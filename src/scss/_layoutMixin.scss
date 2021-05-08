@@ -1,0 +1,29 @@
+@mixin debug-highlight($name, $color) {
+	$debug-background-color: transparentize($color, 0.8);
+	$debug-border-color: transparentize($color, 0.2);
+	.layout-u-debug & {
+		background-color: $debug-background-color;
+		cursor: default;
+
+		&:hover {
+			box-shadow: 0 0 0 2px $debug-border-color inset;
+			// show component name on hover
+			&:before {
+				display: block;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				font-weight: bold;
+				content: $name;
+				text-align: center;
+				color: #333333;
+				border: 2px solid $color;
+				background-color: #FFFFFF;
+				box-shadow: 0 0 100px 0 $debug-background-color inset;
+				padding: 12px;
+				z-index: 9999;
+			}
+		}
+	}
+}

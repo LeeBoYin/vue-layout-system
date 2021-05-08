@@ -1,0 +1,37 @@
+@import 'layoutMixin';
+.layout-flex-column {
+	--var-gap: 0px;
+	display: flex;
+	flex-direction: column;
+
+	&__top, &__bottom {
+		flex: 0 0 auto;
+	}
+	&__top {
+		margin-bottom: var(--var-gap);
+	}
+	&__bottom {
+		margin-top: var(--var-gap);
+	}
+	&__remain {
+		flex: 1 1 auto;
+	}
+	&--horizontal-align-left {
+		align-items: flex-start;
+	}
+	&--horizontal-align-center {
+		align-items: center;
+	}
+	&--horizontal-align-right{
+		align-items: flex-end;
+	}
+
+	@each $spacing-key, $spacing-value in $spacing-map {
+		$gap-size: $spacing-value;
+		&--gap-#{ $spacing-key } {
+			--var-gap: #{ $gap-size };
+		}
+	}
+
+	@include debug-highlight('LayoutFlexColumn', yellow);
+}

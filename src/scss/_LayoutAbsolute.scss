@@ -1,0 +1,62 @@
+@import 'layoutMixin';
+.layout-absolute {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	&__wrapper {
+		// wrapper is required to make grid fill height in some browsers
+		flex: 1;
+		height: auto;
+		display: grid;
+		grid-template: 1fr / 1fr;
+	}
+
+	&__cell {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 1;
+		grid-row-end: 1;
+		&--top-left {
+			justify-self: start;
+			align-self: start;
+		}
+		&--top {
+			justify-self: center;
+			align-self: start;
+		}
+		&--top-right {
+			justify-self: end;
+			align-self: start;
+		}
+		&--right {
+			justify-self: end;
+			align-self: center;
+		}
+		&--bottom-right {
+			justify-self: end;
+			align-self: end;
+		}
+		&--bottom {
+			justify-self: center;
+			align-self: end;
+		}
+		&--bottom-left {
+			justify-self: start;
+			align-self: end;
+		}
+		&--left {
+			justify-self: start;
+			align-self: center;
+		}
+		&--center {
+			justify-self: center;
+			align-self: center;
+		}
+	}
+
+	@include debug-highlight('LayoutAbsolute', red);
+}

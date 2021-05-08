@@ -1,0 +1,24 @@
+@import 'layoutMixin';
+.layout-align {
+	display: grid;
+	&--vertical-align-top {
+		align-content: start;
+	}
+	&--vertical-align-center {
+		align-content: center;
+	}
+	&--vertical-align-bottom {
+		align-content: end;
+	}
+	&--horizontal-align-left {
+		justify-content: start;
+	}
+	&--horizontal-align-center {
+		justify-content: center;
+	}
+	&--horizontal-align-right {
+		justify-content: end;
+	}
+
+	@include debug-highlight('LayoutAlign', orange);
+}

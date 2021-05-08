@@ -1,0 +1,56 @@
+@import 'layoutMixin';
+.layout-list-inline {
+	display: inline-block;
+
+	// 多一層 wrapper，避免 LayoutListInline nesting 時 variables 相互影響
+	&__wrapper {
+		--var-gap: 0px;
+		--var-gap-x: var(--var-gap);
+		--var-gap-y: var(--var-gap);
+		display: inline-flex;
+		flex-wrap: wrap;
+		margin: calc(-0.5 * var(--var-gap-y)) calc(-0.5 * var(--var-gap-x));
+	}
+
+	&__item {
+		margin: calc(0.5 * var(--var-gap-y)) calc(0.5 * var(--var-gap-x));
+	}
+
+	&--nowrap > &__wrapper {
+		flex-wrap: nowrap;
+	}
+
+	&--vertical-align-top > &__wrapper {
+		align-items: flex-start;
+	}
+	&--vertical-align-center > &__wrapper {
+		align-items: center;
+	}
+	&--vertical-align-bottom > &__wrapper {
+		align-items: flex-end;
+	}
+	&--horizontal-align-left > &__wrapper {
+		justify-content: flex-start;
+	}
+	&--horizontal-align-center > &__wrapper {
+		justify-content: center;
+	}
+	&--horizontal-align-right > &__wrapper {
+		justify-content: flex-end;
+	}
+
+	@each $spacing-key, $spacing-value in $spacing-map {
+		$gap-size: $spacing-value;
+		&--gap-#{ $spacing-key } > &__wrapper {
+			--var-gap: #{ $gap-size };
+		}
+		&--gap-x-#{ $spacing-key } > &__wrapper {
+			--var-gap-x: #{ $gap-size };
+		}
+		&--gap-y-#{ $spacing-key } > &__wrapper {
+			--var-gap-y: #{ $gap-size };
+		}
+	}
+
+	@include debug-highlight('LayoutListInline', purple);
+}

@@ -1,0 +1,57 @@
+@each $spacing-key, $spacing-value in $spacing-map {
+	@each $side-key, $side-name in (
+		t: top,
+		b: bottom,
+		l: left,
+		r: right
+	) {
+		.layout-u-m#{ $side-key }-#{ $spacing-key } {
+			margin-#{ $side-name }: $spacing-value;
+		}
+		.layout-u-p#{ $side-key }-#{ $spacing-key } {
+			padding-#{ $side-name }: $spacing-value;
+		}
+	}
+}
+
+@each $spacing-key, $spacing-value in $spacing-map {
+	.layout-u-m-#{ $spacing-key } {
+		margin: $spacing-value;
+	}
+
+	.layout-u-mx-#{ $spacing-key } {
+		margin-left: $spacing-value;
+		margin-right: $spacing-value;
+	}
+
+	.layout-u-my-#{ $spacing-key } {
+		margin-top: $spacing-value;
+		margin-bottom: $spacing-value;
+	}
+
+	.layout-u-p-#{ $spacing-key } {
+		padding: $spacing-value;
+	}
+
+	.layout-u-px-#{ $spacing-key } {
+		padding-left: $spacing-value;
+		padding-right: $spacing-value;
+	}
+
+	.layout-u-py-#{ $spacing-key } {
+		padding-top: $spacing-value;
+		padding-bottom: $spacing-value;
+	}
+}
+
+.layout-u-content-fill-height {
+	display: flex;
+	> *:first-child:last-child {
+		flex: 1;
+		height: auto;
+	}
+}
+
+.layout-u-position-relative {
+	position: relative;
+}

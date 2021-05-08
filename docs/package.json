@@ -1,0 +1,23 @@
+{
+  "name": "vue-layout-system",
+  "version": "0.0.1",
+  "description": "Vue components for solving daily layout problems",
+  "main": "index.js",
+  "authors": {
+    "name": "BoYin Lee",
+    "email": "leeboyin945@gmail.com"
+  },
+  "repository": "leeboyin/vue-layout-system",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.8.2",
+    "vuepress": "^1.5.3",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "vuepress-plugin-live": "^1.6.2"
+  }
+}

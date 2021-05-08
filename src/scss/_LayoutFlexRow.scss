@@ -1,0 +1,36 @@
+@import 'layoutMixin';
+.layout-flex-row {
+	--var-gap: 0px;
+	display: flex;
+
+	&__left, &__right {
+		flex: 0 0 auto;
+	}
+	&__left {
+		margin-right: var(--var-gap);
+	}
+	&__right {
+		margin-left: var(--var-gap);
+	}
+	&__remain {
+		flex: 1 1 auto;
+	}
+	&--vertical-align-top {
+		align-items: flex-start;
+	}
+	&--vertical-align-center {
+		align-items: center;
+	}
+	&--vertical-align-bottom{
+		align-items: flex-end;
+	}
+
+	@each $spacing-key, $spacing-value in $spacing-map {
+		$gap-size: $spacing-value;
+		&--gap-#{ $spacing-key } {
+			--var-gap: #{ $gap-size };
+		}
+	}
+
+	@include debug-highlight('LayoutFlexRow', green);
+}

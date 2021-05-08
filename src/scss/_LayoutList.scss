@@ -1,0 +1,25 @@
+@import 'layoutMixin';
+.layout-list {
+	--var-gap: 0px;
+	display: grid;
+	gap: var(--var-gap);
+
+	&--horizontal-align-left {
+		justify-items: start;
+	}
+	&--horizontal-align-center {
+		justify-items: center;
+	}
+	&--horizontal-align-right {
+		justify-items: end;
+	}
+
+	@each $spacing-key, $spacing-value in $spacing-map {
+		$gap-size: $spacing-value;
+		&--gap-#{ $spacing-key } {
+			--var-gap: #{ $gap-size };
+		}
+	}
+
+	@include debug-highlight('LayoutList', blue);
+}
