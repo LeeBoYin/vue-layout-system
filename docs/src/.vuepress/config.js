@@ -35,8 +35,8 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: 'Installation',
-        link: '/installation/',
+        text: 'Guide',
+        link: '/guide/',
       },
       {
         text: 'Components',

@@ -1,6 +1,6 @@
 {
   "name": "vue-layout-system",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Vue components for solving daily layout problems",
   "main": "dist/vue-layout-system.common.js",
   "module": "dist/vue-layout-system.common.js",
@@ -40,7 +40,7 @@
   "bugs": {
     "url": "https://github.com/LeeBoYin/vue-layout-system/issues"
   },
-  "homepage": "https://github.com/LeeBoYin/vue-layout-system",
+  "homepage": "https://leeboyin.github.io/vue-layout-system",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
