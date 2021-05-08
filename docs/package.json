@@ -10,7 +10,8 @@
   "repository": "leeboyin/vue-layout-system",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src",
+    "deploy": "sh deploy.sh"
   },
   "license": "MIT",
   "devDependencies": {

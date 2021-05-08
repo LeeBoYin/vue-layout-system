@@ -1,0 +1,55 @@
+{
+  "name": "vue-layout-system",
+  "version": "0.0.4",
+  "description": "Vue components for solving daily layout problems",
+  "main": "dist/vue-layout-system.common.js",
+  "module": "dist/vue-layout-system.common.js",
+  "unpkg": "dist/vue-layout-system.umd.min.js",
+  "style": "dist/vue-layout-system.css",
+  "scripts": {
+    "build": "rimraf dist && vue-cli-service build --target lib ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeBoYin/vue-layout-system.git"
+  },
+  "keywords": [
+    "align",
+    "column",
+    "component",
+    "container",
+    "flex",
+    "gap",
+    "grid",
+    "indent",
+    "layout",
+    "list",
+    "remain",
+    "row",
+    "space",
+    "spacing",
+    "vue",
+    "vuejs"
+  ],
+  "author": {
+    "name" : "BoYin Lee",
+    "email" : "leeboyin945@gmail.com",
+    "url" : "https://leeboy.in/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeeBoYin/vue-layout-system/issues"
+  },
+  "homepage": "https://github.com/LeeBoYin/vue-layout-system",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "node-sass": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^10",
+    "vue": "^2.6.12",
+    "webpack": "^5.36.2"
+  }
+}

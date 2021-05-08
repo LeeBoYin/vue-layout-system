@@ -1,0 +1,5 @@
+/node_modules/
+/docs/
+/.idea/
+/dist/demo.html
+/vue.config.js

@@ -1,2 +1,4 @@
 /docs/node_modules/
 /docs/dist/
+/dist/demo.html
+package-lock.json
