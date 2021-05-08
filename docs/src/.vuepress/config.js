@@ -30,9 +30,9 @@ module.exports = {
   themeConfig: {
     repo: 'leeboyin/vue-layout-system',
     editLinks: false,
-    docsDir: 'docs/src',
     editLinkText: '',
     lastUpdated: false,
+    search: false,
     nav: [
       {
         text: 'Installation',
@@ -94,4 +94,8 @@ module.exports = {
       extensions: ['.js', '.vue', '.css', '.scss'],
     },
   },
+  // The base URL the site will be deployed at.
+  base: '/vue-layout-system/',
+  // Specify the output directory for vuepress build.
+  dest: 'dist',
 };
