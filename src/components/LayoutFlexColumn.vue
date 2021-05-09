@@ -1,7 +1,11 @@
 <template>
 	<div
 		class="layout-flex-column"
-		:class="[horizontalAlignClass, gapClass, indentClass]"
+		:class="[
+			getHorizontalAlignClass('layout-flex-column'),
+			getGapClass('layout-flex-column'),
+			indentClass
+		]"
 	>
 		<div v-if="$slots.top" class="layout-flex-column__top">
 			<slot name="top"></slot>
@@ -21,26 +25,5 @@ export default {
 	mixins: [
 		layoutMixin,
 	],
-	props: {
-		gap: {
-			type: [Number, String],
-			default: 0,
-		},
-		horizontalAlign: {
-			type: String,
-			default: 'default',
-		},
-	},
-	computed: {
-		gapClass() {
-			return (Number.isInteger(+this.gap) && +this.gap > 0) ? `layout-flex-column--gap-${ this.gap }` : null;
-		},
-		horizontalAlignClass() {
-			if(['left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
-				return `layout-flex-column--horizontal-align-${ this.horizontalAlign }`;
-			}
-			return null;
-		},
-	},
 };
 </script>
