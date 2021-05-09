@@ -1,6 +1,6 @@
 ---
 home: true
-tagline: Vue components for solving daily layout problems
+tagline: Vue components that solve daily layout problems
 actionText: Quick Start →
 actionLink: /guide/
 features:

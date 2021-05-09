@@ -1,21 +1,17 @@
 # LayoutFlexRow
 
-三個區塊橫向排列的 layout component，也可以只使用其中兩個區塊。
+`LayoutFlexRow` divides one space into 3 sections horizontally, letting you place contents at left, right and the remaining space.
 
 <Doc-LayoutFlexRowDoc />
 
 ## Usage
 
-- 將內容放在 LayoutFlexRow 的三個 slot：
-  1. left：置左
-  1. remain：剩餘空間
-  1. right：置右
-- 當三個 slot 都有內容時，remain 使用中間剩餘的空間
-- 也可以只使用 left 或 right 再加上 remain，remain 使用剩餘的空間
-- 也可以只使用 left + right，中間 remain 留空
-- 以 props 調整排列格式
-  - vertical-align 設定對齊方向：置頂、置中、置底
-  - gap 調整三個 slot 的左右間距
+- Place your contents inside 3 slots of `LayoutFlexRow`
+  1. `left`
+  1. `remain`
+  1. `right`
+- The content in the `remain` slot will fill the remaining horizontal space
+- You may use all of the 3 slots or just 2 of them
 
 ```vue live
 <LayoutFlexRow
@@ -42,8 +38,8 @@
 ## Props
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
-| indent | 上下左右內縮距離 | Number | 0 | spacing scale |
-| indentX | 左右內縮距離 | Number | 0 | spacing scale |
-| indentY | 上下內縮距離 | Number | 0 | spacing scale |
-| gap | 左右間距 | Number | 0 | spacing scale |
-| vertical-align | 上下對齊 | String | default | default, top, center, bottom |
+| indent | indent size of all sides | Number | 0 | spacing scale |
+| indentX | indent size of left and right sides | Number | 0 | spacing scale |
+| indentY | indent size of top and bottom sides | Number | 0 | spacing scale |
+| gap | gap size between slots | Number | 0 | spacing scale |
+| verticalAlign | vertical align | String | default | default, top, center, bottom |

@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="grey-box"
-		:class="[textCenterClass]"
+		:class="[textCenterClass, solidClass]"
 		:style="sizeStyle"
 	>
 		<slot>{{ name }}</slot>
@@ -26,6 +26,10 @@ export default {
 		size: {
 			type: String,
 			default: null, // s, m, l
+		},
+		solid: {
+			type: Boolean,
+			default: false,
 		},
 	},
 	computed: {
@@ -58,7 +62,10 @@ export default {
 			if(this.name !== null && !this.$slots.default) {
 				return 'grey-box--text-center';
 			}
-		}
+		},
+		solidClass() {
+			return this.solid ? 'grey-box--solid' : null;
+		},
 	},
 }
 </script>
@@ -70,6 +77,9 @@ export default {
 	&--text-center {
 		display: grid;
 		place-content: center;
+	}
+	&--solid {
+		background-color: #e5e5e5;
 	}
 }
 </style>

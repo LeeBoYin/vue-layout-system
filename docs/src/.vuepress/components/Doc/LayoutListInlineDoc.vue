@@ -6,7 +6,7 @@
 		>
 			<GreyBox>
 				<LayoutListInline v-bind="propsValue">
-					<GreyBox v-for="i in 20" :key="i" :size="['s', 'm'][i % 2]" :name="i" />
+					<GreyBox v-for="i in 10" :key="i" :size="['s', 'm'][i % 2]" :name="i" />
 				</LayoutListInline>
 			</GreyBox>
 		</PropsPlayground>

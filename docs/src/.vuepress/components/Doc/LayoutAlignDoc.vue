@@ -4,7 +4,7 @@
 			v-model="propsValue"
 			:props-config="propsConfig"
 		>
-			<GreyBox size="l" width="100%" class="layout-u-content-fill-height">
+			<GreyBox height="250" class="layout-u-content-fill-height">
 				<LayoutAlign v-bind="propsValue">
 					<GreyBox size="m" name="content" />
 				</LayoutAlign>

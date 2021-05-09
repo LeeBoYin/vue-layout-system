@@ -1,30 +1,28 @@
 # LayoutAbsolute
 
-在 position relative 的 element 中將內容做上下、左右、置中絕對定位。
+`LayoutAbsolute` lets you place contents at 9 absolute positions in a relative position element. 
 
 <Doc-LayoutAbsoluteDoc />
 
 ## Usage
 
-- LayoutAbsolute 必須放在 position relative element 裡面
-- 將需要做絕對定位的內容放在 LayoutAbsolute 的九個 slot
-  1. topLeft: 左上
-  1. top: 上
-  1. topRight: 右上
-  1. right: 右
-  1. bottomRight: 右下
-  1. bottom: 下
-  1. bottomLeft: 左下
-  1. left: 左
-  1. center: 中心
-- 可以將多項內容同時擺放在多個位置的 slot
-- 以 props 調整排列格式
-  - indent 調整內容與 relative parent 的間距
+- `LayoutAbsolute` must be placed in a relative position element
+- Place your contents inside corresponding slots of 9 absolute positions
+  1. `topLeft`
+  1. `top`
+  1. `topRight`
+  1. `right`
+  1. `bottomRight`
+  1. `bottom`
+  1. `bottomLeft`
+  1. `left`
+  1. `center`
+- You can use multiple slots within one `LayoutAbsolute` at the same time
 
 ```vue live
-<div style="position: relative; border: 1px solid;">
+<div style="position: relative;">
 	<img
-		src="https://generative-placeholders.glitch.me/image?colors=74"
+		src="https://picsum.photos/600/400?grayscale"
 		style="vertical-align: middle;"
 	>
 	<LayoutAbsolute
@@ -65,6 +63,6 @@
 ## Props
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
-| indent | 上下左右內縮距離 | Number | 0 | spacing scale |
-| indentX | 左右內縮距離 | Number | 0 | spacing scale |
-| indentY | 上下內縮距離 | Number | 0 | spacing scale |
+| indent | indent size of all sides | Number | 0 | spacing scale |
+| indentX | indent size of left and right sides | Number | 0 | spacing scale |
+| indentY | indent size of top and bottom sides | Number | 0 | spacing scale |

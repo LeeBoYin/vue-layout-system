@@ -1,7 +1,7 @@
 {
   "name": "vue-layout-system",
   "version": "0.0.1",
-  "description": "Vue components for solving daily layout problems",
+  "description": "Vue components that solve daily layout problems",
   "main": "index.js",
   "authors": {
     "name": "BoYin Lee",

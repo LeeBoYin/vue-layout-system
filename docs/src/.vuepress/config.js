@@ -57,6 +57,7 @@ module.exports = {
           title: 'Components',
           collapsable: false,
           children: [
+            '/components/',
             'LayoutAbsolute',
             'LayoutAlign',
             'LayoutFlexColumn',
@@ -66,7 +67,8 @@ module.exports = {
           ]
         }
       ],
-    }
+      '/': 'auto',
+    },
   },
 
   /**

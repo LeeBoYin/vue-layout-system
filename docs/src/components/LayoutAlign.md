@@ -1,12 +1,13 @@
 # LayoutAlign
 
-將內容放置於左右、上下、置中、加上內縮。
+`LayoutAlign` lets you align contents both horizontally and vertically.
 
 <Doc-LayoutAlignDoc />
 
 ## Usage
-- horizontal-align 設定水平位置：置左、置中、置右
-- 當 parent element 有明確高度時，用 vertical-align 設定垂直位置：置頂、置中、置底
+- Place your contents between `<LayoutAlign>` tags
+- Use `horizontal-align` to align contents left, center or right
+- When the height of `LayoutAlign` is determined, use `vertical-align` to align contents top, center or bottom
 
 ```vue live
 <LayoutAlign
@@ -14,7 +15,7 @@
 	indent-y="5"
 	horizontal-align="right"
 	vertical-align="bottom"
-	style="border: 1px solid; min-height: 200px;"
+	style="border: 1px solid; height: 200px;"
 >
 	<button>Cancel</button>
 	<button>Save</button>
@@ -24,8 +25,8 @@
 ## Props
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
-| indent | 上下左右內縮距離 | Number | 0 | spacing scale |
-| indentX | 左右內縮距離 | Number | 0 | spacing scale |
-| indentY | 上下內縮距離 | Number | 0 | spacing scale |
-| horizontal-align | 水平位置 | String | default | default, left, center, right |
-| vertical-align | 垂直位置 | String | default | default, top, center, bottom |
+| indent | indent size of all sides | Number | 0 | spacing scale |
+| indentX | indent size of left and right sides | Number | 0 | spacing scale |
+| indentY | indent size of top and bottom sides | Number | 0 | spacing scale |
+| horizontalAlign | horizontal align | String | default | default, left, center, right |
+| verticalAlign | vertical align | String | default | default, top, center, bottom |

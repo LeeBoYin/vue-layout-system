@@ -29,7 +29,7 @@ export default {
 				indentX: 5,
 				indentY: 5,
 				gap: 5,
-				horizontalAlign: 'default',
+				horizontalAlign: 'center',
 			},
 			propsConfig: {
 				indentX: {
