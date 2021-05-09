@@ -1,5 +1,5 @@
 @import 'layoutMixin';
-.layout-align {
+.#{ $layout-css-class-prefix }-align {
 	display: grid;
 	&--vertical-align-top {
 		align-content: start;

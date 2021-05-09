@@ -1,7 +1,7 @@
 @mixin debug-highlight($name, $color) {
 	$debug-background-color: transparentize($color, 0.8);
 	$debug-border-color: transparentize($color, 0.2);
-	.layout-u-debug & {
+	.#{ $layout-css-class-prefix }-u-debug & {
 		background-color: $debug-background-color;
 		cursor: default;
 

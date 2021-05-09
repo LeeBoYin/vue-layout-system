@@ -1,11 +1,10 @@
 {
   "name": "vue-layout-system",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Vue components for solving daily layout problems",
   "main": "dist/vue-layout-system.common.js",
   "module": "dist/vue-layout-system.common.js",
   "unpkg": "dist/vue-layout-system.umd.min.js",
-  "style": "dist/vue-layout-system.css",
   "scripts": {
     "build": "rimraf dist && vue-cli-service build --target lib ./src/index.js"
   },

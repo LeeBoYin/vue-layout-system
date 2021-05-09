@@ -1,50 +1,49 @@
-@each $spacing-key, $spacing-value in $spacing-map {
+@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+	$spacing-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+
+	// x & y sides
+	.#{ $layout-css-class-prefix }-u {
+		&-m-#{ $layout-spacing-key } {
+			margin: $spacing-size;
+		}
+		&-mx-#{ $layout-spacing-key } {
+			margin-left: $spacing-size;
+			margin-right: $spacing-size;
+		}
+		&-my-#{ $layout-spacing-key } {
+			margin-top: $spacing-size;
+			margin-bottom: $spacing-size;
+		}
+		&-p-#{ $layout-spacing-key } {
+			padding: $spacing-size;
+		}
+		&-px-#{ $layout-spacing-key } {
+			padding-left: $spacing-size;
+			padding-right: $spacing-size;
+		}
+		&-py-#{ $layout-spacing-key } {
+			padding-top: $spacing-size;
+			padding-bottom: $spacing-size;
+		}
+	}
+
+	// each sides
 	@each $side-key, $side-name in (
 		t: top,
 		b: bottom,
 		l: left,
 		r: right
 	) {
-		.layout-u-m#{ $side-key }-#{ $spacing-key } {
-			margin-#{ $side-name }: $spacing-value;
+		.#{ $layout-css-class-prefix }-u-m#{ $side-key }-#{ $layout-spacing-key } {
+			margin-#{ $side-name }: $spacing-size;
 		}
-		.layout-u-p#{ $side-key }-#{ $spacing-key } {
-			padding-#{ $side-name }: $spacing-value;
+		.#{ $layout-css-class-prefix }-u-p#{ $side-key }-#{ $layout-spacing-key } {
+			padding-#{ $side-name }: $spacing-size;
 		}
 	}
 }
 
-@each $spacing-key, $spacing-value in $spacing-map {
-	.layout-u-m-#{ $spacing-key } {
-		margin: $spacing-value;
-	}
-
-	.layout-u-mx-#{ $spacing-key } {
-		margin-left: $spacing-value;
-		margin-right: $spacing-value;
-	}
-
-	.layout-u-my-#{ $spacing-key } {
-		margin-top: $spacing-value;
-		margin-bottom: $spacing-value;
-	}
-
-	.layout-u-p-#{ $spacing-key } {
-		padding: $spacing-value;
-	}
-
-	.layout-u-px-#{ $spacing-key } {
-		padding-left: $spacing-value;
-		padding-right: $spacing-value;
-	}
-
-	.layout-u-py-#{ $spacing-key } {
-		padding-top: $spacing-value;
-		padding-bottom: $spacing-value;
-	}
-}
-
-.layout-u-content-fill-height {
+.#{ $layout-css-class-prefix }-u-content-fill-height {
 	display: flex;
 	> *:first-child:last-child {
 		flex: 1;
@@ -52,6 +51,6 @@
 	}
 }
 
-.layout-u-position-relative {
+.#{ $layout-css-class-prefix }-u-position-relative {
 	position: relative;
 }
