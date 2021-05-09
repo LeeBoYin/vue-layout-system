@@ -1,5 +1,5 @@
 // customizable scss variables - start
-$layout-css-variable-prefix: 'layout'!default; // this is customizable
+$layout-css-variable-prefix: 'layout' !default;
 
 $layout-spacing-base: 4px !default;
 $layout-spacing-0: $layout-spacing-base * 0 !default;
@@ -28,9 +28,6 @@ $layout-spacing-map: (
 	10: $layout-spacing-10,
 ) !default;
 // customizable scss variables - end
-
-// this is NOT customizable
-$layout-css-class-prefix: 'layout';
 
 // set all spacing css variables
 @each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {

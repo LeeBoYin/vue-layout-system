@@ -1,5 +1,5 @@
 @import 'layoutMixin';
-.#{ $layout-css-class-prefix }-list-inline {
+.layout-list-inline {
 	display: inline-block;
 
 	// 多一層 wrapper，避免 LayoutListInline nesting 時 variables 相互影響

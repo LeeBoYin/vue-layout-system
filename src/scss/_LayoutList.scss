@@ -1,5 +1,5 @@
 @import 'layoutMixin';
-.#{ $layout-css-class-prefix }-list {
+.layout-list {
 	--#{ $layout-css-variable-prefix }-list-gap: 0px;
 	display: grid;
 	gap: var(--#{ $layout-css-variable-prefix }-list-gap);

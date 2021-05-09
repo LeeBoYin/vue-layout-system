@@ -1,5 +1,5 @@
 @import 'layoutMixin';
-.#{ $layout-css-class-prefix }-flex-row {
+.layout-flex-row {
 	--#{ $layout-css-variable-prefix }-flex-row-gap: 0px;
 	display: flex;
 

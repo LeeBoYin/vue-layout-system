@@ -2,7 +2,7 @@
 	$spacing-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
 
 	// x & y sides
-	.#{ $layout-css-class-prefix }-u {
+	.layout-u {
 		&-m-#{ $layout-spacing-key } {
 			margin: $spacing-size;
 		}
@@ -34,16 +34,16 @@
 		l: left,
 		r: right
 	) {
-		.#{ $layout-css-class-prefix }-u-m#{ $side-key }-#{ $layout-spacing-key } {
+		.layout-u-m#{ $side-key }-#{ $layout-spacing-key } {
 			margin-#{ $side-name }: $spacing-size;
 		}
-		.#{ $layout-css-class-prefix }-u-p#{ $side-key }-#{ $layout-spacing-key } {
+		.layout-u-p#{ $side-key }-#{ $layout-spacing-key } {
 			padding-#{ $side-name }: $spacing-size;
 		}
 	}
 }
 
-.#{ $layout-css-class-prefix }-u-content-fill-height {
+.layout-u-content-fill-height {
 	display: flex;
 	> *:first-child:last-child {
 		flex: 1;
@@ -51,6 +51,6 @@
 	}
 }
 
-.#{ $layout-css-class-prefix }-u-position-relative {
+.layout-u-position-relative {
 	position: relative;
 }
