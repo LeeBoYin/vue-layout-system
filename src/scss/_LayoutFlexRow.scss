@@ -1,16 +1,16 @@
 @import 'layoutMixin';
 .layout-flex-row {
-	--#{ $layout-css-variable-prefix }-flex-row-gap: 0px;
+	--layout-flex-row-gap: 0px;
 	display: flex;
 
 	&__left, &__right {
 		flex: 0 0 auto;
 	}
 	&__left {
-		margin-right: var(--#{ $layout-css-variable-prefix }-flex-row-gap);
+		margin-right: var(--layout-flex-row-gap);
 	}
 	&__right {
-		margin-left: var(--#{ $layout-css-variable-prefix }-flex-row-gap);
+		margin-left: var(--layout-flex-row-gap);
 	}
 	&__remain {
 		flex: 1 1 auto;
@@ -26,9 +26,9 @@
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
-		$gap-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-#{ $layout-spacing-key } {
-			--#{ $layout-css-variable-prefix }-flex-row-gap: #{ $gap-size };
+			--layout-flex-row-gap: #{ $gap-size };
 		}
 	}
 

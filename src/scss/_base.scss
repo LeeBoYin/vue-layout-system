@@ -1,37 +1,22 @@
-// customizable scss variables - start
-$layout-css-variable-prefix: 'layout' !default;
-
+// customizable scss variables
 $layout-spacing-base: 4px !default;
-$layout-spacing-0: $layout-spacing-base * 0 !default;
-$layout-spacing-1: $layout-spacing-base * 0.5 !default;
-$layout-spacing-2: $layout-spacing-base * 1 !default;
-$layout-spacing-3: $layout-spacing-base * 2 !default;
-$layout-spacing-4: $layout-spacing-base * 3 !default;
-$layout-spacing-5: $layout-spacing-base * 4 !default;
-$layout-spacing-6: $layout-spacing-base * 5 !default;
-$layout-spacing-7: $layout-spacing-base * 6 !default;
-$layout-spacing-8: $layout-spacing-base * 8 !default;
-$layout-spacing-9: $layout-spacing-base * 10 !default;
-$layout-spacing-10: $layout-spacing-base * 12 !default;
-
 $layout-spacing-map: (
-	0: $layout-spacing-0,
-	1: $layout-spacing-1,
-	2: $layout-spacing-2,
-	3: $layout-spacing-3,
-	4: $layout-spacing-4,
-	5: $layout-spacing-5,
-	6: $layout-spacing-6,
-	7: $layout-spacing-7,
-	8: $layout-spacing-8,
-	9: $layout-spacing-9,
-	10: $layout-spacing-10,
+	0: $layout-spacing-base * 0,
+	1: $layout-spacing-base * 0.5,
+	2: $layout-spacing-base * 1,
+	3: $layout-spacing-base * 2,
+	4: $layout-spacing-base * 3,
+	5: $layout-spacing-base * 4,
+	6: $layout-spacing-base * 5,
+	7: $layout-spacing-base * 6,
+	8: $layout-spacing-base * 8,
+	9: $layout-spacing-base * 10,
+	10: $layout-spacing-base * 12,
 ) !default;
-// customizable scss variables - end
 
 // set all spacing css variables
 @each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
 	:root {
-		--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key }: #{ $layout-spacing-value };
+		--layout-spacing-#{ $layout-spacing-key }: #{ $layout-spacing-value };
 	}
 }

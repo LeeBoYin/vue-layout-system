@@ -1,6 +1,6 @@
 @import 'layoutMixin';
 .layout-flex-column {
-	--#{ $layout-css-variable-prefix }-flex-column-gap: 0px;
+	--layout-flex-column-gap: 0px;
 	display: flex;
 	flex-direction: column;
 
@@ -8,10 +8,10 @@
 		flex: 0 0 auto;
 	}
 	&__top {
-		margin-bottom: var(--#{ $layout-css-variable-prefix }-flex-column-gap);
+		margin-bottom: var(--layout-flex-column-gap);
 	}
 	&__bottom {
-		margin-top: var(--#{ $layout-css-variable-prefix }-flex-column-gap);
+		margin-top: var(--layout-flex-column-gap);
 	}
 	&__remain {
 		flex: 1 1 auto;
@@ -27,9 +27,9 @@
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
-		$gap-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-#{ $layout-spacing-key } {
-			--#{ $layout-css-variable-prefix }-flex-column-gap: #{ $gap-size };
+			--layout-flex-column-gap: #{ $gap-size };
 		}
 	}
 

@@ -4,16 +4,16 @@
 
 	// 多一層 wrapper，避免 LayoutListInline nesting 時 variables 相互影響
 	&__wrapper {
-		--#{ $layout-css-variable-prefix }-list-inline-gap: 0px;
-		--#{ $layout-css-variable-prefix }-list-inline-gap-x: var(--#{ $layout-css-variable-prefix }-list-inline-gap);
-		--#{ $layout-css-variable-prefix }-list-inline-gap-y: var(--#{ $layout-css-variable-prefix }-list-inline-gap);
+		--layout-list-inline-gap: 0px;
+		--layout-list-inline-gap-x: var(--layout-list-inline-gap);
+		--layout-list-inline-gap-y: var(--layout-list-inline-gap);
 		display: inline-flex;
 		flex-wrap: wrap;
-		margin: calc(-0.5 * var(--#{ $layout-css-variable-prefix }-list-inline-gap-y)) calc(-0.5 * var(--#{ $layout-css-variable-prefix }-list-inline-gap-x));
+		margin: calc(-0.5 * var(--layout-list-inline-gap-y)) calc(-0.5 * var(--layout-list-inline-gap-x));
 	}
 
 	&__item {
-		margin: calc(0.5 * var(--#{ $layout-css-variable-prefix }-list-inline-gap-y)) calc(0.5 * var(--#{ $layout-css-variable-prefix }-list-inline-gap-x));
+		margin: calc(0.5 * var(--layout-list-inline-gap-y)) calc(0.5 * var(--layout-list-inline-gap-x));
 	}
 
 	&--nowrap > &__wrapper {
@@ -40,15 +40,15 @@
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
-		$gap-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-#{ $layout-spacing-key } > &__wrapper {
-			--#{ $layout-css-variable-prefix }-list-inline-gap: #{ $gap-size };
+			--layout-list-inline-gap: #{ $gap-size };
 		}
 		&--gap-x-#{ $layout-spacing-key } > &__wrapper {
-			--#{ $layout-css-variable-prefix }-list-inline-gap-x: #{ $gap-size };
+			--layout-list-inline-gap-x: #{ $gap-size };
 		}
 		&--gap-y-#{ $layout-spacing-key } > &__wrapper {
-			--#{ $layout-css-variable-prefix }-list-inline-gap-y: #{ $gap-size };
+			--layout-list-inline-gap-y: #{ $gap-size };
 		}
 	}
 

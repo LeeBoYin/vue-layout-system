@@ -1,5 +1,5 @@
 @each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
-	$spacing-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+	$spacing-size: var(--layout-spacing-#{ $layout-spacing-key });
 
 	// x & y sides
 	.layout-u {

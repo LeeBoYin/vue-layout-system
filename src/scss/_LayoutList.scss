@@ -1,8 +1,8 @@
 @import 'layoutMixin';
 .layout-list {
-	--#{ $layout-css-variable-prefix }-list-gap: 0px;
+	--layout-list-gap: 0px;
 	display: grid;
-	gap: var(--#{ $layout-css-variable-prefix }-list-gap);
+	gap: var(--layout-list-gap);
 
 	&--horizontal-align-left {
 		justify-items: start;
@@ -15,9 +15,9 @@
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
-		$gap-size: var(--#{ $layout-css-variable-prefix }-spacing-#{ $layout-spacing-key });
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-#{ $layout-spacing-key } {
-			--#{ $layout-css-variable-prefix }-list-gap: #{ $gap-size };
+			--layout-list-gap: #{ $gap-size };
 		}
 	}
 
