@@ -44,6 +44,9 @@
 		&--gap-#{ $layout-spacing-key } > &__wrapper {
 			--layout-list-inline-gap: #{ $gap-size };
 		}
+	}
+	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-x-#{ $layout-spacing-key } > &__wrapper {
 			--layout-list-inline-gap-x: #{ $gap-size };
 		}

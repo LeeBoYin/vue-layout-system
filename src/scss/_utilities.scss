@@ -1,11 +1,18 @@
 @each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
 	$spacing-size: var(--layout-spacing-#{ $layout-spacing-key });
-
-	// x & y sides
 	.layout-u {
 		&-m-#{ $layout-spacing-key } {
 			margin: $spacing-size;
 		}
+		&-p-#{ $layout-spacing-key } {
+			padding: $spacing-size;
+		}
+	}
+}
+
+@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+	$spacing-size: var(--layout-spacing-#{ $layout-spacing-key });
+	.layout-u {
 		&-mx-#{ $layout-spacing-key } {
 			margin-left: $spacing-size;
 			margin-right: $spacing-size;
@@ -13,9 +20,6 @@
 		&-my-#{ $layout-spacing-key } {
 			margin-top: $spacing-size;
 			margin-bottom: $spacing-size;
-		}
-		&-p-#{ $layout-spacing-key } {
-			padding: $spacing-size;
 		}
 		&-px-#{ $layout-spacing-key } {
 			padding-left: $spacing-size;
@@ -26,19 +30,23 @@
 			padding-bottom: $spacing-size;
 		}
 	}
+}
 
-	// each sides
-	@each $side-key, $side-name in (
-		t: top,
-		b: bottom,
-		l: left,
-		r: right
-	) {
-		.layout-u-m#{ $side-key }-#{ $layout-spacing-key } {
-			margin-#{ $side-name }: $spacing-size;
-		}
-		.layout-u-p#{ $side-key }-#{ $layout-spacing-key } {
-			padding-#{ $side-name }: $spacing-size;
+@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+	$spacing-size: var(--layout-spacing-#{ $layout-spacing-key });
+	.layout-u {
+		@each $side-key, $side-name in (
+			t: top,
+			b: bottom,
+			l: left,
+			r: right
+		) {
+			&-m#{ $side-key }-#{ $layout-spacing-key } {
+				margin-#{ $side-name }: $spacing-size;
+			}
+			&-p#{ $side-key }-#{ $layout-spacing-key } {
+				padding-#{ $side-name }: $spacing-size;
+			}
 		}
 	}
 }

@@ -7,7 +7,7 @@
 						<div v-for="(propConfig, propName) in propsConfig" :key="propName">
 							<div>
 								<b>
-									{{ propConfig.name }}
+									{{ propName }}
 								</b>
 								<template v-if="['range'].indexOf(propConfig.type) !== -1">
 									: {{ propsValue[propName] }}

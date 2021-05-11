@@ -187,17 +187,33 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
   props: {
-    indent: {
+    padding: {
       type: [Number, String],
-      "default": 0
+      "default": null
     },
-    indentX: {
+    paddingX: {
       type: [Number, String],
-      "default": 0
+      "default": null
     },
-    indentY: {
+    paddingY: {
       type: [Number, String],
-      "default": 0
+      "default": null
+    },
+    paddingTop: {
+      type: [Number, String],
+      "default": null
+    },
+    paddingBottom: {
+      type: [Number, String],
+      "default": null
+    },
+    paddingLeft: {
+      type: [Number, String],
+      "default": null
+    },
+    paddingRight: {
+      type: [Number, String],
+      "default": null
     },
     gap: {
       type: [Number, String],
@@ -221,19 +237,73 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
   },
   computed: {
-    indentClass: function indentClass() {
+    paddingClass: function paddingClass() {
+      var padding = this.padding;
+      var paddingX = this.paddingX;
+      var paddingY = this.paddingY;
+      var paddingTop = this.paddingTop;
+      var paddingBottom = this.paddingBottom;
+      var paddingLeft = this.paddingLeft;
+      var paddingRight = this.paddingRight; // css-styled shorthand
+
+      if (typeof this.padding === 'string') {
+        var paddingValues = this.padding.split(' ').filter(function (v) {
+          return v.length;
+        });
+
+        if (paddingValues.length >= 2 && paddingValues.length <= 4) {
+          padding = paddingX = paddingY = paddingTop = paddingBottom = paddingLeft = paddingRight = null;
+        }
+
+        switch (paddingValues.length) {
+          case 2:
+            paddingY = paddingValues[0];
+            paddingX = paddingValues[1];
+            break;
+
+          case 3:
+            paddingTop = paddingValues[0];
+            paddingX = paddingValues[1];
+            paddingBottom = paddingValues[2];
+            break;
+
+          case 4:
+            paddingTop = paddingValues[0];
+            paddingRight = paddingValues[1];
+            paddingBottom = paddingValues[2];
+            paddingLeft = paddingValues[3];
+            break;
+        }
+      }
+
       var classList = [];
 
-      if (Number.isInteger(+this.indent) && +this.indent > 0) {
-        classList.push("layout-u-p-".concat(this.indent));
+      if (padding !== null) {
+        classList.push("layout-u-p-".concat(padding));
       }
 
-      if (Number.isInteger(+this.indentX) && +this.indentX > 0) {
-        classList.push("layout-u-px-".concat(this.indentX));
+      if (paddingX !== null) {
+        classList.push("layout-u-px-".concat(paddingX));
       }
 
-      if (Number.isInteger(+this.indentY) && +this.indentY > 0) {
-        classList.push("layout-u-py-".concat(this.indentY));
+      if (paddingY !== null) {
+        classList.push("layout-u-py-".concat(paddingY));
+      }
+
+      if (paddingTop !== null) {
+        classList.push("layout-u-pt-".concat(paddingTop));
+      }
+
+      if (paddingBottom !== null) {
+        classList.push("layout-u-pb-".concat(paddingBottom));
+      }
+
+      if (paddingLeft !== null) {
+        classList.push("layout-u-pl-".concat(paddingLeft));
+      }
+
+      if (paddingRight !== null) {
+        classList.push("layout-u-pr-".concat(paddingRight));
       }
 
       return classList;
@@ -241,18 +311,34 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   },
   methods: {
     getGapClass: function getGapClass(componentClass) {
+      var gap = this.gap;
+      var gapX = this.gapX;
+      var gapY = this.gapY; // css-styled shorthand
+
+      if (typeof this.gap === 'string') {
+        var gapValues = this.gap.split(' ').filter(function (v) {
+          return v.length;
+        });
+
+        if (gapValues.length === 2) {
+          gap = null;
+          gapY = gapValues[0];
+          gapX = gapValues[1];
+        }
+      }
+
       var classList = [];
 
-      if (this.gap !== 0) {
-        classList.push("".concat(componentClass, "--gap-").concat(this.gap));
+      if (gap !== 0) {
+        classList.push("".concat(componentClass, "--gap-").concat(gap));
       }
 
-      if (this.gapX !== 0) {
-        classList.push("".concat(componentClass, "--gap-x-").concat(this.gapX));
+      if (gapX !== 0) {
+        classList.push("".concat(componentClass, "--gap-x-").concat(gapX));
       }
 
-      if (this.gapY !== 0) {
-        classList.push("".concat(componentClass, "--gap-y-").concat(this.gapY));
+      if (gapY !== 0) {
+        classList.push("".concat(componentClass, "--gap-y-").concat(gapY));
       }
 
       return classList;
@@ -281,16 +367,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71dbbf4c-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexColumn.vue?vue&type=template&id=4df3c1b4&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e62a1d4a-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexColumn.vue?vue&type=template&id=918bf072&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-flex-column",class:[
 		_vm.getHorizontalAlignClass('layout-flex-column'),
 		_vm.getGapClass('layout-flex-column'),
-		_vm.indentClass
+		_vm.paddingClass
 	]},[(_vm.$slots.top)?_c('div',{staticClass:"layout-flex-column__top"},[_vm._t("top")],2):_vm._e(),_c('div',{staticClass:"layout-flex-column__remain layout-u-content-fill-height"},[_vm._t("remain")],2),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-flex-column__bottom"},[_vm._t("bottom")],2):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutFlexColumn.vue?vue&type=template&id=4df3c1b4&
+// CONCATENATED MODULE: ./src/components/LayoutFlexColumn.vue?vue&type=template&id=918bf072&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -354,11 +440,11 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71dbbf4c-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexRow.vue?vue&type=template&id=0994f3eb&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e62a1d4a-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexRow.vue?vue&type=template&id=1414402e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-flex-row",class:[
 		_vm.getVerticalAlignClass('layout-flex-row'),
 		_vm.getGapClass('layout-flex-row'),
-		_vm.indentClass
+		_vm.paddingClass
 	]},[(_vm.$slots.left)?_c('div',{staticClass:"layout-flex-row__left",class:{
 			'layout-u-content-fill-height': !_vm.getVerticalAlignClass('layout-flex-row'),
 		}},[_vm._t("left")],2):_vm._e(),_c('div',{staticClass:"layout-flex-row__remain",class:{
@@ -369,7 +455,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutFlexRow.vue?vue&type=template&id=0994f3eb&
+// CONCATENATED MODULE: ./src/components/LayoutFlexRow.vue?vue&type=template&id=1414402e&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -471,7 +557,7 @@ var layoutMixin = __webpack_require__("7c9a");
   render: function render(createElement) {
     var componentClass = 'layout-list-inline';
     return createElement('div', {
-      "class": [componentClass, this.getGapClass(componentClass), this.getHorizontalAlignClass(componentClass), this.getVerticalAlignClass(componentClass), this.getNowrapClass(componentClass), this.indentClass]
+      "class": [componentClass, this.getGapClass(componentClass), this.getHorizontalAlignClass(componentClass), this.getVerticalAlignClass(componentClass), this.getNowrapClass(componentClass), this.paddingClass]
     }, [createElement('div', {
       "class": "".concat(componentClass, "__wrapper")
     }, // 將每一個 slot children node 包在 &__item 裡面
@@ -644,16 +730,16 @@ if (GlobalVue) {
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71dbbf4c-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAlign.vue?vue&type=template&id=9d7243e0&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e62a1d4a-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAlign.vue?vue&type=template&id=94c6e522&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-align",class:[
 		_vm.getVerticalAlignClass('layout-align'),
 		_vm.getHorizontalAlignClass('layout-align'),
-		_vm.indentClass
+		_vm.paddingClass
 	]},[_c('div',{staticClass:"layout-align__content"},[_vm._t("default")],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutAlign.vue?vue&type=template&id=9d7243e0&
+// CONCATENATED MODULE: ./src/components/LayoutAlign.vue?vue&type=template&id=94c6e522&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -711,16 +797,16 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71dbbf4c-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutList.vue?vue&type=template&id=5ef19cc1&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e62a1d4a-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutList.vue?vue&type=template&id=15327fc4&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-list",class:[
 		_vm.getGapClass('layout-list'),
 		_vm.getHorizontalAlignClass('layout-list'),
-		_vm.indentClass
+		_vm.paddingClass
 	]},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutList.vue?vue&type=template&id=5ef19cc1&
+// CONCATENATED MODULE: ./src/components/LayoutList.vue?vue&type=template&id=15327fc4&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -803,12 +889,12 @@ module.exports = g;
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71dbbf4c-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAbsolute.vue?vue&type=template&id=c4614692&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-absolute",class:[_vm.indentClass]},[_c('div',{staticClass:"layout-absolute__wrapper"},[(_vm.$slots.topLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-left"},[_vm._t("topLeft")],2):_vm._e(),(_vm.$slots.top)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top"},[_vm._t("top")],2):_vm._e(),(_vm.$slots.topRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-right"},[_vm._t("topRight")],2):_vm._e(),(_vm.$slots.right)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--right"},[_vm._t("right")],2):_vm._e(),(_vm.$slots.bottomRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-right"},[_vm._t("bottomRight")],2):_vm._e(),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom"},[_vm._t("bottom")],2):_vm._e(),(_vm.$slots.bottomLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-left"},[_vm._t("bottomLeft")],2):_vm._e(),(_vm.$slots.left)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--left"},[_vm._t("left")],2):_vm._e(),(_vm.$slots.center)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--center"},[_vm._t("center")],2):_vm._e()])])}
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e62a1d4a-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAbsolute.vue?vue&type=template&id=c3d8b540&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-absolute",class:[_vm.paddingClass]},[_c('div',{staticClass:"layout-absolute__wrapper"},[(_vm.$slots.topLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-left"},[_vm._t("topLeft")],2):_vm._e(),(_vm.$slots.top)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top"},[_vm._t("top")],2):_vm._e(),(_vm.$slots.topRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-right"},[_vm._t("topRight")],2):_vm._e(),(_vm.$slots.right)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--right"},[_vm._t("right")],2):_vm._e(),(_vm.$slots.bottomRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-right"},[_vm._t("bottomRight")],2):_vm._e(),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom"},[_vm._t("bottom")],2):_vm._e(),(_vm.$slots.bottomLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-left"},[_vm._t("bottomLeft")],2):_vm._e(),(_vm.$slots.left)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--left"},[_vm._t("left")],2):_vm._e(),(_vm.$slots.center)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--center"},[_vm._t("center")],2):_vm._e()])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutAbsolute.vue?vue&type=template&id=c4614692&
+// CONCATENATED MODULE: ./src/components/LayoutAbsolute.vue?vue&type=template&id=c3d8b540&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");

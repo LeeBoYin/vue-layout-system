@@ -2,15 +2,31 @@ export default {
 	props: {
 		padding: {
 			type: [Number, String],
-			default: 0,
+			default: null,
 		},
 		paddingX: {
 			type: [Number, String],
-			default: 0,
+			default: null,
 		},
 		paddingY: {
 			type: [Number, String],
-			default: 0,
+			default: null,
+		},
+		paddingTop: {
+			type: [Number, String],
+			default: null,
+		},
+		paddingBottom: {
+			type: [Number, String],
+			default: null,
+		},
+		paddingLeft: {
+			type: [Number, String],
+			default: null,
+		},
+		paddingRight: {
+			type: [Number, String],
+			default: null,
 		},
 		gap: {
 			type: [Number, String],
@@ -35,30 +51,89 @@ export default {
 	},
 	computed: {
 		paddingClass() {
+			let padding = this.padding;
+			let paddingX = this.paddingX;
+			let paddingY = this.paddingY;
+			let paddingTop = this.paddingTop;
+			let paddingBottom = this.paddingBottom;
+			let paddingLeft = this.paddingLeft;
+			let paddingRight = this.paddingRight;
+
+			// css-styled shorthand
+			if(typeof this.padding === 'string') {
+				const paddingValues = this.padding.split(' ').filter(v => v.length);
+				if(paddingValues.length >= 2 && paddingValues.length <=4) {
+					padding = paddingX = paddingY = paddingTop = paddingBottom = paddingLeft = paddingRight = null;
+				}
+				switch (paddingValues.length) {
+					case 2:
+						paddingY = paddingValues[0];
+						paddingX = paddingValues[1];
+						break;
+					case 3:
+						paddingTop = paddingValues[0];
+						paddingX = paddingValues[1];
+						paddingBottom = paddingValues[2];
+						break;
+					case 4:
+						paddingTop = paddingValues[0];
+						paddingRight = paddingValues[1];
+						paddingBottom = paddingValues[2];
+						paddingLeft = paddingValues[3];
+						break;
+				}
+			}
+
 			const classList = [];
-			if(Number.isInteger(+this.padding) && +this.padding > 0) {
-				classList.push(`layout-u-p-${ this.padding }`);
+			if(padding !== null) {
+				classList.push(`layout-u-p-${ padding }`);
 			}
-			if(Number.isInteger(+this.paddingX) && +this.paddingX > 0) {
-				classList.push(`layout-u-px-${ this.paddingX }`);
+			if(paddingX !== null) {
+				classList.push(`layout-u-px-${ paddingX }`);
 			}
-			if(Number.isInteger(+this.paddingY) && +this.paddingY > 0) {
-				classList.push(`layout-u-py-${ this.paddingY }`);
+			if(paddingY !== null) {
+				classList.push(`layout-u-py-${ paddingY }`);
+			}
+			if(paddingTop !== null) {
+				classList.push(`layout-u-pt-${ paddingTop }`);
+			}
+			if(paddingBottom !== null) {
+				classList.push(`layout-u-pb-${ paddingBottom }`);
+			}
+			if(paddingLeft !== null) {
+				classList.push(`layout-u-pl-${ paddingLeft }`);
+			}
+			if(paddingRight !== null) {
+				classList.push(`layout-u-pr-${ paddingRight }`);
 			}
 			return classList;
 		},
 	},
 	methods: {
 		getGapClass(componentClass) {
+			let gap = this.gap;
+			let gapX = this.gapX;
+			let gapY = this.gapY;
+
+			// css-styled shorthand
+			if(typeof this.gap === 'string') {
+				const gapValues = this.gap.split(' ').filter(v => v.length);
+				if(gapValues.length === 2) {
+					gap = null;
+					gapY = gapValues[0];
+					gapX = gapValues[1];
+				}
+			}
+
 			const classList = [];
-			if(this.gap !== 0) {
-				classList.push(`${ componentClass }--gap-${ this.gap }`);
+			if(gap !== 0) {
+				classList.push(`${ componentClass }--gap-${ gap }`);
 			}
-			if(this.gapX !== 0) {
-				classList.push(`${ componentClass }--gap-x-${ this.gapX }`);
+			if(gapX !== 0) {
+				classList.push(`${ componentClass }--gap-x-${ gapX }`);
 			}
-			if(this.gapY !== 0) {
-				classList.push(`${ componentClass }--gap-y-${ this.gapY }`);
+			if(gapY !== 0) {
+				classList.push(`${ componentClass }--gap-y-${ gapY }`);
 			}
 			return classList;
 		},
