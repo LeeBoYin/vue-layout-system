@@ -4,7 +4,7 @@
 		:class="[
 			getGapClass('layout-list'),
 			getHorizontalAlignClass('layout-list'),
-			indentClass
+			paddingClass
 		]"
 	>
 		<slot />

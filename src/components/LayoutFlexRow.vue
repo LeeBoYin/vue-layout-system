@@ -4,7 +4,7 @@
 		:class="[
 			getVerticalAlignClass('layout-flex-row'),
 			getGapClass('layout-flex-row'),
-			indentClass
+			paddingClass
 		]"
 	>
 		<div

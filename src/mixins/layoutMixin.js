@@ -1,14 +1,14 @@
 export default {
 	props: {
-		indent: {
+		padding: {
 			type: [Number, String],
 			default: 0,
 		},
-		indentX: {
+		paddingX: {
 			type: [Number, String],
 			default: 0,
 		},
-		indentY: {
+		paddingY: {
 			type: [Number, String],
 			default: 0,
 		},
@@ -34,16 +34,16 @@ export default {
 		},
 	},
 	computed: {
-		indentClass() {
+		paddingClass() {
 			const classList = [];
-			if(Number.isInteger(+this.indent) && +this.indent > 0) {
-				classList.push(`layout-u-p-${ this.indent }`);
+			if(Number.isInteger(+this.padding) && +this.padding > 0) {
+				classList.push(`layout-u-p-${ this.padding }`);
 			}
-			if(Number.isInteger(+this.indentX) && +this.indentX > 0) {
-				classList.push(`layout-u-px-${ this.indentX }`);
+			if(Number.isInteger(+this.paddingX) && +this.paddingX > 0) {
+				classList.push(`layout-u-px-${ this.paddingX }`);
 			}
-			if(Number.isInteger(+this.indentY) && +this.indentY > 0) {
-				classList.push(`layout-u-py-${ this.indentY }`);
+			if(Number.isInteger(+this.paddingY) && +this.paddingY > 0) {
+				classList.push(`layout-u-py-${ this.paddingY }`);
 			}
 			return classList;
 		},

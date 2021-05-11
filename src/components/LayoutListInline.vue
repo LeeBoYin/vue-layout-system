@@ -26,7 +26,7 @@ export default {
 					this.getHorizontalAlignClass(componentClass),
 					this.getVerticalAlignClass(componentClass),
 					this.getNowrapClass(componentClass),
-					this.indentClass,
+					this.paddingClass,
 				],
 			},
 			[createElement(

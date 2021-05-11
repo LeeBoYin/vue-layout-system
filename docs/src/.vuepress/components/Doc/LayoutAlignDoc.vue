@@ -26,21 +26,21 @@ export default {
 	data() {
 		return {
 			propsValue: {
-				indentX: 5,
-				indentY: 5,
+				paddingX: 5,
+				paddingY: 5,
 				horizontalAlign: 'left',
 				verticalAlign: 'top',
 			},
 			propsConfig: {
-				indentX: {
-					name: 'indent-x',
+				paddingX: {
+					name: 'padding-x',
 					type: 'range',
 					max: 10,
 					min: 0,
 					step: 1,
 				},
-				indentY: {
-					name: 'indent-y',
+				paddingY: {
+					name: 'padding-y',
 					type: 'range',
 					max: 10,
 					min: 0,

@@ -4,7 +4,7 @@
 		:class="[
 			getHorizontalAlignClass('layout-flex-column'),
 			getGapClass('layout-flex-column'),
-			indentClass
+			paddingClass
 		]"
 	>
 		<div v-if="$slots.top" class="layout-flex-column__top">

@@ -2,7 +2,7 @@
 	<div class="props-playground">
 		<LayoutFlexRow>
 			<template #left>
-				<LayoutAlign indent="5" class="props-playground__controls">
+				<LayoutAlign padding="5" class="props-playground__controls">
 					<LayoutList gap="5">
 						<div v-for="(propConfig, propName) in propsConfig" :key="propName">
 							<div>

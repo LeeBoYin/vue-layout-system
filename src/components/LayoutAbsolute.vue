@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="layout-absolute"
-		:class="[indentClass]"
+		:class="[paddingClass]"
 	>
 		<div class="layout-absolute__wrapper">
 			<div

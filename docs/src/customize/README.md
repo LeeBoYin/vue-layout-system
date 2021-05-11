@@ -85,7 +85,7 @@ $layout-spacing-map: (
 and use them in layout components.
 
 ```vue
-<LayoutList indent="xs" gap="xl">
+<LayoutList padding="xs" gap="xl">
     ...
 </LayoutList>
 ```
@@ -109,7 +109,7 @@ $layout-spacing-map: (
 and use them in layout components.
 
 ```vue
-<LayoutList indent="loose" gap="tight">
+<LayoutList padding="loose" gap="tight">
     ...
 </LayoutList>
 ```
