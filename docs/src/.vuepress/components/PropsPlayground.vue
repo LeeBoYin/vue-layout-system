@@ -1,5 +1,13 @@
 <template>
-	<div class="props-playground">
+	<div
+		class="props-playground"
+		:class="{
+			'props-playground--overflow': isResultOverflow,
+		}"
+		:style="{
+			width: playgroundWidth && playgroundWidth + 'px',
+		}"
+	>
 		<LayoutFlexRow>
 			<template #left>
 				<LayoutAlign padding="5" class="props-playground__controls">
@@ -62,6 +70,17 @@
 					<slot />
 				</div>
 			</template>
+			<template #right>
+				<LayoutAlign
+					class="props-playground__handle"
+					vertical-align="center"
+					horizontal-align="center"
+					@mousedown.native.prevent="onDragHandleStart"
+					@touchstart.native.prevent="onDragHandleStart"
+				>
+					||
+				</LayoutAlign>
+			</template>
 		</LayoutFlexRow>
 	</div>
 </template>
@@ -90,6 +109,11 @@ export default {
 	},
 	data() {
 		return {
+			isResizing: false,
+			isResultOverflow: false,
+			playgroundWidth: null,
+			resizeStartPlaygroundWidth: null,
+			resizeStartX: null,
 			propsValue: {},
 		};
 	},
@@ -101,22 +125,91 @@ export default {
 				this.$emit('input', newValue);
 			},
 		},
+		value() {
+			this.$nextTick(this.checkWidthByResultContent);
+		},
 	},
 	created() {
 		Object.keys(this.value).forEach(propName => {
 			this.$set(this.propsValue, propName, this.value[propName]);
 		});
 	},
+	mounted() {
+		document.addEventListener('mousemove', this.onDragHandle);
+		document.addEventListener('touchmove', this.onDragHandle);
+		document.addEventListener('mouseup', this.onDragHandleEnd);
+		document.addEventListener('touchend', this.onDragHandleEnd);
+	},
+	beforeDestroy() {
+		document.removeEventListener('mousemove', this.onDragHandle);
+		document.removeEventListener('touchmove', this.onDragHandle);
+		document.removeEventListener('mouseup', this.onDragHandleEnd);
+		document.removeEventListener('touchend', this.onDragHandleEnd);
+	},
+	methods: {
+		onDragHandleStart(e) {
+			this.isResizing = true;
+			if(e.type === 'touchstart') {
+				this.resizeStartX = e.touches[0].clientX;
+			} else {
+				this.resizeStartX = e.clientX;
+			}
+			this.resizeStartPlaygroundWidth = this.$el.clientWidth;
+		},
+		onDragHandle(e) {
+			if(!this.isResizing) {
+				return;
+			}
+
+			let currentX;
+			if(e.type === 'touchmove') {
+				currentX = e.touches[0].clientX;
+			} else {
+				currentX = e.clientX;
+			}
+			const deltaX = currentX - this.resizeStartX;
+			this.playgroundWidth = this.resizeStartPlaygroundWidth + deltaX;
+			this.$nextTick(this.checkWidthByResultContent);
+		},
+		onDragHandleEnd() {
+			this.isResizing = false;
+		},
+		checkWidthByResultContent() {
+			this.isResultOverflow = false;
+			if(this.$el.clientWidth < this.$el.scrollWidth) {
+				this.playgroundWidth = this.$el.scrollWidth;
+
+				// check again after next tick
+				this.$nextTick(() => {
+					if(this.$el.clientWidth < this.$el.scrollWidth) {
+						this.isResultOverflow = true;
+					}
+				});
+			}
+		},
+	},
 };
 </script>
 
 <style scoped lang="scss">
+$border-style: 1px solid #e2e2e2;
 .props-playground {
-	border: 1px solid #e2e2e2;
+	max-width: 100%;
+	border: $border-style;
 	border-radius: 4px;
+	&--overflow {
+		border-color: #CC0000;
+	}
 	&__controls {
 		width: 200px;
 		background-color: #f8f5f5;
+	}
+	&__handle {
+		border-left: $border-style;
+		color: #999;
+		width: 16px;
+		cursor: ew-resize;
+		user-select: none;
 	}
 }
 </style>
