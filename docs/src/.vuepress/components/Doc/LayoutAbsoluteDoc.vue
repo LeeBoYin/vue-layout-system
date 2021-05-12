@@ -44,7 +44,8 @@
 import GreyBox from '../GreyBox';
 import PropsPlayground from '../PropsPlayground';
 import LayoutAbsolute from '@layout-system-components/LayoutAbsolute';
-import { paddingPropsValue, paddingPropsConfig } from './playgroundProps';
+import { getDefaultPropsValue, getPropsConfig } from './playgroundProps';
+
 export default {
 	components: {
 		GreyBox,
@@ -52,13 +53,10 @@ export default {
 		LayoutAbsolute,
 	},
 	data() {
+		const propsName = ['padding'];
 		return {
-			propsValue: {
-				...paddingPropsValue,
-			},
-			propsConfig: {
-				...paddingPropsConfig,
-			},
+			propsValue: getDefaultPropsValue(propsName),
+			propsConfig: getPropsConfig(propsName),
 		};
 	},
 }

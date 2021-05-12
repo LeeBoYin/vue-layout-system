@@ -58,7 +58,8 @@ import GreyBox from '../GreyBox';
 import PropsPlayground from '../PropsPlayground';
 import LayoutFlexRow from '@layout-system-components/LayoutFlexRow';
 import LayoutList from '@layout-system-components/LayoutList';
-import { paddingPropsValue, paddingPropsConfig, gapValue, gapConfig, verticalAlignConfig } from './playgroundProps';
+import { getDefaultPropsValue, getPropsConfig } from './playgroundProps';
+
 export default {
 	components: {
 		GreyBox,
@@ -67,17 +68,10 @@ export default {
 		LayoutList,
 	},
 	data() {
+		const propsName = ['padding', 'gap', 'verticalAlign'];
 		return {
-			propsValue: {
-				...paddingPropsValue,
-				...gapValue,
-				verticalAlign: 'default',
-			},
-			propsConfig: {
-				...paddingPropsConfig,
-				...gapConfig,
-				...verticalAlignConfig,
-			},
+			propsValue: getDefaultPropsValue(propsName),
+			propsConfig: getPropsConfig(propsName),
 		};
 	},
 }

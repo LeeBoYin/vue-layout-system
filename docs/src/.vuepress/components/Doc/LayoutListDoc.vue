@@ -6,7 +6,12 @@
 		>
 			<GreyBox>
 				<LayoutList v-bind="propsValue">
-					<GreyBox v-for="i in 5" :key="i" :size="['s', 'm'][i % 2]" :name="i" />
+					<GreyBox
+						v-for="i in 5"
+						:key="i"
+						:size="['s', 'm'][i % 2]"
+						:name="i"
+					/>
 				</LayoutList>
 			</GreyBox>
 		</PropsPlayground>
@@ -17,7 +22,8 @@
 import GreyBox from '../GreyBox';
 import PropsPlayground from '../PropsPlayground';
 import LayoutList from '@layout-system-components/LayoutList';
-import { paddingPropsValue, paddingPropsConfig, gapValue, gapConfig, horizontalAlignConfig } from './playgroundProps';
+import { getDefaultPropsValue, getPropsConfig } from './playgroundProps';
+
 export default {
 	components: {
 		GreyBox,
@@ -25,17 +31,10 @@ export default {
 		LayoutList,
 	},
 	data() {
+		const propsName = ['padding', 'gap', 'horizontalAlign'];
 		return {
-			propsValue: {
-				...paddingPropsValue,
-				...gapValue,
-				horizontalAlign: 'center',
-			},
-			propsConfig: {
-				...paddingPropsConfig,
-				...gapConfig,
-				...horizontalAlignConfig,
-			},
+			propsValue: getDefaultPropsValue(propsName),
+			propsConfig: getPropsConfig(propsName),
 		};
 	},
 }

@@ -17,12 +17,8 @@
 import GreyBox from '../GreyBox';
 import PropsPlayground from '../PropsPlayground';
 import LayoutAlign from '@layout-system-components/LayoutAlign';
-import {
-	paddingPropsValue,
-	paddingPropsConfig,
-	horizontalAlignConfig,
-	verticalAlignConfig
-} from './playgroundProps';
+import { getDefaultPropsValue, getPropsConfig } from './playgroundProps';
+
 export default {
 	components: {
 		GreyBox,
@@ -30,17 +26,10 @@ export default {
 		LayoutAlign,
 	},
 	data() {
+		const propsName = ['padding', 'horizontalAlign', 'verticalAlign'];
 		return {
-			propsValue: {
-				...paddingPropsValue,
-				horizontalAlign: 'left',
-				verticalAlign: 'top',
-			},
-			propsConfig: {
-				...paddingPropsConfig,
-				...horizontalAlignConfig,
-				...verticalAlignConfig,
-			},
+			propsValue: getDefaultPropsValue(propsName),
+			propsConfig: getPropsConfig(propsName),
 		};
 	},
 }
