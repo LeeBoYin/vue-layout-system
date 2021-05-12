@@ -6,12 +6,11 @@
 		>
 			<GreyBox>
 				<LayoutList v-bind="propsValue">
-					<GreyBox
-						v-for="i in 5"
-						:key="i"
-						:size="['s', 'm'][i % 2]"
-						:name="i"
-					/>
+					<GreyBox name="Lorem" size="s" width="initial" />
+					<GreyBox name="ipsum" size="s" width="initial" />
+					<GreyBox name="dolor" size="s" width="initial" />
+					<GreyBox name="sit" size="s" width="initial" />
+					<GreyBox name="amet" size="s" width="initial" />
 				</LayoutList>
 			</GreyBox>
 		</PropsPlayground>
