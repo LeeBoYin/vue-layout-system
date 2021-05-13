@@ -9,19 +9,19 @@ If your project doesn't have a build process, you still can easily customize the
 ```html
 <link rel="stylesheet" href="https://unpkg.com/vue-layout-system/dist/vue-layout-system.css">
 <style>
-    :root {
-        --layout-spacing-0: 0px;
-        --layout-spacing-1: 2px;
-        --layout-spacing-2: 4px;
-        --layout-spacing-3: 6px;
-        --layout-spacing-4: 8px;
-        --layout-spacing-5: 12px;
-        --layout-spacing-6: 16px;
-        --layout-spacing-7: 24px;
-        --layout-spacing-8: 32px;
-        --layout-spacing-9: 40px;
-        --layout-spacing-10: 60px;
-    }
+	:root {
+		--layout-spacing-0: 0px;
+		--layout-spacing-1: 2px;
+		--layout-spacing-2: 4px;
+		--layout-spacing-3: 6px;
+		--layout-spacing-4: 8px;
+		--layout-spacing-5: 12px;
+		--layout-spacing-6: 16px;
+		--layout-spacing-7: 24px;
+		--layout-spacing-8: 32px;
+		--layout-spacing-9: 40px;
+		--layout-spacing-10: 60px;
+	}
 </style>
 ```
 
@@ -86,7 +86,7 @@ and use them in layout components.
 
 ```vue
 <LayoutList padding="xs" gap="xl">
-    ...
+	...
 </LayoutList>
 ```
 
@@ -110,6 +110,6 @@ and use them in layout components.
 
 ```vue
 <LayoutList padding="loose" gap="tight">
-    ...
+	...
 </LayoutList>
 ```
