@@ -1,7 +1,11 @@
 <template>
 	<div
 		class="grey-box"
-		:class="[textCenterClass, solidClass]"
+		:class="[
+			textCenterClass,
+			solidClass,
+			inlineClass,
+		]"
 		:style="sizeStyle"
 	>
 		<slot>{{ name }}</slot>
@@ -28,6 +32,10 @@ export default {
 			default: null, // s, m, l
 		},
 		solid: {
+			type: Boolean,
+			default: false,
+		},
+		inline: {
 			type: Boolean,
 			default: false,
 		},
@@ -66,6 +74,9 @@ export default {
 		solidClass() {
 			return this.solid ? 'grey-box--solid' : null;
 		},
+		inlineClass() {
+			return this.inline ? 'grey-box--inline' : null;
+		},
 	},
 }
 </script>
@@ -80,6 +91,12 @@ export default {
 	}
 	&--solid {
 		background-color: #e5e5e5;
+	}
+	&--inline {
+		display: inline-block;
+	};
+	&--inline#{&}--text-center {
+		display: inline-grid;
 	}
 }
 </style>

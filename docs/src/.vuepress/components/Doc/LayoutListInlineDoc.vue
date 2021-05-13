@@ -4,13 +4,16 @@
 			v-model="propsValue"
 			:props-config="propsConfig"
 		>
-			<GreyBox>
+			<GreyBox inline>
 				<LayoutListInline v-bind="propsValue">
 					<GreyBox name="Lorem" size="m" width="initial" />
 					<GreyBox name="ipsum" size="s" width="initial" />
 					<GreyBox name="dolor" size="m" width="initial" />
 					<GreyBox name="sit" size="s" width="initial" />
 					<GreyBox name="amet" size="m" width="initial" />
+					<GreyBox name="consectetur" size="s" width="initial" />
+					<GreyBox name="adipiscing" size="m" width="initial" />
+					<GreyBox name="elit" size="s" width="initial" />
 				</LayoutListInline>
 			</GreyBox>
 		</PropsPlayground>
