@@ -1,6 +1,5 @@
 # Overview
-
-Vue Layout System is a pack of Vue components, each one layout component solves one specific problem while sharing similar pattern with other layout components. 
+Vue Layout System is a pack of Vue components, where each one layout component solves one specific problem while sharing similar pattern with the others. 
 
 - Your contents are always placed inside `slots`
 - Padding, gap size and alignment are set with corresponding `props`
@@ -8,8 +7,7 @@ Vue Layout System is a pack of Vue components, each one layout component solves 
  
 
 ## Padding Props
-
-All layout components share the same padding props.
+Padding generates space around a layout's content. All layout components share the same padding props.
 
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
@@ -40,7 +38,7 @@ When the padding sizes on opposite sides need to be symmetric, it is easy to com
 ```
 
 ### Padding on each side
-Padding generates space around an layout's content. You can set padding size for each side of the layout component.
+You can also set padding size for each side of a layout component.
 
 ```vue
 <LayoutList

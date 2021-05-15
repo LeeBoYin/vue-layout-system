@@ -35,7 +35,7 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: 'Guide',
+        text: 'Get Started',
         link: '/guide/',
       },
       {

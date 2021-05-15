@@ -1,4 +1,4 @@
-# Guide
+# Get Started
 
 ## Overview
 Vue Layout System is a pack of components that solve daily layout problems.
@@ -45,4 +45,13 @@ Alternatively, if your project doesn't have a build process, you can load Vue La
 ```html
 <script src="https://unpkg.com/vue-layout-system"></script>
 <link rel="stylesheet" href="https://unpkg.com/vue-layout-system/dist/vue-layout-system.css">
+
+<div id="app">
+	<!-- Note that components use kebab-case when installed with CDN -->
+	<layout-list>
+		...
+	</layout-list>
+</div>
 ```
+
+Next, learn how [Layout Components](/components) work to solve layout problems.
