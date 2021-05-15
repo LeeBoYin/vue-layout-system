@@ -68,7 +68,7 @@ export default {
 		},
 		textCenterClass() {
 			if(this.name !== null && !this.$slots.default) {
-				return 'grey-box--text-center';
+				return 'grey-box--text-content';
 			}
 		},
 		solidClass() {
@@ -85,9 +85,13 @@ export default {
 .grey-box {
 	background-color: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
-	&--text-center {
+	overflow: hidden;
+	&--text-content {
 		display: grid;
 		place-content: center;
+		overflow: hidden;
+		/*white-space: nowrap;*/
+		/*text-overflow: ellipsis;*/
 	}
 	&--solid {
 		background-color: #e5e5e5;
@@ -95,7 +99,7 @@ export default {
 	&--inline {
 		display: inline-block;
 	};
-	&--inline#{&}--text-center {
+	&--inline#{&}--text-content {
 		display: inline-grid;
 	}
 }

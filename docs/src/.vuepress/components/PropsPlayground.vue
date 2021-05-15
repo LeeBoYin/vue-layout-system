@@ -6,7 +6,8 @@
 			'props-playground--transition': isTransition,
 		}"
 		:style="{
-			width: playgroundWidth && playgroundWidth + 'px',
+			'width': playgroundWidth && playgroundWidth + 'px',
+			'max-width': playgroundMaxWidth + 'px',
 		}"
 	>
 		<LayoutFlexRow>
@@ -16,12 +17,12 @@
 						<LayoutList
 							v-for="(propConfig, propName) in propsConfig"
 							:key="propName"
-							gap="2"
+							gap="3"
 							horizontal-align="left"
 						>
 							<div>
 								<b>
-									{{ propName }}
+									{{ propConfig.title || propName }}
 								</b>
 								<template v-if="['range'].indexOf(propConfig.type) !== -1">
 									: {{ propsValue[propName] }}
@@ -61,6 +62,7 @@
 import InputBoolean from './PropsPlaygroundForm/InputBoolean';
 import InputRange from './PropsPlaygroundForm/InputRange';
 import InputSelect from './PropsPlaygroundForm/InputSelect';
+import ToggleSwitch from './PropsPlaygroundForm/ToggleSwitch';
 import LayoutAlign from '@layout-system-components/LayoutAlign';
 import LayoutList from '@layout-system-components/LayoutList';
 import LayoutListInline from '@layout-system-components/LayoutListInline';
@@ -71,6 +73,7 @@ export default {
 		InputBoolean,
 		InputRange,
 		InputSelect,
+		ToggleSwitch,
 		LayoutAlign,
 		LayoutList,
 		LayoutListInline,
@@ -91,6 +94,7 @@ export default {
 			isResizing: false,
 			isResultOverflow: false,
 			isTransition: false,
+			playgroundMaxWidth: null,
 			playgroundWidth: null,
 			resizeStartPlaygroundWidth: null,
 			resizeStartX: null,
@@ -115,18 +119,19 @@ export default {
 		});
 	},
 	mounted() {
+		this.playgroundMaxWidth = this.$el.clientWidth;
 		document.addEventListener('mousemove', this.onDragHandle);
 		document.addEventListener('touchmove', this.onDragHandle);
 		document.addEventListener('mouseup', this.onDragHandleEnd);
 		document.addEventListener('touchend', this.onDragHandleEnd);
-		window.addEventListener('resize', this.checkWidthByResultContent);
+		window.addEventListener('resize', this.onWindowResize);
 	},
 	beforeDestroy() {
 		document.removeEventListener('mousemove', this.onDragHandle);
 		document.removeEventListener('touchmove', this.onDragHandle);
 		document.removeEventListener('mouseup', this.onDragHandleEnd);
 		document.removeEventListener('touchend', this.onDragHandleEnd);
-		window.removeEventListener('resize', this.checkWidthByResultContent);
+		window.removeEventListener('resize', this.onWindowResize);
 	},
 	methods: {
 		getInputComponent(type) {
@@ -134,6 +139,7 @@ export default {
 				boolean: InputBoolean,
 				range: InputRange,
 				select: InputSelect,
+				switch: ToggleSwitch,
 			}[type];
 		},
 		onDragHandleStart(e) {
@@ -174,6 +180,12 @@ export default {
 				})
 			}
 		},
+		onWindowResize() {
+			this.playgroundWidth = null;
+			this.$nextTick(() => {
+				this.playgroundMaxWidth = this.$el.clientWidth;
+			});
+		},
 		checkWidthByResultContent() {
 			this.isResultOverflow = false;
 			if(this.$el.clientWidth < this.$el.scrollWidth) {
@@ -211,6 +223,7 @@ $border-style: 1px solid #e2e2e2;
 	&__handle {
 		border-left: $border-style;
 		color: #999;
+		background-color: #ffffff;
 		width: 16px;
 		cursor: ew-resize;
 		user-select: none;
