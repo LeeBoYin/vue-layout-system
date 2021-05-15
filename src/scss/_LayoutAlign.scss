@@ -1,6 +1,7 @@
 @import 'layoutMixin';
 .layout-align {
 	display: grid;
+	grid-template-columns: minmax(0, auto); // set column min-width = 0
 	&--vertical-align-top {
 		align-content: start;
 	}

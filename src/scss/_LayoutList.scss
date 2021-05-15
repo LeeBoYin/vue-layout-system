@@ -2,6 +2,7 @@
 .layout-list {
 	--layout-list-gap: 0px;
 	display: grid;
+	grid-template-columns: minmax(0, auto); // set column min-width = 0
 	gap: var(--layout-list-gap);
 
 	&--horizontal-align-left {
