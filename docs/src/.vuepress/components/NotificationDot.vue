@@ -1,5 +1,5 @@
 <template functional>
-	<div class="notification-dot layout-u-content-fill-height"></div>
+	<div class="notification-dot"></div>
 </template>
 
 <style lang="scss" scoped>

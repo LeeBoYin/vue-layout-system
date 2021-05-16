@@ -12,30 +12,45 @@
 	>
 		<LayoutFlexRow>
 			<template #left>
-				<LayoutAlign padding="5" class="props-playground__controls">
-					<LayoutList gap="5">
-						<LayoutList
-							v-for="(propConfig, propName) in propsConfig"
-							:key="propName"
-							gap="3"
-							horizontal-align="left"
-						>
-							<div>
-								<b>
-									{{ propConfig.title || propName }}
-								</b>
-								<template v-if="['range'].indexOf(propConfig.type) !== -1">
-									: {{ propsValue[propName] }}
-								</template>
-							</div>
-							<component
-								:is="getInputComponent(propConfig.type)"
-								v-bind="propConfig"
-								v-model.number="propsValue[propName]"
-							/>
-						</LayoutList>
-					</LayoutList>
-				</LayoutAlign>
+				<LayoutFlexColumn
+					class="props-playground__controls"
+					padding="5"
+					gap="8"
+				>
+					<template #remain>
+						<LayoutAlign vertical-align="top">
+							<LayoutList
+								gap="5"
+							>
+								<LayoutList
+									v-for="(propConfig, propName) in propsConfig"
+									:key="propName"
+									gap="3"
+									horizontal-align="left"
+								>
+									<div>
+										<b>
+											{{ propConfig.title || propName }}
+										</b>
+										<template v-if="['range'].indexOf(propConfig.type) !== -1">
+											: {{ propsValue[propName] }}
+										</template>
+									</div>
+									<component
+										:is="getInputComponent(propConfig.type)"
+										v-bind="propConfig"
+										v-model.number="propsValue[propName]"
+									/>
+								</LayoutList>
+							</LayoutList>
+						</LayoutAlign>
+					</template>
+					<template #bottom>
+						<LayoutAlign horizontal-align="center">
+							<a style="cursor: pointer" @click="resetPropsValue">reset</a>
+						</LayoutAlign>
+					</template>
+				</LayoutFlexColumn>
 			</template>
 			<template #remain>
 				<div class="props-playground__result">
@@ -66,6 +81,7 @@ import ToggleSwitch from './PropsPlaygroundForm/ToggleSwitch';
 import LayoutAlign from '@layout-system-components/LayoutAlign';
 import LayoutList from '@layout-system-components/LayoutList';
 import LayoutListInline from '@layout-system-components/LayoutListInline';
+import LayoutFlexColumn from '@layout-system-components/LayoutFlexColumn';
 import LayoutFlexRow from '@layout-system-components/LayoutFlexRow';
 
 export default {
@@ -77,6 +93,7 @@ export default {
 		LayoutAlign,
 		LayoutList,
 		LayoutListInline,
+		LayoutFlexColumn,
 		LayoutFlexRow,
 	},
 	props: {
@@ -98,6 +115,7 @@ export default {
 			playgroundWidth: null,
 			resizeStartPlaygroundWidth: null,
 			resizeStartX: null,
+			initialValue: {},
 			propsValue: {},
 		};
 	},
@@ -114,9 +132,8 @@ export default {
 		},
 	},
 	created() {
-		Object.keys(this.value).forEach(propName => {
-			this.$set(this.propsValue, propName, this.value[propName]);
-		});
+		this.initialValue = Object.assign({}, this.value);
+		this.resetPropsValue();
 	},
 	mounted() {
 		this.playgroundMaxWidth = this.$el.clientWidth;
@@ -125,6 +142,7 @@ export default {
 		document.addEventListener('mouseup', this.onDragHandleEnd);
 		document.addEventListener('touchend', this.onDragHandleEnd);
 		window.addEventListener('resize', this.onWindowResize);
+		window.addEventListener('focus', this.onWindowResize);
 	},
 	beforeDestroy() {
 		document.removeEventListener('mousemove', this.onDragHandle);
@@ -132,6 +150,7 @@ export default {
 		document.removeEventListener('mouseup', this.onDragHandleEnd);
 		document.removeEventListener('touchend', this.onDragHandleEnd);
 		window.removeEventListener('resize', this.onWindowResize);
+		window.removeEventListener('focus', this.onWindowResize);
 	},
 	methods: {
 		getInputComponent(type) {
@@ -141,6 +160,11 @@ export default {
 				select: InputSelect,
 				switch: ToggleSwitch,
 			}[type];
+		},
+		resetPropsValue() {
+			Object.keys(this.initialValue).forEach(propName => {
+				this.$set(this.propsValue, propName, this.initialValue[propName]);
+			});
 		},
 		onDragHandleStart(e) {
 			this.isResizing = true;

@@ -138,13 +138,13 @@ export default {
 			return classList;
 		},
 		getHorizontalAlignClass(componentClass) {
-			if(['left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
+			if(['default', 'left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
 				return `${ componentClass }--horizontal-align-${ this.horizontalAlign }`;
 			}
 			return null;
 		},
 		getVerticalAlignClass(componentClass) {
-			if(['top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
+			if(['default', 'top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
 				return `${ componentClass }--vertical-align-${ this.verticalAlign }`;
 			}
 			return null;

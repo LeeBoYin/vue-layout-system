@@ -43,8 +43,8 @@ export default {
 	right: 0;
 	bottom: 0;
 	background-color: #ccc;
-	-webkit-transition: .4s;
-	transition: .4s;
+	-webkit-transition: .1s;
+	transition: .1s;
 }
 
 .slider:before {
@@ -55,8 +55,8 @@ export default {
 	left: 2px;
 	bottom: 2px;
 	background-color: white;
-	-webkit-transition: .4s;
-	transition: .4s;
+	-webkit-transition: .1s;
+	transition: .1s;
 }
 
 input:checked + .slider {

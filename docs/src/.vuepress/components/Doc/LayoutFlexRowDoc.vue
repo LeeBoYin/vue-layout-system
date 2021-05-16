@@ -12,9 +12,6 @@
 						</template>
 						<template slot="remain">
 							<GreyBox name="remain" />
-<!--							<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-->
-<!--								remain remain remain remain remain-->
-<!--							</div>-->
 						</template>
 						<template slot="right">
 							<GreyBox size="m" name="right" />

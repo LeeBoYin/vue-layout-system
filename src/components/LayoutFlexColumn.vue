@@ -10,7 +10,7 @@
 		<div v-if="$slots.top" class="layout-flex-column__top">
 			<slot name="top"></slot>
 		</div>
-		<div class="layout-flex-column__remain layout-u-content-fill-height">
+		<div class="layout-flex-column__remain">
 			<slot name="remain"></slot>
 		</div>
 		<div v-if="$slots.bottom" class="layout-flex-column__bottom">

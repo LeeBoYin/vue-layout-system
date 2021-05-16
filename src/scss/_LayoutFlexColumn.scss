@@ -15,6 +15,7 @@
 	}
 	&__remain {
 		flex: 1 1 auto;
+		@include content-fill-height;
 	}
 	&--horizontal-align-left {
 		align-items: flex-start;
@@ -22,7 +23,7 @@
 	&--horizontal-align-center {
 		align-items: center;
 	}
-	&--horizontal-align-right{
+	&--horizontal-align-right {
 		align-items: flex-end;
 	}
 

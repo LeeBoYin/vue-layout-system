@@ -1,3 +1,5 @@
+@import 'layoutMixin';
+
 @each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
 	$spacing-size: var(--layout-spacing-#{ $layout-spacing-key });
 	.layout-u {
@@ -52,11 +54,7 @@
 }
 
 .layout-u-content-fill-height {
-	display: flex;
-	> *:first-child:last-child {
-		flex: 1;
-		height: auto;
-	}
+	@include content-fill-height;
 }
 
 .layout-u-position-relative {
