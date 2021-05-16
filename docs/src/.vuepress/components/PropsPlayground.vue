@@ -53,7 +53,7 @@
 				</LayoutFlexColumn>
 			</template>
 			<template #remain>
-				<div class="props-playground__result">
+				<div ref="result" class="props-playground__result">
 					<slot />
 				</div>
 			</template>
@@ -125,6 +125,13 @@ export default {
 			handler() {
 				const newValue = Object.assign({}, this.value, this.propsValue);
 				this.$emit('input', newValue);
+
+				// workaround: enforce result content repainting to fix Safari bug
+				// Safari bug: changing CSS grid gap doesn't trigger repainting
+				this.$refs.result.style.marginRight = '0.1px';
+				setTimeout(() => {
+					this.$refs.result.style.marginRight = '';
+				}, 0);
 			},
 		},
 		value() {
