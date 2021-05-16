@@ -48,8 +48,10 @@
 							<template #left>
 								<div class="layout-u-position-relative">
 									<Avatar />
-									<LayoutAbsolute padding="1">
-										<template #topRight>
+									<LayoutAbsolute
+										:padding="propsValue.notificationPadding"
+									>
+										<template v-slot:[propsValue.notificationPosition]>
 											<NotificationDot v-if="!message.read" />
 										</template>
 									</LayoutAbsolute>
@@ -114,6 +116,11 @@ import LayoutListInline from '@layout-system-components/LayoutListInline';
 import LayoutFlexColumn from '@layout-system-components/LayoutFlexColumn';
 import LayoutFlexRow from '@layout-system-components/LayoutFlexRow';
 import PropsPlayground from '../PropsPlayground';
+import {
+	absolutePositionSelectConfig,
+	spacingRangeConfig,
+} from './playgroundProps';
+
 export default {
 	components: {
 		Avatar,
@@ -131,7 +138,7 @@ export default {
 	data() {
 		return {
 			propsValue: {
-				listGap: 8,
+				listGap: 5,
 				listPaddingX: 5,
 				listPaddingY: 5,
 				messagePaddingX: 5,
@@ -139,64 +146,51 @@ export default {
 				messageAvatarGap: 5,
 				messageContentGap: 3,
 				messageStatusGap: 3,
+				notificationPadding: 1,
+				notificationPosition: 'topRight',
 				debug: false,
 			},
 			propsConfig: {
 				listGap: {
 					title: 'List gap',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				listPaddingX: {
 					title: 'List paddingX',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				listPaddingY: {
 					title: 'List paddingY',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				messagePaddingX: {
 					title: 'Message paddingX',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				messagePaddingY: {
 					title: 'Message paddingY',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				messageAvatarGap: {
 					title: 'Message avatar gap',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				messageContentGap: {
 					title: 'Message content gap',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
 				},
 				messageStatusGap: {
 					title: 'Message status gap',
-					type: 'range',
-					max: 10,
-					min: 0,
-					step: 1,
+					...spacingRangeConfig,
+				},
+				notificationPadding: {
+					title: 'Notification Padding',
+					...spacingRangeConfig,
+					max: 5,
+				},
+				notificationPosition: {
+					title: 'Notification position',
+					...absolutePositionSelectConfig,
 				},
 				debug: {
 					title: 'Highlight layouts',

@@ -1,3 +1,35 @@
+const spacingRangeConfig = {
+	type: 'range',
+	max: 10,
+	min: 0,
+	step: 1,
+};
+
+const horizontalAlignSelectConfig = {
+	type: 'select',
+	options: ['default', 'left', 'center', 'right'],
+};
+
+const verticalAlignSelectConfig = {
+	type: 'select',
+	options: ['default', 'top', 'center', 'bottom'],
+};
+
+const absolutePositionSelectConfig = {
+	type: 'select',
+	options: [
+		'topLeft',
+		'top',
+		'topRight',
+		'right',
+		'bottomRight',
+		'bottom',
+		'bottomLeft',
+		'left',
+		'center',
+	],
+};
+
 const playgroundProps = {
 	padding: {
 		propsValue: {
@@ -7,30 +39,10 @@ const playgroundProps = {
 			paddingRight: 5,
 		},
 		propsConfig: {
-			paddingTop: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
-			paddingBottom: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
-			paddingLeft: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
-			paddingRight: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
+			paddingTop: spacingRangeConfig,
+			paddingBottom: spacingRangeConfig,
+			paddingLeft: spacingRangeConfig,
+			paddingRight: spacingRangeConfig,
 		},
 	},
 	gap: {
@@ -38,12 +50,7 @@ const playgroundProps = {
 			gap: 5,
 		},
 		propsConfig: {
-			gap: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
+			gap: spacingRangeConfig,
 		},
 	},
 	gapXY: {
@@ -52,18 +59,8 @@ const playgroundProps = {
 			gapY: 5,
 		},
 		propsConfig: {
-			gapX: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
-			gapY: {
-				type: 'range',
-				max: 10,
-				min: 0,
-				step: 1,
-			},
+			gapX: spacingRangeConfig,
+			gapY: spacingRangeConfig,
 		},
 	},
 	horizontalAlign: {
@@ -71,10 +68,7 @@ const playgroundProps = {
 			horizontalAlign: 'default',
 		},
 		propsConfig: {
-			horizontalAlign: {
-				type: 'select',
-				options: ['default', 'left', 'center', 'right'],
-			},
+			horizontalAlign: horizontalAlignSelectConfig,
 		},
 	},
 	verticalAlign: {
@@ -82,10 +76,15 @@ const playgroundProps = {
 			verticalAlign: 'default',
 		},
 		propsConfig: {
-			verticalAlign: {
-				type: 'select',
-				options: ['default', 'top', 'center', 'bottom'],
-			},
+			verticalAlign: verticalAlignSelectConfig,
+		},
+	},
+	absoluteSlotName: {
+		propsValue: {
+			absoluteSlotName: 'topLeft',
+		},
+		propsConfig: {
+			absoluteSlotName: absolutePositionSelectConfig,
 		},
 	},
 };
@@ -99,3 +98,10 @@ export function getDefaultPropsValue(propNames) {
 export function getPropsConfig(propNames) {
 	return assign({}, ...map(pick(playgroundProps, propNames), 'propsConfig'));
 }
+
+export {
+	spacingRangeConfig,
+	horizontalAlignSelectConfig,
+	verticalAlignSelectConfig,
+	absolutePositionSelectConfig,
+};
