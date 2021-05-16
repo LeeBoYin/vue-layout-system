@@ -4,7 +4,8 @@
 		:class="[
 			getHorizontalAlignClass('layout-flex-column'),
 			getGapClass('layout-flex-column'),
-			paddingClass
+			paddingClass,
+			noRemainClass,
 		]"
 	>
 		<div v-if="$slots.top" class="layout-flex-column__top">
@@ -25,5 +26,10 @@ export default {
 	mixins: [
 		layoutMixin,
 	],
+	computed: {
+		noRemainClass() {
+			return !this.$slots.remain ? 'layout-flex-column--no-remain' : null;
+		},
+	},
 };
 </script>

@@ -12,13 +12,19 @@
 	&__right {
 		margin-left: var(--layout-flex-row-gap);
 	}
+	&--no-remain > &__left {
+		margin-right: calc(0.5 * var(--layout-flex-row-gap));
+	}
+	&--no-remain > &__right {
+		margin-left: calc(0.5 * var(--layout-flex-row-gap));
+	}
 	&__remain {
 		flex: 1 1 auto;
 		min-width: 0;
 	}
-	&--vertical-align-default &__left,
-	&--vertical-align-default &__right,
-	&--vertical-align-default &__remain {
+	&--vertical-align-default > &__left,
+	&--vertical-align-default > &__right,
+	&--vertical-align-default > &__remain {
 		@include content-fill-height;
 	}
 	&--vertical-align-top {

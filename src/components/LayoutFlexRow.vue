@@ -4,7 +4,8 @@
 		:class="[
 			getVerticalAlignClass('layout-flex-row'),
 			getGapClass('layout-flex-row'),
-			paddingClass
+			paddingClass,
+			noRemainClass,
 		]"
 	>
 		<div
@@ -33,5 +34,10 @@ export default {
 	mixins: [
 		layoutMixin,
 	],
+	computed: {
+		noRemainClass() {
+			return !this.$slots.remain ? 'layout-flex-row--no-remain' : null;
+		},
+	},
 };
 </script>

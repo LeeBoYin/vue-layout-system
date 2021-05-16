@@ -13,8 +13,15 @@
 	&__bottom {
 		margin-top: var(--layout-flex-column-gap);
 	}
+	&--no-remain > &__top {
+		margin-bottom: calc(0.5 * var(--layout-flex-column-gap));
+	}
+	&--no-remain > &__bottom {
+		margin-top: calc(0.5 * var(--layout-flex-column-gap));
+	}
 	&__remain {
 		flex: 1 1 auto;
+		min-height: 0;
 		@include content-fill-height;
 	}
 	&--horizontal-align-left {

@@ -20,7 +20,7 @@
 					<template #remain>
 						<LayoutAlign vertical-align="top">
 							<LayoutList
-								gap="5"
+								gap="6"
 							>
 								<LayoutList
 									v-for="(propConfig, propName) in propsConfig"
