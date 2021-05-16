@@ -42,7 +42,7 @@
 						<LayoutFlexRow
 							:padding-x="propsValue.messagePaddingX"
 							:padding-y="propsValue.messagePaddingY"
-							:gap="propsValue.messageAvatarGap"
+							:gap="propsValue.userAvatarGap"
 							vertical-align="top"
 						>
 							<template #left>
@@ -60,13 +60,13 @@
 							<template #remain>
 								<LayoutList :gap="propsValue.messageContentGap">
 									<LayoutFlexRow
-										:gap="propsValue.messageStatusGap"
+										:gap="propsValue.userStatusGap"
 										vertical-align="center"
 									>
 										<template #remain>
 											<LayoutAlign horizontal-align="left">
 												<LayoutFlexRow
-													:gap="propsValue.messageStatusGap"
+													:gap="propsValue.userStatusGap"
 													vertical-align="center"
 												>
 													<template #remain>
@@ -143,9 +143,9 @@ export default {
 				listPaddingY: 5,
 				messagePaddingX: 5,
 				messagePaddingY: 5,
-				messageAvatarGap: 5,
 				messageContentGap: 3,
-				messageStatusGap: 3,
+				userAvatarGap: 5,
+				userStatusGap: 3,
 				notificationPadding: 1,
 				notificationPosition: 'topRight',
 				debug: false,
@@ -171,16 +171,16 @@ export default {
 					title: 'Message paddingY',
 					...spacingRangeConfig,
 				},
-				messageAvatarGap: {
-					title: 'Message avatar gap',
-					...spacingRangeConfig,
-				},
 				messageContentGap: {
 					title: 'Message content gap',
 					...spacingRangeConfig,
 				},
-				messageStatusGap: {
-					title: 'Message status gap',
+				userAvatarGap: {
+					title: 'User avatar gap',
+					...spacingRangeConfig,
+				},
+				userStatusGap: {
+					title: 'User status gap',
 					...spacingRangeConfig,
 				},
 				notificationPadding: {

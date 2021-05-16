@@ -1,30 +1,6 @@
 # Customize
 
-Vue Layout System applies a consistent spacing rule across all layout components. It is built on top of Sass variables and CSS custom properties. To match the design of your products, you may customize spacing scales and values by overriding either CSS custom properties or Sass variables.
-
-## CSS custom properties
-
-If your project doesn't have a build process, you still can easily customize the space values by overriding the default values of the CSS custom properties. Simply set your own space values after the css file link.
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/vue-layout-system/dist/vue-layout-system.css">
-<style>
-	:root {
-		--layout-spacing-0: 0px;
-		--layout-spacing-1: 2px;
-		--layout-spacing-2: 4px;
-		--layout-spacing-3: 6px;
-		--layout-spacing-4: 8px;
-		--layout-spacing-5: 12px;
-		--layout-spacing-6: 16px;
-		--layout-spacing-7: 24px;
-		--layout-spacing-8: 32px;
-		--layout-spacing-9: 40px;
-		--layout-spacing-10: 60px;
-	}
-</style>
-```
-
+Vue Layout System applies a consistent spacing system across all layout components. It is built on top of Sass variables and CSS custom properties. To match the design of your products, you may customize spacing scales and values by overriding either CSS custom properties or Sass variables.
 
 ## Sass variables
 
@@ -66,7 +42,9 @@ $layout-spacing-map: (
 
 ### Use string as spacing scales
 
-You may set spacing scale from `xxs` to `xxl`
+Besides using integers as spacing scales, it is possible to define the scale names with any strings by changing the keys in the Sass map.
+
+For example, you may set spacing scale from `xxs` to `xxl`
 
 ```scss
 $layout-spacing-map: (
@@ -82,7 +60,7 @@ $layout-spacing-map: (
 @import 'node_modules/vue-layout-system/src/scss/main.scss';
 ```
 
-and use them in layout components.
+and use them in the layout components.
 
 ```vue
 <LayoutList padding="xs" gap="xl">
@@ -90,7 +68,7 @@ and use them in layout components.
 </LayoutList>
 ```
 
-You may set spacing scale from `tightest` to `loosest`
+Likely, you may set spacing scale from `tightest` to `loosest`
 
 ```scss
 $layout-spacing-map: (
@@ -106,10 +84,33 @@ $layout-spacing-map: (
 @import 'node_modules/vue-layout-system/src/scss/main.scss';
 ```
 
-and use them in layout components.
+and use them in the layout components.
 
 ```vue
 <LayoutList padding="loose" gap="tight">
 	...
 </LayoutList>
+```
+
+## CSS custom properties
+
+If your project doesn't have a build process, you still can easily customize the space values by overriding the default values of the CSS custom properties. Simply set your own space values after the css file link.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/vue-layout-system/dist/vue-layout-system.css">
+<style>
+	:root {
+		--layout-spacing-0: 0px;
+		--layout-spacing-1: 2px;
+		--layout-spacing-2: 4px;
+		--layout-spacing-3: 6px;
+		--layout-spacing-4: 8px;
+		--layout-spacing-5: 12px;
+		--layout-spacing-6: 16px;
+		--layout-spacing-7: 24px;
+		--layout-spacing-8: 32px;
+		--layout-spacing-9: 40px;
+		--layout-spacing-10: 60px;
+	}
+</style>
 ```

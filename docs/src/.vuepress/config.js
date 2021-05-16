@@ -48,10 +48,10 @@ module.exports = {
         text: 'Customize',
         link: '/customize/',
       },
-      {
-        text: 'Showcases',
-        link: '/showcases/',
-      },
+      // {
+      //   text: 'Showcases',
+      //   link: '/showcases/',
+      // },
     ],
     sidebar: {
       '/components/': [
@@ -67,6 +67,13 @@ module.exports = {
             'LayoutList',
             'LayoutListInline',
           ]
+        },
+        {
+          title: 'Tools',
+          collapsable: false,
+          children: [
+              'UtilityClass',
+          ],
         }
       ],
       '/': 'auto',

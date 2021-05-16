@@ -6,7 +6,7 @@
 		>
 			<GreyBox height="250" class="layout-u-content-fill-height">
 				<LayoutAlign v-bind="propsValue">
-					<GreyBox size="m" name="content" />
+					<GreyBox size="m" width="initial" name="content" />
 				</LayoutAlign>
 			</GreyBox>
 		</PropsPlayground>

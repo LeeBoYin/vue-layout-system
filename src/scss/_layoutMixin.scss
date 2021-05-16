@@ -1,6 +1,7 @@
 @mixin content-fill-height {
 	display: flex;
-	> *:first-child:last-child {
+	flex-direction: column;
+	> * {
 		flex: 1 1 auto;
 		height: auto;
 	}

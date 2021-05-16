@@ -20,7 +20,7 @@
 - You can use multiple slots within one `LayoutAbsolute` at the same time
 
 ```vue live
-<div style="position: relative;">
+<div class="layout-u-position-relative">
 	<img
 		src="https://picsum.photos/600/400?grayscale"
 		style="aspect-ratio: 4 / 3; width: 100%; vertical-align: middle;"

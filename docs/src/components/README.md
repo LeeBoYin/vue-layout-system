@@ -4,7 +4,13 @@ Vue Layout System is a pack of Vue components, where each one layout component s
 - Your contents are always placed inside `slots`
 - Padding, gap size and alignment are set with corresponding `props`
 - Layout components can be nested in other layout components. Just like LEGO bricks, combination is the key to creating various types of layout.
- 
+
+## Spacing System
+Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents.
+
+The default spacing scales are integers from `0` to `10`, where smaller numbers represent smaller space and larger numbers represent larger space.
+
+You can easily customize your own spacing system by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
 
 ## Padding Props
 Padding generates space around a layout's content. All layout components share the same padding props.

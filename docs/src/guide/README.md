@@ -8,14 +8,7 @@ With Vue Layout System developers are empowered to
 
 - Create various types of layout without writing CSS
 - Arrange contents in a intuitive and predictable way
-- Control space between contents precisely with one consistent spacing rule
-
-### Spacing Rule
-Vue Layout System use a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents.
-
-The default spacing rule is a range of integers from 0 to 10, where smaller numbers represent smaller space and larger numbers represent larger space.
-
-You can easily customize your own spacing rule by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
+- Control space between contents precisely with one consistent spacing system
 
 ## Installation
 
