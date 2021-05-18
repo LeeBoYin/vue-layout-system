@@ -7,7 +7,7 @@
 		}"
 		:style="{
 			'width': playgroundWidth && playgroundWidth + 'px',
-			'max-width': playgroundMaxWidth + 'px',
+			'max-width': playgroundMaxWidth && playgroundMaxWidth + 'px',
 		}"
 	>
 		<LayoutFlexRow>
@@ -116,6 +116,7 @@ export default {
 			resizeStartPlaygroundWidth: null,
 			resizeStartX: null,
 			initialValue: {},
+			windowInnerWidth: null,
 			propsValue: {},
 		};
 	},
@@ -144,6 +145,8 @@ export default {
 	},
 	mounted() {
 		this.playgroundMaxWidth = this.$el.clientWidth;
+		this.windowInnerWidth = window.innerWidth;
+
 		document.addEventListener('mousemove', this.onDragHandle);
 		document.addEventListener('touchmove', this.onDragHandle);
 		document.addEventListener('mouseup', this.onDragHandleEnd);
@@ -212,7 +215,12 @@ export default {
 			}
 		},
 		onWindowResize() {
+			if(window.innerWidth === this.windowInnerWidth) {
+				return;
+			}
+			this.windowInnerWidth = window.innerWidth;
 			this.playgroundWidth = null;
+			this.playgroundMaxWidth = null;
 			this.$nextTick(() => {
 				this.playgroundMaxWidth = this.$el.clientWidth;
 			});
@@ -237,8 +245,6 @@ export default {
 <style scoped lang="scss">
 $border-style: 1px solid #e2e2e2;
 .props-playground {
-	width: 100%;
-	max-width: 100%;
 	border: $border-style;
 	border-radius: 4px;
 	&--overflow {

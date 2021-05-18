@@ -47,4 +47,4 @@ Alternatively, if your project doesn't have a build process, you can load Vue La
 </div>
 ```
 
-Next, learn how [Layout Components](/components) work to solve layout problems.
+Next, learn how [Layout Components](/components/) work to solve layout problems.

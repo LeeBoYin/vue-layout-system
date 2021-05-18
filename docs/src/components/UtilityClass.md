@@ -18,7 +18,7 @@ In HTML, block elements expand horizontally by default, taking up the width of t
 
 `layout-u-content-fill-height` is often used in combination with `LayoutAlign` when you are aligning content vertically.
 
-See demo in [LayoutAlign](/components/LayoutAlign).
+See demo in [LayoutAlign](/components/LayoutAlign/).
 
 ```vue
 <div class="layout-u-content-fill-height" style="height: 100px">
@@ -32,7 +32,7 @@ See demo in [LayoutAlign](/components/LayoutAlign).
 
 `layout-u-content-fill-height` is often used in combination with `LayoutFlexColumn` when you are diving a vertical space into top, bottom and remaining spaces.
 
-See demo in [LayoutFlexColumn](/components/LayoutFlexColumn).
+See demo in [LayoutFlexColumn](/components/LayoutFlexColumn/).
 
 ```vue
 <div class="layout-u-content-fill-height" style="height: 100px">
@@ -50,7 +50,7 @@ See demo in [LayoutFlexColumn](/components/LayoutFlexColumn).
 
 `layout-u-position-relative` is usually used in combination with `LayoutAbsolute`, since `LayoutAbsolute` must be placed in a relative positioned element to work properly.
 
-See demo in [LayoutAbsolute](/components/LayoutAbsolute).
+See demo in [LayoutAbsolute](/components/LayoutAbsolute/).
 
 ```vue
 <div class="layout-u-position-relative">
