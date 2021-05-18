@@ -4,7 +4,7 @@
 		:class="[
 			getVerticalAlignClass('layout-align'),
 			getHorizontalAlignClass('layout-align'),
-			paddingClass
+			paddingClass,
 		]"
 	>
 		<div class="layout-align__content">

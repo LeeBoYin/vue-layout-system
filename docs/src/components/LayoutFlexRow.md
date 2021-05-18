@@ -1,6 +1,6 @@
 # LayoutFlexRow
 
-`LayoutFlexRow` divides one space into 3 sections horizontally, letting you place contents at left, right and the remaining space.
+`LayoutFlexRow` divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
 
 <Doc-LayoutFlexRowDoc />
 

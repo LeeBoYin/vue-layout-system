@@ -1,6 +1,6 @@
 # LayoutList
 
-`LayoutList` arranges contents vertically
+`LayoutList` arranges contents vertically.
 
 <Doc-LayoutListDoc />
 

@@ -1,6 +1,6 @@
 # LayoutFlexColumn
 
-`LayoutFlexColumn` divides one space into 3 sections vertically, letting you place contents at top, bottom and the remaining space.
+`LayoutFlexColumn` divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
 
 <Doc-LayoutFlexColumnDoc />
 

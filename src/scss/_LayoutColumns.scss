@@ -1,0 +1,40 @@
+@import 'layoutMixin';
+.layout-columns {
+	display: grid;
+	--layout-columns-gap: 0px;
+	--layout-columns-gap-x: var(--layout-columns-gap);
+	--layout-columns-gap-y: var(--layout-columns-gap);
+	--layout-columns-column-min-width: 0px;
+	grid-template-columns: repeat(auto-fit, minmax(var(--layout-columns-column-min-width), 1fr));
+	gap: var(--layout-columns-gap-y) var(--layout-columns-gap-x);
+	&--vertical-align-default {
+		align-items: stretch;
+	}
+	&--vertical-align-top {
+		align-items: start;
+	}
+	&--vertical-align-center {
+		align-items: center;
+	}
+	&--vertical-align-bottom {
+		align-items: end;
+	}
+
+	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
+		&--gap-#{ $layout-spacing-key } {
+			--layout-columns-gap: #{ $gap-size };
+		}
+	}
+	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
+		&--gap-x-#{ $layout-spacing-key } {
+			--layout-columns-gap-x: #{ $gap-size };
+		}
+		&--gap-y-#{ $layout-spacing-key } {
+			--layout-columns-gap-y: #{ $gap-size };
+		}
+	}
+
+	@include debug-highlight('LayoutColumns', brown);
+}
