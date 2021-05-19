@@ -206,12 +206,15 @@ export default {
 		onDoubleClickHandle() {
 			if(this.playgroundWidth !== null) {
 				this.isTransition = true;
-				this.playgroundWidth = null;
 				this.$el.addEventListener('transitionend', () => {
 					this.isTransition = false;
+					this.playgroundWidth = null;
 				}, {
 					once: true,
-				})
+				});
+				this.$nextTick(() => {
+					this.playgroundWidth = this.playgroundMaxWidth;
+				});
 			}
 		},
 		onWindowResize() {
