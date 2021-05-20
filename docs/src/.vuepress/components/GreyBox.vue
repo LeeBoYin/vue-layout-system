@@ -6,7 +6,7 @@
 			solidClass,
 			inlineClass,
 		]"
-		:style="sizeStyle"
+		:style="[sizeStyle, sizeHintStyle]"
 	>
 		<slot>{{ name }}</slot>
 	</div>
@@ -66,6 +66,17 @@ export default {
 				height: (height !== null && Number.isInteger(+height)) ? `${ height }px` : height,
 			};
 		},
+		sizeHint() {
+			return [
+				(this.sizeStyle.width === null || this.sizeStyle.width === 'initial')  ? 'auto' : this.sizeStyle.width,
+				(this.sizeStyle.height === null || this.sizeStyle.height === 'initial')  ? 'auto' : this.sizeStyle.height,
+			].join(' x ');
+		},
+		sizeHintStyle() {
+			return {
+				'--grey-box-size-hint': `'${ this.sizeHint }'`,
+			};
+		},
 		textCenterClass() {
 			if(this.name !== null && !this.$slots.default) {
 				return 'grey-box--text-content';
@@ -83,6 +94,7 @@ export default {
 
 <style scoped lang="scss">
 .grey-box {
+	position: relative;
 	background-color: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 	overflow: hidden;
@@ -99,6 +111,22 @@ export default {
 	};
 	&--inline#{&}--text-content {
 		display: inline-grid;
+	}
+	&--text-content:hover:before {
+		display: block;
+		content: var(--grey-box-size-hint);
+		position: absolute;
+		font-size: 12px;
+		line-height: 1;
+		text-align: right;
+		top: 0;
+		right: 0;
+		left: 0;
+		padding: 4px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: rgba(0, 0, 0, 0.4);
 	}
 }
 </style>
