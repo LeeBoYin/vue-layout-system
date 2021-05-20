@@ -1,25 +1,44 @@
 @import 'layoutMixin';
 .layout-columns {
-	display: grid;
 	--layout-columns-gap: 0px;
 	--layout-columns-gap-x: var(--layout-columns-gap);
 	--layout-columns-gap-y: var(--layout-columns-gap);
-	--layout-columns-column-min-width: 0px;
-	grid-template-columns: repeat(auto-fit, minmax(var(--layout-columns-column-min-width), 1fr));
-	gap: var(--layout-columns-gap-y) var(--layout-columns-gap-x);
-	&--vertical-align-default {
+
+	// flow direction row
+	&--flow-direction-row {
+		display: grid;
+		grid-template-columns: repeat(var(--layout-columns-column-count, auto-fit), minmax(var(--layout-columns-content-min-width, 0), 1fr));
+		gap: var(--layout-columns-gap-y) var(--layout-columns-gap-x);
+		justify-content: stretch;
+	}
+	&--flow-direction-row#{&}--vertical-align-default {
 		align-items: stretch;
 	}
-	&--vertical-align-top {
+	&--flow-direction-row#{&}--vertical-align-top {
 		align-items: start;
 	}
-	&--vertical-align-center {
+	&--flow-direction-row#{&}--vertical-align-center {
 		align-items: center;
 	}
-	&--vertical-align-bottom {
+	&--flow-direction-row#{&}--vertical-align-bottom {
 		align-items: end;
 	}
 
+	// flow direction column
+	&--flow-direction-column > &__wrapper {
+		column-width: var(--layout-columns-content-min-width);
+		column-count: var(--layout-columns-column-count);
+		column-gap: var(--layout-columns-gap-x);
+		margin-bottom: calc(-1 * var(--layout-columns-gap-y));
+	}
+	&--flow-direction-column > &__wrapper > &__item {
+		display: inline-grid;
+		width: 100%;
+		break-inside: avoid;
+		margin-bottom: var(--layout-columns-gap-y);
+	}
+
+	// gap
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
 		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
 		&--gap-#{ $layout-spacing-key } {

@@ -28,5 +28,5 @@
 
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
-| horizontalAlign | horizontal align | String | default | default, left, center, right |
-| verticalAlign | vertical align | String | default | default, top, center, bottom |
+| horizontalAlign | horizontal align contents | String | default | default, left, center, right |
+| verticalAlign | vertical align contents | String | default | default, top, center, bottom |

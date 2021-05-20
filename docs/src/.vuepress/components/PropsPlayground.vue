@@ -24,6 +24,7 @@
 							>
 								<LayoutList
 									v-for="(propConfig, propName) in propsConfig"
+									v-show="!propConfig.disabled"
 									:key="propName"
 									gap="3"
 									horizontal-align="left"

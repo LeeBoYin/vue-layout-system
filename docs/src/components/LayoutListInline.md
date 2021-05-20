@@ -39,6 +39,6 @@
 | gap | gap size between contents | Number, String | 0 | spacing scale, gap shorthand |
 | gapX | horizontal gap size between contents | Number, String | 0 | spacing scale |
 | gapY | vertical gap size between contents | Number, String | 0 | spacing scale |
-| horizontalAlign | horizontal align (when contents wrapped) | String | default | default, left, center, right |
-| verticalAlign | vertical align (when the heights of contents differ) | String | default | default, top, center, bottom |
+| horizontalAlign | horizontal align contents (when contents wrapped) | String | default | default, left, center, right |
+| verticalAlign | vertical align contents (when the heights of contents differ) | String | default | default, top, center, bottom |
 | wrap | wrap contents into multiple lines | Boolean | true ||

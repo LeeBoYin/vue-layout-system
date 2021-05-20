@@ -90,8 +90,6 @@ export default {
 		display: grid;
 		place-content: center;
 		overflow: hidden;
-		/*white-space: nowrap;*/
-		/*text-overflow: ellipsis;*/
 	}
 	&--solid {
 		background-color: #e5e5e5;

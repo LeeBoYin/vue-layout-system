@@ -42,4 +42,4 @@
 | Property | Description | Type | Default | note |
 | --- | --- | --- | --- | --- |
 | gap | gap size between slots | Number, String | 0 | spacing scale |
-| horizontalAlign | horizontal align | String | default | default, left, center, right |
+| horizontalAlign | horizontal align contents | String | default | default, left, center, right |
