@@ -1,5 +1,6 @@
 ---
 home: true
+heroImage: /logo.png
 tagline: Vue components that solve daily layout problems
 actionText: Get Started →
 actionLink: /guide/
