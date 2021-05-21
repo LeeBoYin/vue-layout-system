@@ -4,9 +4,9 @@ Vue Layout System comes with a bunch of utility class, they are necessary for bu
 
 ## Content Fill Height
 
-In HTML, block elements expand horizontally by default, taking up the width of the parent element. When it comes to vertical space, things get complicated.
+In HTML, block elements expand horizontally by default, taking up the width of the parent element. However, things get complicated when it comes to vertical space.
 
-`layout-u-content-fill-height` is an utility class for solving the vertical space problem. When it is added to an element, the children elements will expand vertically, taking up the height of the available space in the parent element. 
+`layout-u-content-fill-height` is an utility class for solving the expanding problem in vertical space. When it is added to an element, the children elements will expand vertically, taking up the height of the available space in the parent element. 
 
 ```vue live
 <div class="layout-u-content-fill-height" style="height: 100px">

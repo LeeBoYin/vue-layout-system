@@ -36,7 +36,6 @@
 					:padding-x="propsValue.listPaddingX"
 					:padding-y="propsValue.listPaddingY"
 					:gap="propsValue.listGap"
-					horizontal-align="center"
 				>
 					<div v-for="(message, index) in messages" :key="index" class="message">
 						<LayoutFlexRow
@@ -249,8 +248,6 @@ export default {
 <style lang="scss" scoped>
 .message {
 	color: #333;
-	width: 100%;
-	/*max-width: 600px;*/
 	border: 1px solid #EEE;
 	border-radius: 4px;
 	&__user-name {

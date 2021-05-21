@@ -15,6 +15,8 @@ features:
 
 ---
 
+### Give it a try
+
 Here's an example showing how you can easily create new composite elements by mixing your existing components and contents with Vue Layout System. Without writing many lines of CSS, you can arrange your UI components in the desired layout, where elements are well aligned and arranged with precise spacing.
 
 <Doc-HomepageDemoDoc />

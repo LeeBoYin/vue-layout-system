@@ -7,7 +7,7 @@
 ## Usage
 
 - Place your contents between `<LayoutColumns>` tags
-- Divide space into columns by either `columnCount` or `contentMinWidth`. When divided by `columnCount`, width of contents will be evenly distributed. When divided by `contentMinWidth`, number of columns will be dynamic.
+- Divide space into columns by either `columnCount` or `contentMinWidth`. When divided by `columnCount`, the width of contents will be evenly distributed. When divided by `contentMinWidth`, the number of columns will be dynamic.
 - Set the direction contents are ordered by `flowDirection`. When `flowDirection` is `row`, contents are ordered from left to right first. When `flowDirection` is `column`, contents are ordered from top to bottom first.
 
 ```vue live

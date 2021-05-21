@@ -4,50 +4,70 @@
 			v-model="propsValue"
 			:props-config="propsConfig"
 		>
-			<LayoutList gap="5">
-				<GreyBox>
-					<LayoutFlexRow v-bind="propsValue">
-						<template slot="left">
-							<GreyBox size="m" name="left" />
-						</template>
-						<template slot="remain">
-							<GreyBox name="remain" />
-						</template>
-						<template slot="right">
-							<GreyBox size="m" name="right" />
-						</template>
-					</LayoutFlexRow>
-				</GreyBox>
-				<GreyBox>
-					<LayoutFlexRow v-bind="propsValue">
-						<template slot="remain">
-							<GreyBox name="remain" />
-						</template>
-						<template slot="right">
-							<GreyBox size="m" name="right" />
-						</template>
-					</LayoutFlexRow>
-				</GreyBox>
-				<GreyBox>
-					<LayoutFlexRow v-bind="propsValue">
-						<template slot="left">
-							<GreyBox size="m" name="left" />
-						</template>
-						<template slot="remain">
-							<GreyBox name="remain" />
-						</template>
-					</LayoutFlexRow>
-				</GreyBox>
-				<GreyBox>
-					<LayoutFlexRow v-bind="propsValue">
-						<template slot="left">
-							<GreyBox size="m" name="left" />
-						</template>
-						<template slot="right">
-							<GreyBox size="m" name="right" />
-						</template>
-					</LayoutFlexRow>
-				</GreyBox>
+			<LayoutList gap="5" padding-y="5">
+				<LayoutList gap="3">
+					<small class="layout-u-pl-3">
+						left + remain + right
+					</small>
+					<GreyBox>
+						<LayoutFlexRow v-bind="propsValue">
+							<template slot="left">
+								<GreyBox size="m" name="left" />
+							</template>
+							<template slot="remain">
+								<GreyBox name="remain" />
+							</template>
+							<template slot="right">
+								<GreyBox size="m" name="right" />
+							</template>
+						</LayoutFlexRow>
+					</GreyBox>
+				</LayoutList>
+				<LayoutList gap="3">
+					<small class="layout-u-pl-3">
+						left + remain
+					</small>
+					<GreyBox>
+						<LayoutFlexRow v-bind="propsValue">
+							<template slot="left">
+								<GreyBox size="m" name="left" />
+							</template>
+							<template slot="remain">
+								<GreyBox name="remain" />
+							</template>
+						</LayoutFlexRow>
+					</GreyBox>
+				</LayoutList>
+				<LayoutList gap="3">
+					<small class="layout-u-pl-3">
+						 remain + right
+					</small>
+					<GreyBox>
+						<LayoutFlexRow v-bind="propsValue">
+							<template slot="remain">
+								<GreyBox name="remain" />
+							</template>
+							<template slot="right">
+								<GreyBox size="m" name="right" />
+							</template>
+						</LayoutFlexRow>
+					</GreyBox>
+				</LayoutList>
+				<LayoutList gap="3">
+					<small class="layout-u-pl-3">
+						left + right
+					</small>
+					<GreyBox>
+						<LayoutFlexRow v-bind="propsValue">
+							<template slot="left">
+								<GreyBox size="m" name="left" />
+							</template>
+							<template slot="right">
+								<GreyBox size="m" name="right" />
+							</template>
+						</LayoutFlexRow>
+					</GreyBox>
+				</LayoutList>
 			</LayoutList>
 		</PropsPlayground>
 	</div>
