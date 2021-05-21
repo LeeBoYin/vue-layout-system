@@ -26,8 +26,7 @@
 
 	// flow direction column
 	&--flow-direction-column > &__wrapper {
-		column-width: var(--layout-columns-content-min-width);
-		column-count: var(--layout-columns-column-count);
+		columns: var(--layout-columns-content-min-width, auto) var(--layout-columns-column-count, auto);
 		column-gap: var(--layout-columns-gap-x);
 		margin-bottom: calc(-1 * var(--layout-columns-gap-y));
 	}
