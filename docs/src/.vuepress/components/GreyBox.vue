@@ -99,8 +99,9 @@ export default {
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 	overflow: hidden;
 	&--text-content {
-		display: grid;
-		place-content: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		overflow: hidden;
 	}
 	&--solid {
@@ -110,7 +111,7 @@ export default {
 		display: inline-block;
 	};
 	&--inline#{&}--text-content {
-		display: inline-grid;
+		display: inline-flex;
 	}
 	&--text-content:hover:before {
 		display: block;
