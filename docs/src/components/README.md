@@ -10,7 +10,9 @@ Vue Layout System uses a finite set of spacing scales for all spacing needs, suc
 
 The default spacing scales are integers from `0` to `10`, where smaller numbers represent smaller space and larger numbers represent larger space.
 
-You can easily customize your own spacing system by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
+You can easily customize spacing scales by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
+
+<Doc-SpacingSystemDoc />
 
 ## Padding Props
 Padding generates space around a layout's content. All layout components share the same padding props.
@@ -29,50 +31,93 @@ Padding generates space around a layout's content. All layout components share t
 When space around all sides needs to be the same, simply set the `padding` props.
 
 ```vue
-<LayoutList padding="5">
+<LayoutListInline padding="8">
 	...
-</LayoutList>
+</LayoutListInline>
 ```
+
+<GreyBox inline>
+<LayoutListInline padding="8">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
 
 ### Padding on opposite sides
 When the padding sizes on opposite sides need to be symmetric, it is easy to complete with `paddingX` and `paddingY`.
 
 ```vue
-<LayoutList padding-x="5" padding-y="3">
+<LayoutListInline padding-x="8" padding-y="4">
 	...
-</LayoutList>
+</LayoutListInline>
 ```
+
+<GreyBox inline>
+<LayoutListInline padding-x="8" padding-y="4">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
 
 ### Padding on each side
 You can also set padding size for each side of a layout component.
 
 ```vue
-<LayoutList
-	padding-top="5"
-	padding-bottom="3"
+<LayoutListInline
+	padding-top="8"
+	padding-bottom="4"
 	padding-left="2"
-	padding-right="1"
+	padding-right="0"
 >
 	...
-</LayoutList>
+</LayoutListInline>
 ```
+
+<GreyBox inline>
+<LayoutListInline padding-top="8" padding-bottom="4" padding-left="2" padding-right="0">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
 
 ### Padding shorthand
 To shorten the code, it is possible to specify space of all sides in the `padding` props, similar to writing padding shorthand in css.
 
+
+<b>top: 8, right: 4, bottom: 8, left: 4</b>
 ```vue
-<!-- top: 5, right: 3, bottom: 5, left: 3 -->
-<LayoutList padding="5 3">
+<LayoutListInline padding="8 4">
 	...
-</LayoutList>
-
-<!-- top: 5, right: 3, bottom: 2, left: 3 -->
-<LayoutList padding="5 3 2">
-	...
-</LayoutList>
-
-<!-- top: 5, right: 3, bottom: 2, left: 1 -->
-<LayoutList padding="5 3 2 1">
-	...
-</LayoutList>
+</LayoutListInline>
 ```
+
+<GreyBox inline>
+<LayoutListInline padding="8 4">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
+
+
+<b>top: 8, right: 4, bottom: 2, left: 4</b>
+```vue
+<LayoutListInline padding="8 4 2">
+	...
+</LayoutListInline>
+```
+
+<GreyBox inline>
+<LayoutListInline padding="8 4 2">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
+
+
+<b>top: 8, right: 4, bottom: 2, left: 0</b>
+```vue
+<LayoutListInline padding="8 4 2 0">
+	...
+</LayoutListInline>
+```
+
+<GreyBox inline>
+<LayoutListInline padding="8 4 2 0">
+<GreyBox v-for="i in 3" :key="i" size="s" />
+</LayoutListInline>
+</GreyBox>
