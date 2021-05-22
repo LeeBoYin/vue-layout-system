@@ -2,7 +2,10 @@
 	<div>
 		<LayoutListInline gap="8">
 			<LayoutList v-for="scale in spacingScales" gap="3" horizontal-align="center">
-				<b>{{ scale }}</b>
+				<span>
+					<b>{{ scale }}</b>:
+					{{ getScaleValue(scale) }}
+				</span>
 				<GreyBox>
 					<LayoutList :gap="scale" :padding="scale">
 						<GreyBox size="s" />
@@ -30,6 +33,11 @@ export default {
 		return {
 			spacingScales: Array.from(Array(spacingRangeConfig.max + 1).keys()),
 		};
+	},
+	methods: {
+		getScaleValue(scale) {
+			return getComputedStyle(document.documentElement).getPropertyValue(`--layout-spacing-${ scale }`);
+		},
 	},
 };
 </script>
