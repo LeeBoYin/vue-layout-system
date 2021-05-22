@@ -57,3 +57,6 @@ Alternatively, if your project doesn't have a build process, you can load Vue La
 ```
 
 To learn how layout components work, please check out the [Documentation Website](https://leeboyin.github.io/vue-layout-system/) for demo and more information.
+
+## Contributing
+For any question or feature request please feel free to create an [issue](https://github.com/LeeBoYin/vue-layout-system/issues/new) or [pull request](https://github.com/LeeBoYin/vue-layout-system/pulls).
