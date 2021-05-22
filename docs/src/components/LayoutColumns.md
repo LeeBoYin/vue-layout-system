@@ -31,7 +31,7 @@
 
 - [padding props](/components/#padding-props)
 
-| Property | Description | Type | Default | note |
+| Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | columnCount | set number of columns, width of contents will be evenly distributed, required when contentMinWidth is not set | Number | - | positive integer |
 | contentMinWidth | Set minimum width of contents, number of columns will be dynamic, ignored when columnCount is set | Number, String | 0 | |

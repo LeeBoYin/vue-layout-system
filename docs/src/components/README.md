@@ -5,8 +5,38 @@ Vue Layout System is a pack of Vue components, where each one layout component s
 - Padding, gap size and alignment are set with corresponding `props`
 - Layout components can be nested in other layout components. Just like LEGO bricks, combination is the key to creating various types of layout.
 
+Here's an example.
+
+```vue live
+<LayoutList gap="5">
+    <LayoutFlexRow
+        v-for="i in 5"
+        :key="i"
+        gap="5"
+        vertical-align="top"
+    >
+        <template #left>
+            <img :src="`https://i.pravatar.cc/60?img=${ i }`">
+        </template>
+        <template #remain>
+            <LayoutList gap="3">
+                <b>Lorem ipsum</b>
+                <span>Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+            </LayoutList>
+        </template>
+        <template #right>
+            <LayoutListInline gap="3">
+                <button>😍️</button>
+                <button>😆</button>
+                <button>😢</button>
+            </LayoutListInline>
+        </template>
+    </LayoutFlexRow>
+</LayoutList>
+```
+
 ## Spacing System
-Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents.
+Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for precise control of the spacing.
 
 The default spacing scales are integers from `0` to `10`, where smaller numbers represent smaller space and larger numbers represent larger space.
 
@@ -17,7 +47,7 @@ You can easily customize spacing scales by using either Sass variables or CSS cu
 ## Padding Props
 Padding generates space around a layout's content. All layout components share the same padding props.
 
-| Property | Description | Type | Default | note |
+| Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | padding | padding size of all sides | Number, String | 0 | spacing scale, padding shorthand |
 | paddingX | padding size of left and right sides | Number, String | 0 | spacing scale |

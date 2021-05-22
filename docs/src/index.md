@@ -21,6 +21,8 @@ Here's an example showing how you can easily create new composite elements by mi
 
 <Doc-HomepageDemoDoc />
 
+Let's [get started](/guide/) to setup Vue Layout System in your projects.
+
 ---
 
 <Footer />

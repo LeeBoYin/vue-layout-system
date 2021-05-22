@@ -38,7 +38,7 @@
 ## Props
 - [padding props](/components/#padding-props)
 
-| Property | Description | Type | Default | note |
+| Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | gap | gap size between slots | Number, String | 0 | spacing scale |
 | verticalAlign | vertical align contents | String | default | default, top, center, bottom |

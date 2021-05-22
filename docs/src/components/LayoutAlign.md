@@ -26,7 +26,7 @@
 
 - [padding props](/components/#padding-props)
 
-| Property | Description | Type | Default | note |
+| Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | horizontalAlign | horizontal align contents | String | default | default, left, center, right |
 | verticalAlign | vertical align contents | String | default | default, top, center, bottom |
