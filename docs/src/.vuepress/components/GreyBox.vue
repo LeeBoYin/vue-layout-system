@@ -94,9 +94,10 @@ export default {
 
 <style scoped lang="scss">
 .grey-box {
+	$color: transparentize(#2c3e50, 0.85);
 	position: relative;
-	background-color: rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+	background-color: $color;
+	box-shadow: 0 0 0 1px $color inset;
 	overflow: hidden;
 	&--text-content {
 		display: flex;
@@ -105,7 +106,7 @@ export default {
 		overflow: hidden;
 	}
 	&--solid {
-		background-color: #e5e5e5;
+		background-color: #eaebed;
 	}
 	&--inline {
 		display: inline-block;
@@ -127,7 +128,7 @@ export default {
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		color: rgba(0, 0, 0, 0.4);
+		color: transparentize(#2c3e50, 0.4);
 	}
 }
 </style>
