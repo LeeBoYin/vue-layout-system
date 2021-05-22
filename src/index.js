@@ -1,5 +1,6 @@
 import LayoutAbsolute from './components/LayoutAbsolute.vue';
 import LayoutAlign from './components/LayoutAlign.vue';
+import LayoutColumns from './components/LayoutColumns.vue';
 import LayoutFlexColumn from './components/LayoutFlexColumn.vue';
 import LayoutFlexRow from './components/LayoutFlexRow.vue';
 import LayoutList from './components/LayoutList.vue';
@@ -9,6 +10,7 @@ import './scss/main.scss';
 const VueLayoutSystem = {
     LayoutAbsolute,
     LayoutAlign,
+    LayoutColumns,
     LayoutFlexColumn,
     LayoutFlexRow,
     LayoutList,
@@ -41,6 +43,7 @@ export default VueLayoutSystem;
 export {
     LayoutAbsolute,
     LayoutAlign,
+    LayoutColumns,
     LayoutFlexColumn,
     LayoutFlexRow,
     LayoutList,
