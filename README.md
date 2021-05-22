@@ -2,6 +2,8 @@
 
 [![npm (scoped)](https://img.shields.io/npm/v/vue-layout-system.svg)](https://www.npmjs.com/package/vue-layout-system)
 
+<p align="center"><img src="https://leeboyin.github.io/vue-layout-system/logo.png"></p>
+
 Vue Layout System is a pack of Vue components that solve daily layout problems.
 
 Lightweight and no dependencies.
