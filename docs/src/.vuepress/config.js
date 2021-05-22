@@ -1,33 +1,19 @@
 const path = require('path');
 const { description } = require('../../package');
+const title = 'Vue Layout System';
 
 module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
-  title: 'Vue Layout System',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
-  description: description,
-
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
+  title,
+  description,
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://leeboyin.github.io/vue-layout-system/' }],
+    ['meta', { property: 'og:description', content: description }],
+    ['meta', { property: 'og:image', content: 'https://leeboyin.github.io/vue-layout-system/logo.png' }],
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
   themeConfig: {
     logo: '/logo.png',
     repo: 'leeboyin/vue-layout-system',
@@ -80,10 +66,6 @@ module.exports = {
       '/': 'auto',
     },
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
   plugins: [
     [
       '@vuepress/plugin-register-components',
@@ -106,8 +88,6 @@ module.exports = {
       extensions: ['.js', '.vue', '.css', '.scss'],
     },
   },
-  // The base URL the site will be deployed at.
   base: '/vue-layout-system/',
-  // Specify the output directory for vuepress build.
   dest: 'dist',
 };
