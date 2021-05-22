@@ -272,5 +272,10 @@ $border-style: 1px solid #e2e2e2;
 			color: #666;
 		}
 	}
+	@media (max-width: 767px) {
+		&__controls, &__handle {
+			display: none;
+		}
+	}
 }
 </style>

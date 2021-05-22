@@ -4,6 +4,7 @@
  * https://v1.vuepress.vuejs.org/guide/basic-config.html#app-level-enhancements
  */
 import '@layout-system-scss/main.scss';
+import './custom.scss';
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
