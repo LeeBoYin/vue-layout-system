@@ -11,6 +11,7 @@ Lightweight and no dependencies.
 Please check out the [Documentation Website](https://leeboyin.github.io/vue-layout-system/) for demo and more information.
 
 ## Overview
+
 Vue Layout System lets you intuitively arrange your components. Simply drop your contents into slots, configure options with props, Vue Layout system will take care of all CSS challenges for you.
 
 With Vue Layout System developers are empowered to
@@ -20,6 +21,26 @@ With Vue Layout System developers are empowered to
 - Control space between contents precisely with one consistent spacing system
 
 ![](https://leeboyin.github.io/vue-layout-system/layout_highlight.gif)
+
+## Layout Components
+
+Vue Layout System is a pack of Vue components, where each one layout component solves one specific problem while sharing similar pattern with the others.
+
+- [LayoutAbsolute](https://leeboyin.github.io/vue-layout-system/components/LayoutAbsolute/) lets you place contents at 9 absolute positions in a relative position element.
+- [LayoutAlign](https://leeboyin.github.io/vue-layout-system/components/LayoutAlign/) lets you align contents both horizontally and vertically.
+- [LayoutColumns](https://leeboyin.github.io/vue-layout-system/components/LayoutColumns/) divide a space evenly into columns, arranging contents into the columns in order.
+- [LayoutFlexColumn](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
+- [LayoutFlexRow](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
+- [LayoutList](https://leeboyin.github.io/vue-layout-system/components/LayoutList/) arranges contents vertically.
+- [LayoutListInline](https://leeboyin.github.io/vue-layout-system/components/LayoutListInline/) arranges contents horizontally.
+
+## Spacing System
+
+Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for consistent and precise control of the spacing.
+
+The default spacing scales are integers from `0` to `10`, You can easily customize the spacing scales by using either Sass variables or CSS custom properties. See more details in [Customize](https://leeboyin.github.io/vue-layout-system/customize/).
+
+![](https://leeboyin.github.io/vue-layout-system/spacing_system.png)
 
 ## Installation
 

@@ -36,11 +36,11 @@ Here's an example.
 ```
 
 ## Spacing System
-Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for precise control of the spacing.
+Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for consistent and precise control of the spacing.
 
 The default spacing scales are integers from `0` to `10`, where smaller numbers represent smaller space and larger numbers represent larger space.
 
-You can easily customize spacing scales by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
+You can easily customize the spacing scales by using either Sass variables or CSS custom properties. See more details in [Customize](/customize/).
 
 <Doc-SpacingSystemDoc />
 
