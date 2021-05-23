@@ -1,4 +1,4 @@
-# vue-layout-system
+# Vue Layout System
 
 [![npm (scoped)](https://img.shields.io/npm/v/vue-layout-system.svg)](https://www.npmjs.com/package/vue-layout-system)
 
