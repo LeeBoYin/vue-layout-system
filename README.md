@@ -26,13 +26,13 @@ With Vue Layout System developers are empowered to
 
 Vue Layout System is a pack of Vue components, where each one layout component solves one specific problem while sharing similar pattern with the others.
 
-- [LayoutAbsolute](https://leeboyin.github.io/vue-layout-system/components/LayoutAbsolute/) lets you place contents at 9 absolute positions in a relative position element.
-- [LayoutAlign](https://leeboyin.github.io/vue-layout-system/components/LayoutAlign/) lets you align contents both horizontally and vertically.
-- [LayoutColumns](https://leeboyin.github.io/vue-layout-system/components/LayoutColumns/) divide a space evenly into columns, arranging contents into the columns in order.
-- [LayoutFlexColumn](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
-- [LayoutFlexRow](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
-- [LayoutList](https://leeboyin.github.io/vue-layout-system/components/LayoutList/) arranges contents vertically.
-- [LayoutListInline](https://leeboyin.github.io/vue-layout-system/components/LayoutListInline/) arranges contents horizontally.
+- [LayoutAbsolute](https://leeboyin.github.io/vue-layout-system/components/LayoutAbsolute) lets you place contents at 9 absolute positions in a relative position element.
+- [LayoutAlign](https://leeboyin.github.io/vue-layout-system/components/LayoutAlign) lets you align contents both horizontally and vertically.
+- [LayoutColumns](https://leeboyin.github.io/vue-layout-system/components/LayoutColumns) divide a space evenly into columns, arranging contents into the columns in order.
+- [LayoutFlexColumn](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexColumn) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
+- [LayoutFlexRow](https://leeboyin.github.io/vue-layout-system/components/LayoutFlexRow) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
+- [LayoutList](https://leeboyin.github.io/vue-layout-system/components/LayoutList) arranges contents vertically.
+- [LayoutListInline](https://leeboyin.github.io/vue-layout-system/components/LayoutListInline) arranges contents horizontally.
 
 ## Spacing System
 
