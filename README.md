@@ -19,6 +19,8 @@ With Vue Layout System developers are empowered to
 - Arrange contents in a intuitive and predictable way
 - Control space between contents precisely with one consistent spacing system
 
+![](https://leeboyin.github.io/vue-layout-system/layout_highlight.gif)
+
 ## Installation
 
 ### JavaScript Package Manager 
