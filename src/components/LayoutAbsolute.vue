@@ -65,6 +65,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutAbsolute',
 	mixins: [
 		layoutMixin,
 	],

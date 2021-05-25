@@ -1,3 +1,24 @@
+let currentDebugComponent = null;
+
+const startDebugComponent = (element) => {
+	if(currentDebugComponent?.isSameNode(element)) {
+		return;
+	}
+	if(currentDebugComponent) {
+		currentDebugComponent.classList.remove('layout--debug');
+	}
+	element.classList.add('layout--debug');
+	currentDebugComponent = element;
+};
+
+const endDebugComponent = (element) => {
+	if(currentDebugComponent?.isSameNode(element)) {
+		currentDebugComponent.classList.remove('layout--debug');
+		currentDebugComponent = null;
+	}
+};
+
+
 export default {
 	props: {
 		padding: {
@@ -109,6 +130,14 @@ export default {
 			return classList;
 		},
 	},
+	mounted() {
+		this.$el.addEventListener('mouseleave', this.onMouseLeave);
+		this.$el.addEventListener('mousemove', this.onMouseMove);
+	},
+	beforeDestroy() {
+		this.$el.removeEventListener('mouseleave', this.onMouseLeave);
+		this.$el.removeEventListener('mousemove', this.onMouseMove);
+	},
 	methods: {
 		getGapClass(componentClass) {
 			let gap = this.gap;
@@ -148,6 +177,18 @@ export default {
 				return `${ componentClass }--vertical-align-${ this.verticalAlign }`;
 			}
 			return null;
+		},
+		onMouseMove(e) {
+			const parentElements = e.composedPath();
+			if(parentElements.some(element => {
+				return element?.classList?.contains('layout-u-debug');
+			})) {
+				e.stopPropagation();
+				startDebugComponent(this.$el);
+			}
+		},
+		onMouseLeave(e) {
+			endDebugComponent(this.$el);
 		},
 	},
 };

@@ -23,6 +23,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutFlexColumn',
 	mixins: [
 		layoutMixin,
 	],

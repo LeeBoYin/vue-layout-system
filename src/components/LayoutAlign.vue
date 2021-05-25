@@ -16,6 +16,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutAlign',
 	mixins: [
 		layoutMixin,
 	],

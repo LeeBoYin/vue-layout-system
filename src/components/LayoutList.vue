@@ -14,6 +14,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutList',
 	mixins: [
 		layoutMixin,
 	],

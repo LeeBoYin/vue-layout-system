@@ -7,34 +7,38 @@
 	}
 }
 
-@mixin debug-highlight($name, $color) {
-	$debug-background-color: transparentize($color, 0.8);
-	$debug-border-color: transparentize($color, 0.2);
+@mixin debug-highlight($name, $color, $child-selectors: (' > *')) {
 	.layout-u-debug & {
-		background-color: $debug-background-color;
+		background-color: #{ transparentize($color, 0.95) };
 		cursor: default;
+	}
+	.layout-u-debug &.layout--debug {
+		background-color: #{ transparentize($color, 0.8) };
+		outline: 2px solid #{ transparentize($color, 0.5) };
 
-		&:hover {
-			box-shadow: 0 0 0 2px $debug-border-color inset;
-			// show component name on hover
-			&:before {
-				display: block;
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				font-weight: bold;
-				content: $name;
-				font-size: 14px;
-				line-height: 1;
-				text-align: center;
-				color: #333333;
-				border: 2px solid $color;
-				background-color: #FFFFFF;
-				box-shadow: 0 0 100px 0 $debug-background-color inset;
-				padding: 12px;
-				z-index: 9999;
-			}
+		// show component name on hover
+		&:before {
+			display: block;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			font-weight: bold;
+			content: $name;
+			font-size: 14px;
+			line-height: 1;
+			text-align: center;
+			color: #333333;
+			border: 2px solid $color;
+			background-color: #FFFFFF;
+			box-shadow: 0 0 100px 0 #{ transparentize($color, 0.8) } inset;
+			padding: 12px;
+			z-index: 9999;
+		}
+	}
+	@each $child-selector in $child-selectors {
+		&.layout--debug#{ & }#{ $child-selector } {
+			outline: 2px dashed #{ transparentize($color, 0.2) };
 		}
 	}
 }

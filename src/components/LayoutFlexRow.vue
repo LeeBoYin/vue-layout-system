@@ -31,6 +31,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutFlexRow',
 	mixins: [
 		layoutMixin,
 	],

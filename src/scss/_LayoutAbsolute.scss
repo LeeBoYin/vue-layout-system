@@ -58,5 +58,5 @@
 		}
 	}
 
-	@include debug-highlight('LayoutAbsolute', red);
+	@include debug-highlight('LayoutAbsolute', red, (' > &__wrapper > &__cell'));
 }

@@ -56,5 +56,5 @@
 		}
 	}
 
-	@include debug-highlight('LayoutListInline', purple);
+	@include debug-highlight('LayoutListInline', purple, (' > &__wrapper > &__item'));
 }

@@ -1,6 +1,7 @@
 <script>
 import layoutMixin from '../mixins/layoutMixin';
 export default {
+	name: 'LayoutColumns',
 	props: {
 		contentMinWidth: {
 			type: [Number, String],
