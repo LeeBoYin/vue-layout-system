@@ -20,3 +20,13 @@ $layout-spacing-map: (
 		--layout-spacing-#{ $layout-spacing-key }: #{ $layout-spacing-value };
 	}
 }
+
+$layout-debug-color-map: (
+		LayoutAbsolute: Crimson,
+		LayoutAlign: Coral,
+		LayoutColumns: Chocolate,
+		LayoutFlexColumn: CadetBlue,
+		LayoutFlexRow: ForestGreen,
+		LayoutList: Navy,
+		LayoutListInline: BlueViolet,
+);

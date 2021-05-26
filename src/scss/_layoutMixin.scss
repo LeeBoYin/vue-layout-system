@@ -7,14 +7,24 @@
 	}
 }
 
-@mixin debug-highlight($name, $color, $child-selectors: (' > *')) {
+@mixin debug-highlight($name, $child-selectors: (' > *')) {
+	$debug-color: map-get($layout-debug-color-map, $name);
+
 	.layout-u-debug & {
-		background-color: #{ transparentize($color, 0.95) };
+		background-color: #{ transparentize($debug-color, 0.92) };
 		cursor: default;
 	}
 	.layout-u-debug &.layout--debug {
-		background-color: #{ transparentize($color, 0.8) };
-		outline: 2px solid #{ transparentize($color, 0.5) };
+		background:
+			repeating-linear-gradient(
+				45deg,
+				transparentize($debug-color, 0.8) 0px,
+				transparentize($debug-color, 0.8) 1px,
+				transparent 1px,
+				transparent 10px
+			),
+			rgba(255, 255, 255, 0.5);
+		outline: 2px solid #{ transparentize($debug-color, 0.4) };
 
 		// show component name on hover
 		&:before {
@@ -29,16 +39,17 @@
 			line-height: 1;
 			text-align: center;
 			color: #333333;
-			border: 2px solid $color;
+			border: 2px solid $debug-color;
 			background-color: #FFFFFF;
-			box-shadow: 0 0 100px 0 #{ transparentize($color, 0.8) } inset;
+			box-shadow: 0 0 100px 0 #{ transparentize($debug-color, 0.8) } inset;
 			padding: 12px;
 			z-index: 9999;
 		}
 	}
 	@each $child-selector in $child-selectors {
 		&.layout--debug#{ & }#{ $child-selector } {
-			outline: 2px dashed #{ transparentize($color, 0.2) };
+			background-color: #{ mix($debug-color, white, 20%) };
+			outline: 2px dashed #{ transparentize($debug-color, 0.4) };
 		}
 	}
 }

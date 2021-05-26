@@ -54,5 +54,5 @@
 		}
 	}
 
-	@include debug-highlight('LayoutColumns', brown, ('--flow-direction-row > *', '--flow-direction-column > &__wrapper > &__item'));
+	@include debug-highlight('LayoutColumns', ('--flow-direction-row > *', '--flow-direction-column > &__wrapper > &__item'));
 }

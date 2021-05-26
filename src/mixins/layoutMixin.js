@@ -1,3 +1,4 @@
+const debugComponentClass = 'layout--debug';
 let currentDebugComponent = null;
 
 const startDebugComponent = (element) => {
@@ -5,15 +6,15 @@ const startDebugComponent = (element) => {
 		return;
 	}
 	if(currentDebugComponent) {
-		currentDebugComponent.classList.remove('layout--debug');
+		currentDebugComponent.classList.remove(debugComponentClass);
 	}
-	element.classList.add('layout--debug');
+	element.classList.add(debugComponentClass);
 	currentDebugComponent = element;
 };
 
 const endDebugComponent = (element) => {
 	if(currentDebugComponent?.isSameNode(element)) {
-		currentDebugComponent.classList.remove('layout--debug');
+		currentDebugComponent.classList.remove(debugComponentClass);
 		currentDebugComponent = null;
 	}
 };
@@ -179,15 +180,12 @@ export default {
 			return null;
 		},
 		onMouseMove(e) {
-			const parentElements = e.composedPath();
-			if(parentElements.some(element => {
-				return element?.classList?.contains('layout-u-debug');
-			})) {
+			if(this.$el.matches('.layout-u-debug div')) {
 				e.stopPropagation();
 				startDebugComponent(this.$el);
 			}
 		},
-		onMouseLeave(e) {
+		onMouseLeave() {
 			endDebugComponent(this.$el);
 		},
 	},

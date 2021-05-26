@@ -48,10 +48,11 @@
 								<div class="layout-u-position-relative">
 									<Avatar />
 									<LayoutAbsolute
+										v-if="!message.read"
 										:padding="propsValue.notificationPadding"
 									>
 										<template v-slot:[propsValue.notificationPosition]>
-											<NotificationDot v-if="!message.read" />
+											<NotificationDot />
 										</template>
 									</LayoutAbsolute>
 								</div>
@@ -73,8 +74,8 @@
 															{{ message.userName }}
 														</div>
 													</template>
-													<template #right>
-														<OfflineHint v-if="!message.online" />
+													<template v-if="!message.online" #right>
+														<OfflineHint />
 													</template>
 												</LayoutFlexRow>
 											</LayoutAlign>
