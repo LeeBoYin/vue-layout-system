@@ -138,6 +138,7 @@ export default {
 	data() {
 		return {
 			propsValue: {
+				debug: false,
 				listGap: 5,
 				listPaddingX: 5,
 				listPaddingY: 5,
@@ -148,9 +149,12 @@ export default {
 				userStatusGap: 3,
 				notificationPadding: 1,
 				notificationPosition: 'topRight',
-				debug: false,
 			},
 			propsConfig: {
+				debug: {
+					title: 'Highlight layouts',
+					type: 'switch',
+				},
 				listGap: {
 					title: 'List gap',
 					...spacingRangeConfig,
@@ -191,10 +195,6 @@ export default {
 				notificationPosition: {
 					title: 'Notification position',
 					...absolutePositionSelectConfig,
-				},
-				debug: {
-					title: 'Highlight layouts',
-					type: 'switch',
 				},
 			},
 			messages: [
