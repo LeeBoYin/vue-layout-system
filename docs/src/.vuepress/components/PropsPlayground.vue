@@ -11,7 +11,7 @@
 		}"
 	>
 		<LayoutFlexRow>
-			<template #left>
+			<template v-if="propsConfig" #left>
 				<LayoutFlexColumn
 					class="props-playground__controls"
 					padding="5"
@@ -100,11 +100,11 @@ export default {
 	props: {
 		value: {
 			type: Object,
-			required: true,
+			default: null,
 		},
 		propsConfig: {
 			type: Object,
-			required: true,
+			default: null,
 		},
 	},
 	data() {

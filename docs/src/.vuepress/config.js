@@ -34,10 +34,10 @@ module.exports = {
         text: 'Customize',
         link: '/customize/',
       },
-      // {
-      //   text: 'Showcases',
-      //   link: '/showcases/',
-      // },
+      {
+        text: 'Showcase',
+        link: '/showcase/',
+      },
     ],
     sidebar: {
       '/components/': [
