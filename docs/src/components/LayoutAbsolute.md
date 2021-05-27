@@ -23,7 +23,7 @@
 <div class="layout-u-position-relative">
 	<img
 		src="https://picsum.photos/600/400?grayscale"
-		style="aspect-ratio: 4 / 3; width: 100%; vertical-align: middle;"
+		style="aspect-ratio: 4 / 3; width: 100%;"
 	>
 	<LayoutAbsolute
 		padding-x="5"

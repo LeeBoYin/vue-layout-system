@@ -6,7 +6,7 @@
 					<template #left>
 						<img
 							:src="`https://picsum.photos/80/80?grayscale&random=${ i }`"
-							style="width: 80px; height: 80px; vertical-align: middle;"
+							style="width: 80px; height: 80px;"
 						>
 					</template>
 					<template #remain>

@@ -7,7 +7,7 @@
 						<div class="layout-u-position-relative">
 							<img
 								:src="`https://picsum.photos/240/180?grayscale&random=${ i }`"
-								style="width: 240px; height: 180px; vertical-align: middle;"
+								style="width: 240px; height: 180px;"
 							>
 							<LayoutAbsolute padding-y="4">
 								<template #topLeft>

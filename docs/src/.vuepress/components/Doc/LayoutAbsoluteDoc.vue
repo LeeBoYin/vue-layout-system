@@ -5,7 +5,7 @@
 			:props-config="propsConfig"
 		>
 			<GreyBox class="layout-u-position-relative">
-				<img src="https://picsum.photos/1200/800?grayscale" style="aspect-ratio: 4 / 3; width: 100%; vertical-align: middle;">
+				<img src="https://picsum.photos/1200/800?grayscale" style="aspect-ratio: 4 / 3; width: 100%;">
 				<LayoutAbsolute v-bind="propsValue">
 					<template slot="topLeft">
 						<GreyBox size="m" solid name="topLeft" />
