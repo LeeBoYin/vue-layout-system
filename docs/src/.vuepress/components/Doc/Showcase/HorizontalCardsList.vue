@@ -1,7 +1,11 @@
 <template>
 	<ShowcaseFrame>
 		<LayoutList padding="5" gap="5">
-			<GreyBox v-for="i in 3" :key="i">
+			<GreyBox
+				v-for="i in 3"
+				:key="i"
+				class="horizontal-card"
+			>
 				<LayoutFlexRow>
 					<template #left>
 						<div class="layout-u-position-relative">
@@ -19,8 +23,8 @@
 					<template #remain>
 						<LayoutFlexColumn padding="4">
 							<template #top>
-								<LayoutFlexRow gap="5" vertical-align="top">
-									<template #left>
+								<LayoutFlexRow gap="6" vertical-align="top">
+									<template #remain>
 										<LayoutList gap="3" horizontal-align="left">
 											<LayoutListInline gap="3">
 												<GreyBox>Hot</GreyBox>
@@ -28,7 +32,9 @@
 												<GreyBox>Refundable</GreyBox>
 											</LayoutListInline>
 											<b>title - card {{ i }}</b>
-											<div>description</div>
+											<div class="horizontal-card__desc">
+												{{ getRandomLorem({ sections: 2 }) }}
+											</div>
 										</LayoutList>
 									</template>
 									<template #right>
@@ -80,3 +86,14 @@ export default {
 	],
 }
 </script>
+
+<style lang="scss" scoped>
+.horizontal-card {
+	&__desc {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+</style>

@@ -7,6 +7,7 @@ import LayoutFlexColumn from '@layout-system-components/LayoutFlexColumn';
 import LayoutFlexRow from '@layout-system-components/LayoutFlexRow';
 import GreyBox from '../../GreyBox';
 import ShowcaseFrame from './ShowcaseFrame';
+import { getRandomLorem } from "../loremIpsm";
 export default {
 	components: {
 		LayoutAbsolute,
@@ -18,5 +19,8 @@ export default {
 		LayoutFlexRow,
 		GreyBox,
 		ShowcaseFrame,
+	},
+	methods: {
+		getRandomLorem,
 	},
 };

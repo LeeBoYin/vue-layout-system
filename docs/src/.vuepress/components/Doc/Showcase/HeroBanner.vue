@@ -1,7 +1,10 @@
 <template>
 	<ShowcaseFrame>
 		<GreyBox class="hero-banner">
-			<img src="https://picsum.photos/id/100/1200/500?grayscale">
+			<img
+				src="https://picsum.photos/id/100/1200/500?grayscale"
+				style="aspect-ratio: 12 / 5; width: 100%;"
+			>
 			<LayoutAbsolute padding-x="8">
 				<template #left>
 					<LayoutList gap="6" horizontal-align="left">
