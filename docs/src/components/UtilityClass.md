@@ -91,3 +91,13 @@ Margin utility classes let you add margin to elements. Directions and spacing sc
 <div class="layout-u-ml-${ spacing scale }"></div>
 <div class="layout-u-mr-${ spacing scale }"></div>
 ```
+
+## Highlight Layouts
+
+`layout-u-debug` is a debugging tool class that helps you check alignments and debug layout problems. When `layout-u-debug` is added to an element, all descendant layout components of that element will be highlighted with colors. Hovering on each layout component shows you the spacing and the child elements.
+
+```vue
+<div class="layout-u-debug">
+	...
+</div>
+```
