@@ -1,6 +1,6 @@
 {
   "name": "vue-layout-system",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Vue components that solve daily layout problems",
   "main": "index.js",
   "authors": {
