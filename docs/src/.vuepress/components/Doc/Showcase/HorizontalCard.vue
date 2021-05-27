@@ -1,5 +1,5 @@
 <template>
-	<ShowcaseFrame title="Horizontal Cards List">
+	<ShowcaseFrame>
 		<LayoutList padding="5" gap="5">
 			<GreyBox v-for="i in 3" :key="i">
 				<LayoutFlexRow>
@@ -27,7 +27,7 @@
 												<GreyBox>New</GreyBox>
 												<GreyBox>Refundable</GreyBox>
 											</LayoutListInline>
-											<div>title</div>
+											<b>title - card {{ i }}</b>
 											<div>description</div>
 										</LayoutList>
 									</template>
