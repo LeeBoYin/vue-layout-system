@@ -1,19 +1,14 @@
 <template>
 	<div class="showcase-frame">
-		<LayoutList gap="5">
-			<LayoutFlexRow vertical-align="bottom">
-				<template #left>
-					<b>{{ title }}</b>
-				</template>
-				<template #right>
-					<LayoutListInline gap="3" vertical-align="center">
-						<label>
-							Highlight layouts
-						</label>
-						<ToggleSwitch v-model="propsValue.debug" />
-					</LayoutListInline>
-				</template>
-			</LayoutFlexRow>
+		<LayoutList padding-y="5" gap="5">
+			<LayoutAlign horizontal-align="right">
+				<LayoutListInline gap="3" vertical-align="center">
+					<label>
+						Highlight layouts
+					</label>
+					<ToggleSwitch v-model="propsValue.debug" />
+				</LayoutListInline>
+			</LayoutAlign>
 			<PropsPlayground>
 				<div
 					:class="{
@@ -28,24 +23,18 @@
 </template>
 
 <script>
+import LayoutAlign from '@layout-system-components/LayoutAlign';
 import LayoutList from '@layout-system-components/LayoutList';
 import LayoutListInline from '@layout-system-components/LayoutListInline';
-import LayoutFlexRow from '@layout-system-components/LayoutFlexRow';
 import ToggleSwitch from '../../PropsPlaygroundForm/ToggleSwitch';
 import PropsPlayground from '../../PropsPlayground';
 export default {
 	components: {
+		LayoutAlign,
 		LayoutList,
 		LayoutListInline,
-		LayoutFlexRow,
 		ToggleSwitch,
 		PropsPlayground,
-	},
-	props: {
-		title: {
-			type: String,
-			default: null,
-		},
 	},
 	data() {
 		return {
