@@ -20,7 +20,7 @@
 							</template>
 							<template #bottom>
 								<LayoutAlign horizontal-align="right">
-									<GreyBox name="Learn more" />
+									<button>Learn more</button>
 								</LayoutAlign>
 							</template>
 						</LayoutFlexColumn>

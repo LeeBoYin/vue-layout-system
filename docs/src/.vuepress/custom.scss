@@ -6,6 +6,12 @@ img {
 	color: transparentize(#2c3e50, 0.3);
 }
 
+select, input {
+	border: 1px solid #e2e2e2;
+	padding: 8px;
+	border-radius: 4px;
+}
+
 // override vue live style
 @media only screen and (max-width: 767px) {
 	.preview-code.preview-code {

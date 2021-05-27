@@ -21,12 +21,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss" scoped>
-select {
-	position: relative;
-	border: 1px solid #e2e2e2;
-	padding: 4px 8px;
-	border-radius: 4px;
-}
-</style>

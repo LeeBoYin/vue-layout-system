@@ -38,9 +38,7 @@
 										</LayoutList>
 									</template>
 									<template #right>
-										<GreyBox class="layout-u-p-2">
-											❤
-										</GreyBox>
+										<button>❤</button>
 									</template>
 								</LayoutFlexRow>
 							</template>

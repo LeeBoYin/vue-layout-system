@@ -23,7 +23,7 @@
 								<span>Stable</span>
 							</LayoutListInline>
 						</LayoutList>
-						<GreyBox name="Get Started" />
+						<button>Get Started</button>
 					</LayoutList>
 				</template>
 			</LayoutAbsolute>

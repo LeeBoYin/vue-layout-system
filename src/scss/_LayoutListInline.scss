@@ -8,7 +8,7 @@
 		--layout-list-inline-gap-x: var(--layout-list-inline-gap);
 		--layout-list-inline-gap-y: var(--layout-list-inline-gap);
 		display: inline-flex;
-		vertical-align: middle;
+		vertical-align: top;
 		flex-wrap: wrap;
 		margin: calc(-0.5 * var(--layout-list-inline-gap-y)) calc(-0.5 * var(--layout-list-inline-gap-x));
 	}
