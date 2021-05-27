@@ -47,7 +47,7 @@
 		}
 	}
 	@each $child-selector in $child-selectors {
-		&.layout--debug#{ & }#{ $child-selector } {
+		&.layout--debug#{ & }#{ $child-selector }:not(:empty) {
 			background-color: #{ mix($debug-color, white, 20%) };
 			outline: 2px dashed #{ transparentize($debug-color, 0.4) };
 		}
