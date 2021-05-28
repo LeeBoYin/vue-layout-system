@@ -17,3 +17,6 @@ Here's a collection of examples demonstrating a variety of layouts created with 
 
 ## Form
 <Doc-Showcase-Form />
+
+## Modal
+<Doc-Showcase-Modal />

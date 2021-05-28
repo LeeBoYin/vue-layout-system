@@ -110,7 +110,7 @@
 			</LayoutColumns>
 			<hr>
 			<LayoutAlign horizontal-align="right">
-				<LayoutListInline gap="5">
+				<LayoutListInline gap="3">
 					<button>Cancel</button>
 					<button>Submit</button>
 				</LayoutListInline>
