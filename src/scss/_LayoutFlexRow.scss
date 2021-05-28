@@ -25,7 +25,7 @@
 	&--vertical-align-default > &__left,
 	&--vertical-align-default > &__right,
 	&--vertical-align-default > &__remain {
-		@include content-fill-height;
+		@include content-fill-height(auto);
 	}
 	&--vertical-align-top {
 		align-items: flex-start;
