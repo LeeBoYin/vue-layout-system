@@ -8,6 +8,7 @@
 			<LayoutColumns
 				content-min-width="300"
 				:gap="columnsGap"
+				vertical-align="top"
 			>
 				<LayoutList
 					v-for="i in 5"
@@ -25,6 +26,7 @@
 			<LayoutColumns
 				content-min-width="300"
 				:gap="columnsGap"
+				vertical-align="top"
 			>
 				<LayoutList :gap="formControlGapY">
 					<b>select</b>

@@ -6,12 +6,12 @@
 		>
 			<GreyBox inline>
 				<LayoutListInline v-bind="propsValue">
-					<GreyBox name="Lorem" size="m" />
-					<GreyBox name="ipsum" size="s" />
-					<GreyBox name="dolor" size="m" />
-					<GreyBox name="sit" size="s" />
-					<GreyBox name="amet" size="m" />
-					<GreyBox name="elit" size="s" />
+					<GreyBox name="Lorem" size="m" show-size />
+					<GreyBox name="ipsum" size="s" show-size />
+					<GreyBox name="dolor" size="m" show-size />
+					<GreyBox name="sit" size="s" show-size />
+					<GreyBox name="amet" size="m" show-size />
+					<GreyBox name="elit" size="s" show-size />
 				</LayoutListInline>
 			</GreyBox>
 		</PropsPlayground>

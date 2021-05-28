@@ -18,13 +18,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* The switch - the box around the slider */
+$width: 36px;
+$height: 20px;
+$padding: 2px;
+$dot-size: $height - 2 * $padding;
+$active-color: #3eaf7c;
+$inactive-color: transparentize(#2c3e50, 0.5);
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 30px;
-	height: 16px;
+	width: $width;
+	height: $height;
 }
 
 /* Hide default HTML checkbox */
@@ -32,6 +38,7 @@ export default {
 	opacity: 0;
 	width: 0;
 	height: 0;
+	margin: 0;
 }
 
 /* The slider */
@@ -42,7 +49,7 @@ export default {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: $inactive-color;
 	-webkit-transition: .1s;
 	transition: .1s;
 }
@@ -50,30 +57,30 @@ export default {
 .slider:before {
 	position: absolute;
 	content: "";
-	height: 12px;
-	width: 12px;
-	left: 2px;
-	bottom: 2px;
+	height: $dot-size;
+	width: $dot-size;
+	left: $padding;
+	bottom: $padding;
 	background-color: white;
 	-webkit-transition: .1s;
 	transition: .1s;
 }
 
 input:checked + .slider {
-	background-color: #3eaf7c;
+	background-color: $active-color;
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px #3eaf7c;
+	box-shadow: 0 0 1px $active-color;
 }
 
 input:checked + .slider:before {
-	transform: translateX(14px);
+	transform: translateX($width - 2 * $padding - $dot-size);
 }
 
 /* Rounded sliders */
 .slider.round {
-	border-radius: 34px;
+	border-radius: $height / 2;
 }
 
 .slider.round:before {

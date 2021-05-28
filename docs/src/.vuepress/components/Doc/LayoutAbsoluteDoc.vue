@@ -8,31 +8,31 @@
 				<img src="https://picsum.photos/1200/800?grayscale" style="aspect-ratio: 4 / 3; width: 100%;">
 				<LayoutAbsolute v-bind="propsValue">
 					<template slot="topLeft">
-						<GreyBox size="m" solid name="topLeft" />
+						<GreyBox size="m" solid name="topLeft" show-size />
 					</template>
 					<template slot="top">
-						<GreyBox size="m" solid name="top" />
+						<GreyBox size="m" solid name="top" show-size />
 					</template>
 					<template slot="topRight">
-						<GreyBox size="m" solid name="topRight" />
+						<GreyBox size="m" solid name="topRight" show-size />
 					</template>
 					<template slot="right">
-						<GreyBox size="m" solid name="right" />
+						<GreyBox size="m" solid name="right" show-size />
 					</template>
 					<template slot="bottomRight">
-						<GreyBox size="m" solid name="bottomRight" />
+						<GreyBox size="m" solid name="bottomRight" show-size />
 					</template>
 					<template slot="bottom">
-						<GreyBox size="m" solid name="bottom" />
+						<GreyBox size="m" solid name="bottom" show-size />
 					</template>
 					<template slot="bottomLeft">
-						<GreyBox size="m" solid name="bottomLeft" />
+						<GreyBox size="m" solid name="bottomLeft" show-size />
 					</template>
 					<template slot="left">
-						<GreyBox size="m" solid name="left" />
+						<GreyBox size="m" solid name="left" show-size />
 					</template>
 					<template slot="center">
-						<GreyBox size="m" solid name="center" />
+						<GreyBox size="m" solid name="center" show-size />
 					</template>
 				</LayoutAbsolute>
 			</GreyBox>

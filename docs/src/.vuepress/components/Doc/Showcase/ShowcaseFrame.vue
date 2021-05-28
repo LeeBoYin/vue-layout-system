@@ -3,7 +3,10 @@
 		<LayoutList padding-y="5" gap="5">
 			<LayoutAlign horizontal-align="right">
 				<LayoutListInline gap="3" vertical-align="center">
-					<label>
+					<label
+						class="showcase-frame__switch-label"
+						@click="propsValue.debug = !propsValue.debug"
+					>
 						Highlight layouts
 					</label>
 					<ToggleSwitch v-model="propsValue.debug" />
@@ -51,3 +54,12 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss" scoped>
+.showcase-frame {
+	&__switch-label {
+		cursor: pointer;
+		user-select: none;
+	}
+}
+</style>

@@ -6,7 +6,13 @@
 		>
 			<GreyBox>
 				<LayoutColumns v-bind="filteredPropsValue">
-					<GreyBox v-for="i in 20" :name="i" :size="[null, 'm'][i % 2]" width="initial" />
+					<GreyBox
+						v-for="i in 20"
+						:name="i"
+						:size="[null, 'm'][i % 2]"
+						width="initial"
+						show-size
+					/>
 				</LayoutColumns>
 			</GreyBox>
 		</PropsPlayground>

@@ -18,13 +18,13 @@
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">
-								<GreyBox size="m" name="top" />
+								<GreyBox size="m" name="top" show-size />
 							</template>
 							<template slot="remain">
-								<GreyBox name="remain" />
+								<GreyBox name="remain" show-size />
 							</template>
 							<template slot="bottom">
-								<GreyBox size="m" name="bottom" />
+								<GreyBox size="m" name="bottom" show-size />
 							</template>
 						</LayoutFlexColumn>
 					</GreyBox>
@@ -42,10 +42,10 @@
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">
-								<GreyBox size="m" name="top" />
+								<GreyBox size="m" name="top" show-size />
 							</template>
 							<template slot="remain">
-								<GreyBox name="remain" />
+								<GreyBox name="remain" show-size />
 							</template>
 						</LayoutFlexColumn>
 					</GreyBox>
@@ -63,10 +63,10 @@
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="remain">
-								<GreyBox name="remain" />
+								<GreyBox name="remain" show-size />
 							</template>
 							<template slot="bottom">
-								<GreyBox size="m" name="bottom" />
+								<GreyBox size="m" name="bottom" show-size />
 							</template>
 						</LayoutFlexColumn>
 					</GreyBox>
@@ -84,10 +84,10 @@
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">
-								<GreyBox size="m" name="top" />
+								<GreyBox size="m" name="top" show-size />
 							</template>
 							<template slot="bottom">
-								<GreyBox size="m" name="bottom" />
+								<GreyBox size="m" name="bottom" show-size />
 							</template>
 						</LayoutFlexColumn>
 					</GreyBox>

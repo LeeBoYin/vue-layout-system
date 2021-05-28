@@ -1,10 +1,11 @@
 <template>
 	<ShowcaseFrame>
-		<GreyBox class="hero-banner">
-			<img
-				src="https://picsum.photos/id/100/1200/500?grayscale"
-				style="aspect-ratio: 12 / 5; width: 100%;"
-			>
+		<GreyBox
+			class="hero-banner"
+			:style="{
+				'background-image': 'url(https://picsum.photos/id/100/1200/400?grayscale)',
+			}"
+		>
 			<LayoutAbsolute padding-x="8">
 				<template #left>
 					<LayoutList gap="6" horizontal-align="left">
@@ -39,3 +40,11 @@ export default {
 	],
 }
 </script>
+
+<style lang="scss" scoped>
+.hero-banner {
+	height: 400px;
+	background-position: center;
+	background-size: cover;
+}
+</style>

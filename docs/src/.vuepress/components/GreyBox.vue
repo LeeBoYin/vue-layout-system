@@ -39,6 +39,10 @@ export default {
 			type: Boolean,
 			default: false,
 		},
+		showSize: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	computed: {
 		sizeStyle() {
@@ -73,6 +77,9 @@ export default {
 			].join(' x ');
 		},
 		sizeHintStyle() {
+			if(!this.showSize) {
+				return null;
+			}
 			return {
 				'--grey-box-size-hint': `'${ this.sizeHint }'`,
 			};
