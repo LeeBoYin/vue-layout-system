@@ -11,7 +11,7 @@
 					</template>
 					<template #remain>
 						<LayoutList gap="3">
-							<b>title - card {{ i }}</b>
+							<b>card {{ i }}</b>
 							<div>description</div>
 						</LayoutList>
 					</template>

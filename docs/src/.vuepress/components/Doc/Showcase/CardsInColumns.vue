@@ -14,7 +14,7 @@
 						<LayoutFlexColumn padding="4" gap="6">
 							<template #top>
 								<LayoutList gap="3" horizontal-align="left">
-									<b>title - card {{ i }}</b>
+									<b>card {{ i }}</b>
 									<div>{{ getRandomLorem() }}</div>
 								</LayoutList>
 							</template>

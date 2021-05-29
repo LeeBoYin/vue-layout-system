@@ -8,11 +8,12 @@
 			>
 				<LayoutFlexRow>
 					<template #left>
-						<div class="layout-u-position-relative">
-							<img
-								:src="`https://picsum.photos/240/180?grayscale&random=${ i }`"
-								style="width: 240px; height: 180px;"
-							>
+						<div
+							class="horizontal-card__img layout-u-position-relative"
+							:style="{
+								'background-image': `url(https://picsum.photos/240/180?grayscale&random=${ i })`
+							}"
+						>
 							<LayoutAbsolute padding-y="4">
 								<template #topLeft>
 									<GreyBox name="Best Choice" solid />
@@ -21,7 +22,7 @@
 						</div>
 					</template>
 					<template #remain>
-						<LayoutFlexColumn padding="4">
+						<LayoutFlexColumn padding="4" gap="5">
 							<template #top>
 								<LayoutFlexRow gap="6" vertical-align="top">
 									<template #remain>
@@ -31,7 +32,7 @@
 												<GreyBox>New</GreyBox>
 												<GreyBox>Refundable</GreyBox>
 											</LayoutListInline>
-											<b>title - card {{ i }}</b>
+											<b>card {{ i }}</b>
 											<div class="horizontal-card__desc">
 												{{ getRandomLorem({ sections: 2 }) }}
 											</div>
@@ -87,11 +88,22 @@ export default {
 
 <style lang="scss" scoped>
 .horizontal-card {
+	&__img {
+		width: 240px;
+		height: 180px;
+		background-position: center;
+		background-size: cover;
+	}
 	&__desc {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+	@media (max-width: 959px) {
+		&__img {
+			display: none;
+		}
 	}
 }
 </style>
