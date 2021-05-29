@@ -5,6 +5,7 @@
 			textCenterClass,
 			solidClass,
 			inlineClass,
+			resizableClass,
 		]"
 		:style="[sizeStyle, sizeHintStyle]"
 	>
@@ -40,6 +41,18 @@ export default {
 			default: false,
 		},
 		showSize: {
+			type: Boolean,
+			default: false,
+		},
+		resizable: {
+			type: Boolean,
+			default: false,
+		},
+		resizableX: {
+			type: Boolean,
+			default: false,
+		},
+		resizableY: {
 			type: Boolean,
 			default: false,
 		},
@@ -95,6 +108,18 @@ export default {
 		inlineClass() {
 			return this.inline ? 'grey-box--inline' : null;
 		},
+		resizableClass() {
+			if(this.resizable) {
+				return 'grey-box--resizable';
+			}
+			if(this.resizableX) {
+				return 'grey-box--resizable-x';
+			}
+			if(this.resizableY) {
+				return 'grey-box--resizable-y';
+			}
+			return null;
+		},
 	},
 }
 </script>
@@ -136,6 +161,17 @@ export default {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		color: transparentize(#2c3e50, 0.4);
+	}
+	&--resizable {
+		resize: both;
+		max-width: 100%;
+	}
+	&--resizable-x {
+		resize: horizontal;
+		max-width: 100%;
+	}
+	&--resizable-y {
+		resize: vertical;
 	}
 }
 </style>

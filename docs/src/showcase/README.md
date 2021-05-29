@@ -15,8 +15,8 @@ Here's a collection of examples demonstrating a variety of layouts created with 
 ## Horizontal Cards List
 <Doc-Showcase-HorizontalCardsList />
 
-## Form
-<Doc-Showcase-Form />
-
 ## Modal
 <Doc-Showcase-Modal />
+
+## Form
+<Doc-Showcase-Form />

@@ -15,6 +15,7 @@
 					<GreyBox
 						height="420"
 						class="layout-u-content-fill-height"
+						resizable-y
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">
@@ -39,6 +40,7 @@
 					<GreyBox
 						height="420"
 						class="layout-u-content-fill-height"
+						resizable-y
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">
@@ -60,6 +62,7 @@
 					<GreyBox
 						height="420"
 						class="layout-u-content-fill-height"
+						resizable-y
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="remain">
@@ -81,6 +84,7 @@
 					<GreyBox
 						height="420"
 						class="layout-u-content-fill-height"
+						resizable-y
 					>
 						<LayoutFlexColumn v-bind="propsValue">
 							<template slot="top">

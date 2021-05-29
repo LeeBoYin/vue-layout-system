@@ -48,13 +48,17 @@
 					</template>
 					<template #bottom>
 						<LayoutAlign horizontal-align="center">
-							<a style="cursor: pointer" @click="resetPropsValue">reset</a>
+							<a style="cursor: pointer" @click="resetPropsAndResult">reset</a>
 						</LayoutAlign>
 					</template>
 				</LayoutFlexColumn>
 			</template>
 			<template #remain>
-				<div ref="result" class="props-playground__result">
+				<div
+					ref="result"
+					class="props-playground__result"
+					:key="resultSlotKey"
+				>
 					<slot />
 				</div>
 			</template>
@@ -118,6 +122,7 @@ export default {
 			resizeStartX: null,
 			initialValue: {},
 			windowInnerWidth: null,
+			resultSlotKey: Math.random(),
 			propsValue: {},
 		};
 	},
@@ -142,7 +147,7 @@ export default {
 	},
 	created() {
 		this.initialValue = Object.assign({}, this.value);
-		this.resetPropsValue();
+		this.resetPropsAndResult();
 	},
 	mounted() {
 		this.playgroundMaxWidth = this.$el.clientWidth;
@@ -172,10 +177,11 @@ export default {
 				switch: ToggleSwitch,
 			}[type];
 		},
-		resetPropsValue() {
+		resetPropsAndResult() {
 			Object.keys(this.initialValue).forEach(propName => {
 				this.$set(this.propsValue, propName, this.initialValue[propName]);
 			});
+			this.resultSlotKey = Math.random();
 		},
 		onDragHandleStart(e) {
 			this.isResizing = true;

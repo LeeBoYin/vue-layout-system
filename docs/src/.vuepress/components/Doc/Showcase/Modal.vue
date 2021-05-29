@@ -4,6 +4,7 @@
 			<GreyBox
 				height="400"
 				class="layout-u-content-fill-height"
+				resizable
 			>
 				<LayoutFlexColumn>
 					<template #top>
