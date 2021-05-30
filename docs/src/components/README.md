@@ -36,13 +36,13 @@ Here's an example.
 ```
 
 ## Layout Components
-- [LayoutAbsolute](/components/LayoutAbsolute) lets you place contents at 9 absolute positions in a relative position element.
-- [LayoutAlign](/components/LayoutAlign) lets you align contents both horizontally and vertically.
-- [LayoutColumns](/components/LayoutColumns) divide a space evenly into columns, arranging contents into the columns in order.
-- [LayoutFlexColumn](/components/LayoutFlexColumn) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
-- [LayoutFlexRow](/components/LayoutFlexRow) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
-- [LayoutList](/components/LayoutList) arranges contents vertically.
-- [LayoutListInline](/components/LayoutListInline) arranges contents horizontally.
+- [LayoutAbsolute](/components/LayoutAbsolute/) lets you place contents at 9 absolute positions in a relative position element.
+- [LayoutAlign](/components/LayoutAlign/) lets you align contents both horizontally and vertically.
+- [LayoutColumns](/components/LayoutColumns/) divide a space evenly into columns, arranging contents into the columns in order.
+- [LayoutFlexColumn](/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
+- [LayoutFlexRow](/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
+- [LayoutList](/components/LayoutList/) arranges contents vertically.
+- [LayoutListInline](/components/LayoutListInline/) arranges contents horizontally.
 
 ## Spacing System
 Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for consistent and precise control of the spacing.
