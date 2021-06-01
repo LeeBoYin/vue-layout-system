@@ -9,6 +9,7 @@
 
 @mixin debug-highlight($name, $child-selectors: (' > *')) {
 	$debug-color: map-get($layout-debug-color-map, $name);
+	$outline-width: 2px;
 
 	.layout-u-debug & {
 		background-color: #{ transparentize($debug-color, 0.92) };
@@ -24,7 +25,8 @@
 				transparent 10px
 			),
 			rgba(255, 255, 255, 0.5);
-		outline: 2px solid #{ transparentize($debug-color, 0.4) };
+		outline: $outline-width solid #{ transparentize($debug-color, 0.4) };
+		outline-offset: -$outline-width;
 
 		// show component name on hover
 		&:before {
@@ -49,7 +51,8 @@
 	@each $child-selector in $child-selectors {
 		&.layout--debug#{ & }#{ $child-selector }:not(:empty) {
 			background-color: #{ mix($debug-color, white, 20%) };
-			outline: 2px dashed #{ transparentize($debug-color, 0.4) };
+			outline: $outline-width dashed #{ transparentize($debug-color, 0.4) };
+			outline-offset: -$outline-width;
 		}
 	}
 }

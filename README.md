@@ -16,9 +16,9 @@ Vue Layout System lets you intuitively arrange your components. Simply drop your
 
 With Vue Layout System developers are empowered to
 
-- Create various types of layout without writing CSS
-- Arrange contents in a intuitive and predictable way
-- Control space between contents precisely with one consistent spacing system
+- Create various types of layout with much shorter developing time
+- Arrange contents faster in a intuitive and predictable way
+- Control space between contents precisely with system-wide consistency
 
 ![](https://leeboyin.github.io/vue-layout-system/layout_highlight.gif)
 
