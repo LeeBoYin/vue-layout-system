@@ -12,7 +12,7 @@
 			<slot name="top"></slot>
 		</div>
 		<div class="layout-flex-column__remain">
-			<slot name="remain"></slot>
+			<slot name="remain"><slot /></slot>
 		</div>
 		<div v-if="$slots.bottom" class="layout-flex-column__bottom">
 			<slot name="bottom"></slot>
