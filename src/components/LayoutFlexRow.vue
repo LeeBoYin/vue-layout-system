@@ -17,7 +17,7 @@
 		<div
 			class="layout-flex-row__remain"
 		>
-			<slot name="remain"></slot>
+			<slot name="remain"><slot /></slot>
 		</div>
 		<div
 			v-if="$slots.right"

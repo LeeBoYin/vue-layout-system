@@ -11,7 +11,8 @@
   1. `remain`
   1. `right`
 - The content in the `remain` slot will fill the remaining horizontal space
-- You may use all of the 3 slots or just 2 of them
+- Any content not wrapped in the `<template>` tags will be placed in the `remain` slot
+- You may use all the 3 slots or just 2 of them
 
 ```vue live
 <LayoutFlexRow
