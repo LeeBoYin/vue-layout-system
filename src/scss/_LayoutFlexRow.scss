@@ -22,6 +22,10 @@
 		flex: 1 1 auto;
 		min-width: 0;
 	}
+	&--remain-overflow-scroll > &__remain {
+		width: 0;
+		overflow: auto;
+	}
 
 	// vertical align
 	&--vertical-align-default,
@@ -37,7 +41,7 @@
 	&--vertical-align-stretch > &__left,
 	&--vertical-align-stretch > &__right,
 	&--vertical-align-stretch > &__remain {
-		@include content-fill-height(auto);
+		@include content-fill-height;
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {

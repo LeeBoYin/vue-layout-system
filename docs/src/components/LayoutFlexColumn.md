@@ -44,3 +44,4 @@
 | --- | --- | --- | --- | --- |
 | gap | gap size between slots | Number, String | 0 | spacing scale |
 | horizontalAlign | horizontal align contents | String | stretch | left, center, right, stretch |
+| isRemainScrollable | show scrollbar in the remaining space when content overflow | Boolean | false | true, false |

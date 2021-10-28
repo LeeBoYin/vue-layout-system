@@ -3,24 +3,6 @@
 	display: grid;
 	grid-template-columns: minmax(0, auto); // set column min-width = 0
 
-	// vertical align
-	&--vertical-align-default,
-	&--vertical-align-top {
-		align-content: start;
-	}
-	&--vertical-align-center {
-		align-content: center;
-	}
-	&--vertical-align-bottom {
-		align-content: end;
-	}
-	&--vertical-align-stretch {
-		align-content: stretch;
-	}
-	&--vertical-align-stretch > &__content {
-		@include content-fill-height;
-	}
-
 	// horizontal align
 	&--horizontal-align-left {
 		justify-content: start;
@@ -38,6 +20,24 @@
 	&--horizontal-align-default > &__content,
 	&--horizontal-align-stretch > &__content {
 		@include content-fill-width;
+	}
+
+	// vertical align
+	&--vertical-align-default,
+	&--vertical-align-top {
+		align-content: start;
+	}
+	&--vertical-align-center {
+		align-content: center;
+	}
+	&--vertical-align-bottom {
+		align-content: end;
+	}
+	&--vertical-align-stretch {
+		align-content: stretch;
+	}
+	&--vertical-align-stretch > &__content {
+		@include content-fill-height;
 	}
 
 	@include debug-highlight('LayoutAlign');

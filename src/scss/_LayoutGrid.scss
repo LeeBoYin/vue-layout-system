@@ -39,7 +39,7 @@
 	}
 	&--vertical-align-default > &__cell,
 	&--vertical-align-stretch > &__cell {
-		@include content-fill-height(auto);
+		@include content-fill-height;
 	}
 
 	// cell
