@@ -1,0 +1,56 @@
+@import 'layoutMixin';
+.layout-grid {
+	--column-count: 12;
+	--layout-grid-gap: 0px;
+	--layout-grid-gap-x: var(--layout-grid-gap);
+	--layout-grid-gap-y: var(--layout-grid-gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--column-count), 1fr);
+	gap: var(--layout-grid-gap-y) var(--layout-grid-gap-x);
+	align-items: stretch;
+
+	// gap
+	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
+		&--gap-#{ $layout-spacing-key } {
+			--layout-grid-gap: #{ $gap-size };
+		}
+	}
+	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
+		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });
+		&--gap-x-#{ $layout-spacing-key } {
+			--layout-grid-gap-x: #{ $gap-size };
+		}
+		&--gap-y-#{ $layout-spacing-key } {
+			--layout-grid-gap-y: #{ $gap-size };
+		}
+	}
+
+	// vertical align
+	&--vertical-align-default > &__cell {
+		@include content-fill-height(auto);
+	}
+	&--vertical-align-top {
+		align-items: start;
+	}
+	&--vertical-align-center {
+		align-items: center;
+	}
+	&--vertical-align-bottom {
+		align-items: end;
+	}
+
+	// cell
+	&__cell {
+		--span: 1;
+		grid-column: auto / span var(--span);
+	}
+
+	// row break
+	&__row-break {
+		grid-column-end: -1;
+	}
+
+	@include debug-highlight('LayoutGrid', (' > &__cell'));
+}
