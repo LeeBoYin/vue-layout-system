@@ -4,19 +4,29 @@ Here's a collection of examples demonstrating a variety of layouts created with 
 
 
 ## Hero Banner
+`LayoutAbsolute` `LayoutList` `LayoutListInline`
 <Doc-Showcase-HeroBanner />
 
 ## Cards in Columns
+`LayoutColumn` `LayoutFlexColumn` `LayoutList` `LayoutAlign`
 <Doc-Showcase-CardsInColumns />
 
 ## Horizontal Cards In Columns
+`LayoutColumn` `LayoutFlexRow` `LayoutList`
 <Doc-Showcase-HorizontalCardsInColumns />
 
 ## Horizontal Cards List
+`LayoutFlexRow` `LayoutFlexColumn` `LayoutList` `LayoutListInline` `LayoutAbsolute`
 <Doc-Showcase-HorizontalCardsList />
 
 ## Modal
+`LayoutFlexColumn` `LayoutAlign`
 <Doc-Showcase-Modal />
 
 ## Form
+`LayoutColumn` `LayoutList` `LayoutListInline`
 <Doc-Showcase-Form />
+
+## Blog
+`LayoutGrid` `LayoutList` `LayoutFlexColumn`
+<Doc-Showcase-Blog />
