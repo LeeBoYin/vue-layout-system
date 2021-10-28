@@ -36,7 +36,7 @@
 | columnCount | set number of columns, width of contents will be evenly distributed, required when contentMinWidth is not set | Number | - | positive integer |
 | contentMinWidth | Set minimum width of contents, number of columns will be dynamic, ignored when columnCount is set | Number, String | 0 | CSS width value |
 | flowDirection | the direction contents are ordered | String | row | row, column |
-| verticalAlign | vertical align contents (when the heights of contents differ), ignored when flowDirection is column | String | default | default, top, center, bottom |
+| verticalAlign | vertical align contents (when the heights of contents differ), ignored when flowDirection is column | String | top | top, center, bottom, stretch |
 | gap | gap size between contents | Number, String | 0 | spacing scale, gap shorthand |
 | gapX | horizontal gap size between contents | Number, String | 0 | spacing scale |
 | gapY | vertical gap size between contents | Number, String | 0 | spacing scale |

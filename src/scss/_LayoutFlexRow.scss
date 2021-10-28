@@ -22,11 +22,9 @@
 		flex: 1 1 auto;
 		min-width: 0;
 	}
-	&--vertical-align-default > &__left,
-	&--vertical-align-default > &__right,
-	&--vertical-align-default > &__remain {
-		@include content-fill-height(auto);
-	}
+
+	// vertical align
+	&--vertical-align-default,
 	&--vertical-align-top {
 		align-items: flex-start;
 	}
@@ -35,6 +33,11 @@
 	}
 	&--vertical-align-bottom {
 		align-items: flex-end;
+	}
+	&--vertical-align-stretch > &__left,
+	&--vertical-align-stretch > &__right,
+	&--vertical-align-stretch > &__remain {
+		@include content-fill-height(auto);
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {

@@ -6,7 +6,9 @@
 				:key="i"
 				class="horizontal-card"
 			>
-				<LayoutFlexRow>
+				<LayoutFlexRow
+					vertical-align="stretch"
+				>
 					<template #left>
 						<div
 							class="horizontal-card__img layout-u-position-relative"

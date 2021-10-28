@@ -168,13 +168,13 @@ export default {
 			return classList;
 		},
 		getHorizontalAlignClass(componentClass) {
-			if(['default', 'left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
+			if(['default', 'stretch', 'left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
 				return `${ componentClass }--horizontal-align-${ this.horizontalAlign }`;
 			}
 			return null;
 		},
 		getVerticalAlignClass(componentClass) {
-			if(['default', 'top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
+			if(['default', 'stretch', 'top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
 				return `${ componentClass }--vertical-align-${ this.verticalAlign }`;
 			}
 			return null;

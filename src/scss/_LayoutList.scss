@@ -14,6 +14,10 @@
 	&--horizontal-align-right {
 		justify-items: end;
 	}
+	&--horizontal-align-default,
+	&--horizontal-align-stretch {
+		justify-items: stretch;
+	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
 		$gap-size: var(--layout-spacing-#{ $layout-spacing-key });

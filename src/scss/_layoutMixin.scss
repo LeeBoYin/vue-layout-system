@@ -7,6 +7,15 @@
 	}
 }
 
+@mixin content-fill-width($min-width: 0) {
+	display: flex;
+	flex-direction: row;
+	> * {
+		flex: 1 1 $min-width;
+		width: auto;
+	}
+}
+
 @mixin debug-highlight($name, $child-selectors: (' > *')) {
 	$debug-color: map-get($layout-debug-color-map, $name);
 	$outline-width: 2px;

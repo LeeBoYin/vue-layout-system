@@ -24,6 +24,8 @@
 		min-height: 0;
 		@include content-fill-height;
 	}
+
+	// horizontal align
 	&--horizontal-align-left {
 		align-items: flex-start;
 	}
@@ -32,6 +34,10 @@
 	}
 	&--horizontal-align-right {
 		align-items: flex-end;
+	}
+	&--horizontal-align-default,
+	&--horizontal-align-stretch {
+		align-items: stretch;
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {

@@ -28,9 +28,6 @@
 	}
 
 	// vertical align
-	&--vertical-align-default > &__cell {
-		@include content-fill-height(auto);
-	}
 	&--vertical-align-top {
 		align-items: start;
 	}
@@ -39,6 +36,10 @@
 	}
 	&--vertical-align-bottom {
 		align-items: end;
+	}
+	&--vertical-align-default > &__cell,
+	&--vertical-align-stretch > &__cell {
+		@include content-fill-height(auto);
 	}
 
 	// cell

@@ -10,7 +10,7 @@
 				resizable
 			>
 				<LayoutAlign v-bind="propsValue">
-					<GreyBox size="m" width="initial" name="content" show-size />
+					<GreyBox name="content" show-size />
 				</LayoutAlign>
 			</GreyBox>
 		</PropsPlayground>

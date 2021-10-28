@@ -1,6 +1,11 @@
 <template>
 	<ShowcaseFrame>
-		<LayoutColumns content-min-width="200" padding="5" gap="5">
+		<LayoutColumns
+			content-min-width="200"
+			padding="5"
+			gap="5"
+			vertical-align="stretch"
+		>
 			<GreyBox
 				v-for="i in 8"
 				:key="i"

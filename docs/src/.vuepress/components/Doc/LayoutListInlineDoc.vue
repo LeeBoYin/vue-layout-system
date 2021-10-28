@@ -35,10 +35,15 @@ export default {
 		return {
 			propsValue: {
 				...getDefaultPropsValue(propsName),
+				horizontalAlign: 'left',
 				wrap: true,
 			},
 			propsConfig: {
 				...getPropsConfig(propsName),
+				horizontalAlign: {
+					type: 'select',
+						options: ['left', 'center', 'right'],
+				},
 				wrap: {
 					type: 'boolean',
 				},

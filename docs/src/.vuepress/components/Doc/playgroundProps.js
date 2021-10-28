@@ -7,12 +7,12 @@ const spacingRangeConfig = {
 
 const horizontalAlignSelectConfig = {
 	type: 'select',
-	options: ['default', 'left', 'center', 'right'],
+	options: ['left', 'center', 'right', 'stretch'],
 };
 
 const verticalAlignSelectConfig = {
 	type: 'select',
-	options: ['default', 'top', 'center', 'bottom'],
+	options: ['top', 'center', 'bottom', 'stretch'],
 };
 
 const absolutePositionSelectConfig = {
@@ -65,7 +65,7 @@ const playgroundProps = {
 	},
 	horizontalAlign: {
 		propsValue: {
-			horizontalAlign: 'default',
+			horizontalAlign: 'stretch',
 		},
 		propsConfig: {
 			horizontalAlign: horizontalAlignSelectConfig,
@@ -73,7 +73,7 @@ const playgroundProps = {
 	},
 	verticalAlign: {
 		propsValue: {
-			verticalAlign: 'default',
+			verticalAlign: 'top',
 		},
 		propsConfig: {
 			verticalAlign: verticalAlignSelectConfig,

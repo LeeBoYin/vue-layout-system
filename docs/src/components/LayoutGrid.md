@@ -50,7 +50,7 @@
 | gap | gap size between columns and rows | Number, String | 0 | spacing scale |
 | gapX | horizontal gap size between columns | Number, String | 0 | spacing scale |
 | gapY | vertical gap size between rows | Number, String | 0 | spacing scale |
-| verticalAlign | vertical align contents in rows | String | default | default, top, center, bottom |
+| verticalAlign | vertical align contents in rows | String | top | top, center, bottom, stretch |
 
 ### LayoutGridCell
 | Property | Description | Type | Default | Value |

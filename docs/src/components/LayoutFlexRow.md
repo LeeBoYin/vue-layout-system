@@ -42,4 +42,4 @@
 | Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | gap | gap size between slots | Number, String | 0 | spacing scale |
-| verticalAlign | vertical align contents | String | default | default, top, center, bottom |
+| verticalAlign | vertical align contents | String | top | top, center, bottom, stretch |

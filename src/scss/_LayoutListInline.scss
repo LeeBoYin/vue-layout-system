@@ -21,6 +21,8 @@
 		flex-wrap: nowrap;
 	}
 
+	// vertical align
+	&--vertical-align-default > &__wrapper,
 	&--vertical-align-top > &__wrapper {
 		align-items: flex-start;
 	}
@@ -30,6 +32,15 @@
 	&--vertical-align-bottom > &__wrapper {
 		align-items: flex-end;
 	}
+	&--vertical-align-stretch > &__wrapper {
+		align-items: stretch;
+	}
+	&--vertical-align-stretch > &__wrapper > &__item {
+		@include content-fill-height(auto);
+	}
+
+	// horizontal align
+	&--horizontal-align-default > &__wrapper,
 	&--horizontal-align-left > &__wrapper {
 		justify-content: flex-start;
 	}
