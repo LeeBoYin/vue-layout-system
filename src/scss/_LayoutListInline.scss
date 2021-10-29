@@ -36,7 +36,7 @@
 		align-items: stretch;
 	}
 	&--vertical-align-stretch > &__wrapper > &__item {
-		@include content-fill-height;
+		@include content-fill-height(auto);
 	}
 
 	// horizontal align

@@ -1,43 +1,35 @@
 @import 'layoutMixin';
 .layout-flex-column {
 	--layout-flex-column-gap: 0px;
-	display: flex;
-	flex-direction: column;
 
-	&__top, &__bottom {
-		flex: 0 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	gap: var(--layout-flex-column-gap);
+
+	&--no-top {
+		grid-template-rows: 1fr auto;
 	}
-	&__top {
-		margin-bottom: var(--layout-flex-column-gap);
+	&--no-bottom {
+		grid-template-rows: auto 1fr;
 	}
-	&__bottom {
-		margin-top: var(--layout-flex-column-gap);
-	}
-	&--no-remain > &__top {
-		margin-bottom: calc(0.5 * var(--layout-flex-column-gap));
-	}
-	&--no-remain > &__bottom {
-		margin-top: calc(0.5 * var(--layout-flex-column-gap));
+	&--no-remain {
+		grid-template-rows: auto minmax(var(--layout-flex-column-gap), 1fr) auto;
+		gap: 0;
 	}
 	&__remain {
-		flex: 1 1 auto;
-		min-height: 0;
 		@include content-fill-height;
-	}
-	&--remain-overflow-scroll > &__remain {
-		height: 0;
-		overflow: auto;
 	}
 
 	// horizontal align
 	&--horizontal-align-left {
-		align-items: flex-start;
+		align-items: start;
 	}
 	&--horizontal-align-center {
 		align-items: center;
 	}
 	&--horizontal-align-right {
-		align-items: flex-end;
+		align-items: end;
 	}
 	&--horizontal-align-default,
 	&--horizontal-align-stretch {

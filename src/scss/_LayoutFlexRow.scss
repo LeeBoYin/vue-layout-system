@@ -1,47 +1,41 @@
 @import 'layoutMixin';
 .layout-flex-row {
 	--layout-flex-row-gap: 0px;
-	display: flex;
 
-	&__left, &__right {
-		flex: 0 0 auto;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto 1fr auto;
+	gap: var(--layout-flex-row-gap);
+
+	&--no-left {
+		grid-template-columns: 1fr auto;
 	}
-	&__left {
-		margin-right: var(--layout-flex-row-gap);
+	&--no-right {
+		grid-template-columns: auto 1fr;
 	}
-	&__right {
-		margin-left: var(--layout-flex-row-gap);
-	}
-	&--no-remain > &__left {
-		margin-right: calc(0.5 * var(--layout-flex-row-gap));
-	}
-	&--no-remain > &__right {
-		margin-left: calc(0.5 * var(--layout-flex-row-gap));
+	&--no-remain {
+		grid-template-columns: auto minmax(var(--layout-flex-row-gap), 1fr) auto;
+		gap: 0;
 	}
 	&__remain {
-		flex: 1 1 auto;
-		min-width: 0;
-	}
-	&--remain-overflow-scroll > &__remain {
-		width: 0;
-		overflow: auto;
+		@include content-fill-width;
 	}
 
 	// vertical align
 	&--vertical-align-default,
 	&--vertical-align-top {
-		align-items: flex-start;
+		align-items: start;
 	}
 	&--vertical-align-center {
 		align-items: center;
 	}
 	&--vertical-align-bottom {
-		align-items: flex-end;
+		align-items: end;
 	}
 	&--vertical-align-stretch > &__left,
 	&--vertical-align-stretch > &__right,
 	&--vertical-align-stretch > &__remain {
-		@include content-fill-height;
+		@include content-fill-height(auto);
 	}
 
 	@each $layout-spacing-key, $layout-spacing-value in $layout-spacing-map {
