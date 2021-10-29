@@ -6,7 +6,8 @@
 			getGapClass('layout-flex-row'),
 			paddingClass,
 			noRemainClass,
-			isRemainScrollable ? 'layout-flex-row--remain-overflow-scroll' : null,
+			noLeftClass,
+			noRightClass,
 		]"
 	>
 		<div
@@ -36,15 +37,15 @@ export default {
 	mixins: [
 		layoutMixin,
 	],
-	props: {
-		isRemainScrollable: {
-			type: Boolean,
-			default: false,
-		},
-	},
 	computed: {
 		noRemainClass() {
 			return !this.$slots.remain ? 'layout-flex-row--no-remain' : null;
+		},
+		noLeftClass() {
+			return !this.$slots.left ? 'layout-flex-row--no-left' : null;
+		},
+		noRightClass() {
+			return !this.$slots.right ? 'layout-flex-row--no-right' : null;
 		},
 	},
 };

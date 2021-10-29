@@ -40,5 +40,5 @@
 | gapX | horizontal gap size between contents | Number, String | 0 | spacing scale |
 | gapY | vertical gap size between contents | Number, String | 0 | spacing scale |
 | horizontalAlign | horizontal align contents (when contents wrapped) | String | left | left, center, right |
-| verticalAlign | vertical align contents (when the heights of contents differ) | String | top | top, center, bottom, stretch |
+| verticalAlign | vertical align contents (when the heights of contents differ) | String | stretch | top, center, bottom, stretch |
 | wrap | wrap contents into multiple lines | Boolean | true | true, false |

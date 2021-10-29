@@ -6,7 +6,7 @@
 				class="layout-u-content-fill-height"
 				resizable
 			>
-				<LayoutFlexColumn is-remain-scrollable>
+				<LayoutFlexColumn>
 					<template #top>
 						<GreyBox class="layout-u-position-relative">
 							<LayoutAlign
@@ -18,7 +18,7 @@
 						</GreyBox>
 					</template>
 					<template #remain>
-						<div class="layout-u-px-8 layout-u-py-4">
+						<div class="layout-u-px-8 layout-u-py-4" style="overflow: auto">
 							<ol>
 								<li v-for="i in 10" :key="i">
 									{{ getRandomLorem({ sections: 3 }) }}

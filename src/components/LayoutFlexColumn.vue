@@ -6,7 +6,8 @@
 			getGapClass('layout-flex-column'),
 			paddingClass,
 			noRemainClass,
-			isRemainScrollable ? 'layout-flex-column--remain-overflow-scroll' : null,
+			noTopClass,
+			noBottomClass,
 		]"
 	>
 		<div v-if="$slots.top" class="layout-flex-column__top">
@@ -28,15 +29,15 @@ export default {
 	mixins: [
 		layoutMixin,
 	],
-	props: {
-		isRemainScrollable: {
-			type: Boolean,
-			default: false,
-		},
-	},
 	computed: {
 		noRemainClass() {
 			return !this.$slots.remain ? 'layout-flex-column--no-remain' : null;
+		},
+		noTopClass() {
+			return !this.$slots.top ? 'layout-flex-column--no-top' : null;
+		},
+		noBottomClass() {
+			return !this.$slots.bottom ? 'layout-flex-column--no-bottom' : null;
 		},
 	},
 };

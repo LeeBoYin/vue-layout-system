@@ -88,7 +88,7 @@ export default {
 		LayoutList,
 	},
 	data() {
-		const propsName = ['padding', 'gap', 'verticalAlign', 'isRemainScrollable'];
+		const propsName = ['padding', 'gap', 'verticalAlign'];
 		return {
 			propsValue: getDefaultPropsValue(propsName),
 			propsConfig: getPropsConfig(propsName),

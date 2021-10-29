@@ -22,7 +22,6 @@
 	}
 
 	// vertical align
-	&--vertical-align-default > &__wrapper,
 	&--vertical-align-top > &__wrapper {
 		align-items: flex-start;
 	}
@@ -32,11 +31,13 @@
 	&--vertical-align-bottom > &__wrapper {
 		align-items: flex-end;
 	}
+	&--vertical-align-default > &__wrapper,
 	&--vertical-align-stretch > &__wrapper {
 		align-items: stretch;
 	}
+	&--vertical-align-default > &__wrapper > &__item,
 	&--vertical-align-stretch > &__wrapper > &__item {
-		@include content-fill-height;
+		@include content-fill-height(auto);
 	}
 
 	// horizontal align

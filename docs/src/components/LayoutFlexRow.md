@@ -42,5 +42,4 @@
 | Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | gap | gap size between slots | Number, String | 0 | spacing scale |
-| verticalAlign | vertical align contents | String | top | top, center, bottom, stretch |
-| isRemainScrollable | show scrollbar in the remaining space when content overflow | Boolean | false | true, false |
+| verticalAlign | vertical align contents | String | stretch | top, center, bottom, stretch |

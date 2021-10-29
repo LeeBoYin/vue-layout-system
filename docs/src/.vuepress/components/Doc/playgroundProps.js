@@ -30,10 +30,6 @@ const absolutePositionSelectConfig = {
 	],
 };
 
-const isRemainScrollableBooleanConfig = {
-	type: 'switch',
-};
-
 const playgroundProps = {
 	padding: {
 		propsValue: {
@@ -77,7 +73,7 @@ const playgroundProps = {
 	},
 	verticalAlign: {
 		propsValue: {
-			verticalAlign: 'top',
+			verticalAlign: 'stretch',
 		},
 		propsConfig: {
 			verticalAlign: verticalAlignSelectConfig,
@@ -89,14 +85,6 @@ const playgroundProps = {
 		},
 		propsConfig: {
 			absoluteSlotName: absolutePositionSelectConfig,
-		},
-	},
-	isRemainScrollable: {
-		propsValue: {
-			isRemainScrollable: false,
-		},
-		propsConfig: {
-			isRemainScrollable: isRemainScrollableBooleanConfig,
 		},
 	},
 };

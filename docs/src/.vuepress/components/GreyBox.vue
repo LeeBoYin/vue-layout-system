@@ -129,6 +129,7 @@ export default {
 	$color: transparentize(#2c3e50, 0.85);
 	position: relative;
 	background-color: $color;
+	overflow: hidden;
 	box-shadow: 0 0 0 1px $color inset;
 	&--text-content {
 		display: flex;
@@ -170,9 +171,6 @@ export default {
 	}
 	&--resizable-y {
 		resize: vertical;
-	}
-	&--resizable, &--resizable-x, &--resizable-y {
-		overflow: hidden;
 	}
 }
 </style>
