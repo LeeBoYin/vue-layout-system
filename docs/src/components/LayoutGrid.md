@@ -7,8 +7,8 @@
 ## Usage
 
 - In a `LayoutGrid`, content must be placed within `LayoutGridCell`.
-- `span` of `LayoutGridCell` indicate the number of columns you’d like to use out of the columns per row.
-- `LayoutGridCell` are seperated by `gap`.
+- `span` of `LayoutGridCell` indicates the number of columns you’d like to use out of the columns per row.
+- `LayoutGridCell` are seperated by `gap` of `LayoutGrid`.
 - Place a `LayoutGridRowBreak` to break the subsequent `LayoutGridCell` into a new row.
 - Only `LayoutGridCell` and `LayoutGridRowBreak` may be immediate children of `LayoutGrid`.
 
