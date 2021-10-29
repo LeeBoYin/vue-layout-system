@@ -73,7 +73,7 @@ const playgroundProps = {
 	},
 	verticalAlign: {
 		propsValue: {
-			verticalAlign: 'top',
+			verticalAlign: 'stretch',
 		},
 		propsConfig: {
 			verticalAlign: verticalAlignSelectConfig,

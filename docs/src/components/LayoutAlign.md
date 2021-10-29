@@ -29,4 +29,4 @@
 | Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | horizontalAlign | horizontal align contents | String | stretch | left, center, right, stretch |
-| verticalAlign | vertical align contents | String | top | top, center, bottom, stretch |
+| verticalAlign | vertical align contents | String | stretch | top, center, bottom, stretch |

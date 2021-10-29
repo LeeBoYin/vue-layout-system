@@ -22,7 +22,6 @@
 	}
 
 	// vertical align
-	&--vertical-align-default,
 	&--vertical-align-top {
 		align-items: start;
 	}
@@ -32,6 +31,9 @@
 	&--vertical-align-bottom {
 		align-items: end;
 	}
+	&--vertical-align-default > &__left,
+	&--vertical-align-default > &__right,
+	&--vertical-align-default > &__remain,
 	&--vertical-align-stretch > &__left,
 	&--vertical-align-stretch > &__right,
 	&--vertical-align-stretch > &__remain {
