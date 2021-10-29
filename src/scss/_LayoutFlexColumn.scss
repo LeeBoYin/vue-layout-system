@@ -3,7 +3,7 @@
 	--layout-flex-column-gap: 0px;
 
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: minmax(0, 1fr);
 	grid-template-rows: auto 1fr auto;
 	gap: var(--layout-flex-column-gap);
 
