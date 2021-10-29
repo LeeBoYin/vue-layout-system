@@ -4,7 +4,11 @@
 			v-model="propsValue"
 			:props-config="propsConfig"
 		>
-			<LayoutListInline gap="5" padding-y="3">
+			<LayoutListInline
+				gap="5"
+				padding-y="3"
+				vertical-align="top"
+			>
 				<LayoutList
 					gap="3"
 					horizontal-align="center"
