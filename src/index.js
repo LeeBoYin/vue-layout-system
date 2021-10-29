@@ -3,6 +3,7 @@ import LayoutAlign from './components/LayoutAlign.vue';
 import LayoutColumns from './components/LayoutColumns.vue';
 import LayoutFlexColumn from './components/LayoutFlexColumn.vue';
 import LayoutFlexRow from './components/LayoutFlexRow.vue';
+import LayoutGrid from './components/LayoutGrid.vue';
 import LayoutList from './components/LayoutList.vue';
 import LayoutListInline from './components/LayoutListInline.vue';
 import './scss/main.scss';
@@ -13,6 +14,7 @@ const VueLayoutSystem = {
     LayoutColumns,
     LayoutFlexColumn,
     LayoutFlexRow,
+    LayoutGrid,
     LayoutList,
     LayoutListInline,
 };
@@ -46,6 +48,7 @@ export {
     LayoutColumns,
     LayoutFlexColumn,
     LayoutFlexRow,
+    LayoutGrid,
     LayoutList,
     LayoutListInline,
 };

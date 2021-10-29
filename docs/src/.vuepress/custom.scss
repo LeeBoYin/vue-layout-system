@@ -4,6 +4,10 @@ img {
 
 button {
 	margin: 0;
+	cursor: pointer;
+	&:disabled {
+		cursor: initial;
+	}
 }
 
 .text-grey {

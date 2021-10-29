@@ -130,12 +130,10 @@ export default {
 	position: relative;
 	background-color: $color;
 	box-shadow: 0 0 0 1px $color inset;
-	overflow: hidden;
 	&--text-content {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		overflow: hidden;
 	}
 	&--solid {
 		background-color: #eaebed;
@@ -172,6 +170,9 @@ export default {
 	}
 	&--resizable-y {
 		resize: vertical;
+	}
+	&--resizable, &--resizable-x, &--resizable-y {
+		overflow: hidden;
 	}
 }
 </style>

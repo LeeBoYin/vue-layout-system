@@ -28,4 +28,4 @@
 | Property | Description | Type | Default | Value |
 | --- | --- | --- | --- | --- |
 | gap | gap size between contents | Number, String | 0 | spacing scale |
-| horizontalAlign | horizontal align contents | String | default | default, left, center, right |
+| horizontalAlign | horizontal align contents | String | stretch | left, center, right, stretch |

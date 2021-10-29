@@ -41,6 +41,7 @@ Here's an example.
 - [LayoutColumns](/components/LayoutColumns/) divide a space evenly into columns, arranging contents into the columns in order.
 - [LayoutFlexColumn](/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
 - [LayoutFlexRow](/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
+- [LayoutGrid](/components/LayoutGrid/) divides a horizontal space into a number of columns evenly, helps align elements based on sequenced columns and rows.
 - [LayoutList](/components/LayoutList/) arranges contents vertically.
 - [LayoutListInline](/components/LayoutListInline/) arranges contents horizontally.
 

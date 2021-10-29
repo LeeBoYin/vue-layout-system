@@ -16,6 +16,8 @@ With Vue Layout System developers are empowered to
 The preferred way to use Vue Layout System is to install via JavaScript package manager.
 
 #### Install via npm
+[![npm (scoped)](https://img.shields.io/npm/v/vue-layout-system.svg)](https://www.npmjs.com/package/vue-layout-system)
+
 ```shell script
 npm install vue-layout-system
 ```

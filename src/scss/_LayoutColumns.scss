@@ -11,9 +11,9 @@
 		gap: var(--layout-columns-gap-y) var(--layout-columns-gap-x);
 		justify-content: stretch;
 	}
-	&--flow-direction-row#{&}--vertical-align-default {
-		align-items: stretch;
-	}
+
+	// vertical align
+	&--flow-direction-row#{&}--vertical-align-default,
 	&--flow-direction-row#{&}--vertical-align-top {
 		align-items: start;
 	}
@@ -22,6 +22,9 @@
 	}
 	&--flow-direction-row#{&}--vertical-align-bottom {
 		align-items: end;
+	}
+	&--flow-direction-row#{&}--vertical-align-stretch {
+		align-items: stretch;
 	}
 
 	// flow direction column

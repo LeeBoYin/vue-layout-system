@@ -10,7 +10,9 @@
 			'max-width': playgroundMaxWidth && playgroundMaxWidth + 'px',
 		}"
 	>
-		<LayoutFlexRow>
+		<LayoutFlexRow
+			vertical-align="stretch"
+		>
 			<template v-if="propsConfig" #left>
 				<LayoutFlexColumn
 					class="props-playground__controls"

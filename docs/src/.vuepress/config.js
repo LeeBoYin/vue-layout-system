@@ -51,6 +51,7 @@ module.exports = {
             'LayoutColumns',
             'LayoutFlexColumn',
             'LayoutFlexRow',
+            'LayoutGrid',
             'LayoutList',
             'LayoutListInline',
           ]

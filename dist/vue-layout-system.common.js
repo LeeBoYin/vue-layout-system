@@ -271,6 +271,82 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
+/***/ "3cfe":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutGrid.vue?vue&type=template&id=36944b93&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-grid",class:[
+		_vm.getGapClass('layout-grid'),
+		_vm.getVerticalAlignClass('layout-grid'),
+		_vm.paddingClass ],style:({
+		'--column-count': _vm.columnCount,
+	})},[_vm._t("default")],2)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/LayoutGrid.vue?vue&type=template&id=36944b93&
+
+// EXTERNAL MODULE: ./src/mixins/layoutMixin.js
+var layoutMixin = __webpack_require__("7c9a");
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--12!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutGrid.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var LayoutGridvue_type_script_lang_js_ = ({
+  name: 'LayoutGrid',
+  mixins: [layoutMixin["a" /* default */]],
+  props: {
+    columnCount: {
+      type: [Number, String],
+      "default": 12
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/LayoutGrid.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_LayoutGridvue_type_script_lang_js_ = (LayoutGridvue_type_script_lang_js_); 
+// EXTERNAL MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("eb61");
+
+// CONCATENATED MODULE: ./src/components/LayoutGrid.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  components_LayoutGridvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var LayoutGrid = __webpack_exports__["a"] = (component.exports);
+
+/***/ }),
+
 /***/ "647d":
 /***/ (function(module, exports) {
 
@@ -306,14 +382,15 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "install", function() { return /* reexport */ src_0["i" /* install */]; });
+__webpack_require__.d(__webpack_exports__, "install", function() { return /* reexport */ src_0["j" /* install */]; });
 __webpack_require__.d(__webpack_exports__, "LayoutAbsolute", function() { return /* reexport */ src_0["a" /* LayoutAbsolute */]; });
 __webpack_require__.d(__webpack_exports__, "LayoutAlign", function() { return /* reexport */ src_0["b" /* LayoutAlign */]; });
 __webpack_require__.d(__webpack_exports__, "LayoutColumns", function() { return /* reexport */ src_0["c" /* LayoutColumns */]; });
 __webpack_require__.d(__webpack_exports__, "LayoutFlexColumn", function() { return /* reexport */ src_0["d" /* LayoutFlexColumn */]; });
 __webpack_require__.d(__webpack_exports__, "LayoutFlexRow", function() { return /* reexport */ src_0["e" /* LayoutFlexRow */]; });
-__webpack_require__.d(__webpack_exports__, "LayoutList", function() { return /* reexport */ src_0["f" /* LayoutList */]; });
-__webpack_require__.d(__webpack_exports__, "LayoutListInline", function() { return /* reexport */ src_0["g" /* LayoutListInline */]; });
+__webpack_require__.d(__webpack_exports__, "LayoutGrid", function() { return /* reexport */ src_0["f" /* LayoutGrid */]; });
+__webpack_require__.d(__webpack_exports__, "LayoutList", function() { return /* reexport */ src_0["g" /* LayoutList */]; });
+__webpack_require__.d(__webpack_exports__, "LayoutListInline", function() { return /* reexport */ src_0["h" /* LayoutListInline */]; });
 
 // CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -345,7 +422,7 @@ var src_0 = __webpack_require__("b635");
 // CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0["h" /* default */]);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0["i" /* default */]);
 
 
 
@@ -549,14 +626,14 @@ var endDebugComponent = function endDebugComponent(element) {
       return classList;
     },
     getHorizontalAlignClass: function getHorizontalAlignClass(componentClass) {
-      if (['default', 'left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
+      if (['default', 'stretch', 'left', 'center', 'right'].indexOf(this.horizontalAlign) !== -1) {
         return "".concat(componentClass, "--horizontal-align-").concat(this.horizontalAlign);
       }
 
       return null;
     },
     getVerticalAlignClass: function getVerticalAlignClass(componentClass) {
-      if (['default', 'top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
+      if (['default', 'stretch', 'top', 'center', 'bottom'].indexOf(this.verticalAlign) !== -1) {
         return "".concat(componentClass, "--vertical-align-").concat(this.verticalAlign);
       }
 
@@ -581,16 +658,17 @@ var endDebugComponent = function endDebugComponent(element) {
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6aabb5b2-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexColumn.vue?vue&type=template&id=d262a53e&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexColumn.vue?vue&type=template&id=1a44b2fe&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-flex-column",class:[
 		_vm.getHorizontalAlignClass('layout-flex-column'),
 		_vm.getGapClass('layout-flex-column'),
 		_vm.paddingClass,
-		_vm.noRemainClass ]},[(_vm.$slots.top)?_c('div',{staticClass:"layout-flex-column__top"},[_vm._t("top")],2):_vm._e(),_c('div',{staticClass:"layout-flex-column__remain"},[_vm._t("remain",[_vm._t("default")])],2),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-flex-column__bottom"},[_vm._t("bottom")],2):_vm._e()])}
+		_vm.noRemainClass,
+		_vm.isRemainScrollable ? 'layout-flex-column--remain-overflow-scroll' : null ]},[(_vm.$slots.top)?_c('div',{staticClass:"layout-flex-column__top"},[_vm._t("top")],2):_vm._e(),_c('div',{staticClass:"layout-flex-column__remain"},[_vm._t("remain",[_vm._t("default")])],2),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-flex-column__bottom"},[_vm._t("bottom")],2):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutFlexColumn.vue?vue&type=template&id=d262a53e&
+// CONCATENATED MODULE: ./src/components/LayoutFlexColumn.vue?vue&type=template&id=1a44b2fe&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -618,10 +696,17 @@ var layoutMixin = __webpack_require__("7c9a");
 //
 //
 //
+//
 
 /* harmony default export */ var LayoutFlexColumnvue_type_script_lang_js_ = ({
   name: 'LayoutFlexColumn',
   mixins: [layoutMixin["a" /* default */]],
+  props: {
+    isRemainScrollable: {
+      type: Boolean,
+      "default": false
+    }
+  },
   computed: {
     noRemainClass: function noRemainClass() {
       return !this.$slots.remain ? 'layout-flex-column--no-remain' : null;
@@ -661,16 +746,17 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6aabb5b2-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexRow.vue?vue&type=template&id=706aaa67&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutFlexRow.vue?vue&type=template&id=1add4644&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-flex-row",class:[
 		_vm.getVerticalAlignClass('layout-flex-row'),
 		_vm.getGapClass('layout-flex-row'),
 		_vm.paddingClass,
-		_vm.noRemainClass ]},[(_vm.$slots.left)?_c('div',{staticClass:"layout-flex-row__left"},[_vm._t("left")],2):_vm._e(),_c('div',{staticClass:"layout-flex-row__remain"},[_vm._t("remain",[_vm._t("default")])],2),(_vm.$slots.right)?_c('div',{staticClass:"layout-flex-row__right"},[_vm._t("right")],2):_vm._e()])}
+		_vm.noRemainClass,
+		_vm.isRemainScrollable ? 'layout-flex-row--remain-overflow-scroll' : null ]},[(_vm.$slots.left)?_c('div',{staticClass:"layout-flex-row__left"},[_vm._t("left")],2):_vm._e(),_c('div',{staticClass:"layout-flex-row__remain"},[_vm._t("remain",[_vm._t("default")])],2),(_vm.$slots.right)?_c('div',{staticClass:"layout-flex-row__right"},[_vm._t("right")],2):_vm._e()])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/LayoutFlexRow.vue?vue&type=template&id=706aaa67&
+// CONCATENATED MODULE: ./src/components/LayoutFlexRow.vue?vue&type=template&id=1add4644&
 
 // EXTERNAL MODULE: ./src/mixins/layoutMixin.js
 var layoutMixin = __webpack_require__("7c9a");
@@ -706,10 +792,17 @@ var layoutMixin = __webpack_require__("7c9a");
 //
 //
 //
+//
 
 /* harmony default export */ var LayoutFlexRowvue_type_script_lang_js_ = ({
   name: 'LayoutFlexRow',
   mixins: [layoutMixin["a" /* default */]],
+  props: {
+    isRemainScrollable: {
+      type: Boolean,
+      "default": false
+    }
+  },
   computed: {
     noRemainClass: function noRemainClass() {
       return !this.$slots.remain ? 'layout-flex-row--no-remain' : null;
@@ -823,7 +916,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return install; });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return install; });
 /* harmony import */ var _components_LayoutAbsolute_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("efce");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _components_LayoutAbsolute_vue__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
@@ -839,14 +932,18 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony import */ var _components_LayoutFlexRow_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("9655");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _components_LayoutFlexRow_vue__WEBPACK_IMPORTED_MODULE_4__["a"]; });
 
-/* harmony import */ var _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("d5e6");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_5__["a"]; });
+/* harmony import */ var _components_LayoutGrid_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("3cfe");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _components_LayoutGrid_vue__WEBPACK_IMPORTED_MODULE_5__["a"]; });
 
-/* harmony import */ var _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("a3f1");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_6__["a"]; });
+/* harmony import */ var _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("d5e6");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_6__["a"]; });
 
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("b107");
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("a3f1");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_7__["a"]; });
+
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("b107");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -861,8 +958,9 @@ var VueLayoutSystem = {
   LayoutColumns: _components_LayoutColumns_vue__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],
   LayoutFlexColumn: _components_LayoutFlexColumn_vue__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],
   LayoutFlexRow: _components_LayoutFlexRow_vue__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],
-  LayoutList: _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],
-  LayoutListInline: _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"]
+  LayoutGrid: _components_LayoutGrid_vue__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],
+  LayoutList: _components_LayoutList_vue__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"],
+  LayoutListInline: _components_LayoutListInline_vue__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"]
 };
 function install(Vue) {
   if (install.installed) return;
@@ -886,7 +984,7 @@ if (GlobalVue) {
   GlobalVue.use(plugin);
 }
 
-/* harmony default export */ __webpack_exports__["h"] = (VueLayoutSystem);
+/* harmony default export */ __webpack_exports__["i"] = (VueLayoutSystem);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("647d")))
 
@@ -897,7 +995,7 @@ if (GlobalVue) {
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6aabb5b2-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAlign.vue?vue&type=template&id=4be2c860&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAlign.vue?vue&type=template&id=4be2c860&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-align",class:[
 		_vm.getVerticalAlignClass('layout-align'),
 		_vm.getHorizontalAlignClass('layout-align'),
@@ -964,7 +1062,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6aabb5b2-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutList.vue?vue&type=template&id=32221486&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutList.vue?vue&type=template&id=32221486&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-list",class:[
 		_vm.getGapClass('layout-list'),
 		_vm.getHorizontalAlignClass('layout-list'),
@@ -1136,7 +1234,7 @@ function normalizeComponent (
 
 "use strict";
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6aabb5b2-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAbsolute.vue?vue&type=template&id=044aa3e7&
+// CONCATENATED MODULE: /usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4bb9b8aa-vue-loader-template"}!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/local/lib/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/LayoutAbsolute.vue?vue&type=template&id=044aa3e7&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layout-absolute",class:[_vm.paddingClass]},[_c('div',{staticClass:"layout-absolute__wrapper"},[(_vm.$slots.topLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-left"},[_vm._t("topLeft")],2):_vm._e(),(_vm.$slots.top)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top"},[_vm._t("top")],2):_vm._e(),(_vm.$slots.topRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--top-right"},[_vm._t("topRight")],2):_vm._e(),(_vm.$slots.right)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--right"},[_vm._t("right")],2):_vm._e(),(_vm.$slots.bottomRight)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-right"},[_vm._t("bottomRight")],2):_vm._e(),(_vm.$slots.bottom)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom"},[_vm._t("bottom")],2):_vm._e(),(_vm.$slots.bottomLeft)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--bottom-left"},[_vm._t("bottomLeft")],2):_vm._e(),(_vm.$slots.left)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--left"},[_vm._t("left")],2):_vm._e(),(_vm.$slots.center)?_c('div',{staticClass:"layout-absolute__cell layout-absolute__cell--center"},[_vm._t("center")],2):_vm._e()])])}
 var staticRenderFns = []
 

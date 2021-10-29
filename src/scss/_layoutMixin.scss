@@ -1,9 +1,18 @@
-@mixin content-fill-height($min-height: 0) {
+@mixin content-fill-height {
 	display: flex;
 	flex-direction: column;
 	> * {
-		flex: 1 1 $min-height;
+		flex: 1 1 auto;
 		height: auto;
+	}
+}
+
+@mixin content-fill-width {
+	display: flex;
+	flex-direction: row;
+	> * {
+		flex: 1 1 auto;
+		width: auto;
 	}
 }
 
