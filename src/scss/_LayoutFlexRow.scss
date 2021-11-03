@@ -4,14 +4,17 @@
 
 	display: grid;
 	grid-template-rows: minmax(0, 1fr);
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: auto minmax(0, 1fr) auto;
 	gap: var(--layout-flex-row-gap);
 
 	&--no-left {
-		grid-template-columns: 1fr auto;
+		grid-template-columns: minmax(0, 1fr) auto;
 	}
 	&--no-right {
-		grid-template-columns: auto 1fr;
+		grid-template-columns: auto minmax(0, 1fr);
+	}
+	&--no-left#{&}--no-right {
+		grid-template-columns: minmax(0, 1fr);
 	}
 	&--no-remain {
 		grid-template-columns: auto minmax(var(--layout-flex-row-gap), 1fr) auto;

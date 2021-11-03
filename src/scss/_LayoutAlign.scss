@@ -19,10 +19,11 @@
 	}
 	&--horizontal-align-default > &__content,
 	&--horizontal-align-stretch > &__content {
-		@include content-fill-width;
+		@include content-fill-width(auto);
 	}
 
 	// vertical align
+	&--vertical-align-default,
 	&--vertical-align-top {
 		align-content: start;
 	}
@@ -32,13 +33,11 @@
 	&--vertical-align-bottom {
 		align-content: end;
 	}
-	&--vertical-align-default,
 	&--vertical-align-stretch {
 		align-content: stretch;
 	}
-	&--vertical-align-default > &__content ,
 	&--vertical-align-stretch > &__content {
-		@include content-fill-height;
+		@include content-fill-height(auto);
 	}
 
 	@include debug-highlight('LayoutAlign');

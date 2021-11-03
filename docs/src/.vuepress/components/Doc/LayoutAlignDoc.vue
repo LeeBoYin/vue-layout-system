@@ -32,7 +32,10 @@ export default {
 	data() {
 		const propsName = ['padding', 'horizontalAlign', 'verticalAlign'];
 		return {
-			propsValue: getDefaultPropsValue(propsName),
+			propsValue: {
+				...getDefaultPropsValue(propsName),
+				verticalAlign: 'top',
+			},
 			propsConfig: getPropsConfig(propsName),
 		};
 	},
