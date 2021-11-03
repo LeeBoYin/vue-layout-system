@@ -1,6 +1,6 @@
 {
   "name": "vue-layout-system",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Vue components that solve daily layout problems",
   "main": "dist/vue-layout-system.common.js",
   "module": "dist/vue-layout-system.common.js",
