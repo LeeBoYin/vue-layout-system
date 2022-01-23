@@ -7,6 +7,11 @@
 	grid-template-columns: auto minmax(0, 1fr) auto;
 	gap: var(--layout-flex-row-gap);
 
+	&--no-remain {
+		// set gap with column
+		grid-template-columns: auto minmax(var(--layout-flex-row-gap), 1fr) auto;
+		gap: 0;
+	}
 	&--no-left {
 		grid-template-columns: minmax(0, 1fr) auto;
 	}
@@ -15,10 +20,6 @@
 	}
 	&--no-left#{&}--no-right {
 		grid-template-columns: minmax(0, 1fr);
-	}
-	&--no-remain {
-		grid-template-columns: auto minmax(var(--layout-flex-row-gap), 1fr) auto;
-		gap: 0;
 	}
 	&__remain {
 		@include content-fill-width;
