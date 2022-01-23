@@ -36,7 +36,7 @@ export default {
 					class: `${ componentClass }__wrapper`,
 				},
 				// 將每一個 slot children node 包在 &__item 裡面
-				this.$slots.default.filter(node => node.tag).map(node => createElement(
+				this.$slots.default && this.$slots.default.filter(node => node.tag).map(node => createElement(
 					'div',
 					{
 						class: `${ componentClass }__item`,
