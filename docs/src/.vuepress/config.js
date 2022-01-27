@@ -49,6 +49,7 @@ module.exports = {
             'LayoutAbsolute',
             'LayoutAlign',
             'LayoutColumns',
+            'LayoutRows',
             'LayoutFlexColumn',
             'LayoutFlexRow',
             'LayoutGrid',

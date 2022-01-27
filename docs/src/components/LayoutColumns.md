@@ -1,6 +1,6 @@
 # LayoutColumns
 
-`LayoutColumns` divide a space evenly into columns, arranging contents into the columns in order.
+`LayoutColumns` divides a space evenly into columns, arranging contents into the columns in order.
 
 <Doc-LayoutColumnsDoc />
 
@@ -8,7 +8,7 @@
 
 - Place your contents between `<LayoutColumns>` tags
 - Divide space into columns by either `columnCount` or `contentMinWidth`. When divided by `columnCount`, the width of contents will be evenly distributed. When divided by `contentMinWidth`, the number of columns will be dynamic.
-- Set the direction contents are ordered by `flowDirection`. When `flowDirection` is `row`, contents are ordered from left to right first. When `flowDirection` is `column`, contents are ordered from top to bottom first.
+- Set the flow direction of contents by `flowDirection`. When `flowDirection` is `row`, contents flow from left to right first. When `flowDirection` is `column`, contents flow from top to bottom first.
 
 ```vue live
 <LayoutColumns
@@ -35,7 +35,7 @@
 | --- | --- | --- | --- | --- |
 | columnCount | set number of columns, width of contents will be evenly distributed, required when contentMinWidth is not set | Number | - | positive integer |
 | contentMinWidth | Set minimum width of contents, number of columns will be dynamic, ignored when columnCount is set | Number, String | 0 | CSS width value |
-| flowDirection | the direction contents are ordered | String | row | row, column |
+| flowDirection | the direction contents flow first | String | row | row, column |
 | verticalAlign | vertical align contents (when the heights of contents differ), ignored when flowDirection is column | String | stretch | top, center, bottom, stretch |
 | gap | gap size between contents | Number, String | 0 | spacing scale, gap shorthand |
 | gapX | horizontal gap size between contents | Number, String | 0 | spacing scale |
