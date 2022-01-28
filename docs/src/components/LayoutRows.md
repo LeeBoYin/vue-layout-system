@@ -9,6 +9,8 @@
 - Place your contents between `<LayoutRows>` tags.
 - Set row number by `rowCount`.
 - Set the flow direction of contents by `flowDirection`. When `flowDirection` is `row`, contents flow from left to right first. When `flowDirection` is `column`, contents flow from top to bottom first.
+- Put `LayoutRows` in an element where `overflow-x: auto` to show horizontal scrollbar.  
+- When you need only one row, simply use `LayoutListInline` with `wrap` prop set to `false` instead.
 
 ```vue live
 <LayoutRows
