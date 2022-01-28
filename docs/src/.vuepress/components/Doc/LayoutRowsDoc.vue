@@ -9,7 +9,7 @@
 					<GreyBox
 						v-for="i in 20"
 						:name="i"
-						:size="propsValue.identicalContentsSize ? 'm' : ['s', 'm'][i % 2]"
+						:size="propsValue.identicalContentsSize ? 'm' : ['s', 'm', 'l'][i % 3]"
 						show-size
 					/>
 				</LayoutRows>
@@ -34,7 +34,7 @@ export default {
 	data() {
 		return {
 			propsValue: {
-				identicalContentsSize: false,
+				identicalContentsSize: true,
 				rowCount: 3,
 				flowDirection: 'row',
 				...getDefaultPropsValue(['padding', 'gapXY', 'verticalAlign']),

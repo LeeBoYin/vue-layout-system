@@ -41,7 +41,7 @@ export default {
 		}
 
 		return createElement(
-			'LayoutList',
+			LayoutList,
 			{
 				props: {
 					gap: this.gapY,
@@ -57,7 +57,7 @@ export default {
 			},
 			rowNodesList.map(rowNodes => {
 				return createElement(
-					'LayoutListInline',
+					LayoutListInline,
 					{
 						props: {
 							wrap: false,

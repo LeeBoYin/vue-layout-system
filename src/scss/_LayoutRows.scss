@@ -1,4 +1,9 @@
 @import 'layoutMixin';
 .layout-rows {
-	@include debug-highlight('LayoutRows');
+	@include debug-highlight('LayoutRows', (' > .layout-list-inline > .layout-list-inline__wrapper > .layout-list-inline__item'));
+	.layout-u-debug &.layout--debug > .layout-list-inline {
+		//  layout list inline debug highlight when highlighting layout-rows
+		outline: none;
+		background: none;
+	}
 }
