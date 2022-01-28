@@ -38,12 +38,13 @@ Here's an example.
 ## Layout Components
 - [LayoutAbsolute](/components/LayoutAbsolute/) lets you place contents at 9 absolute positions in a relative position element.
 - [LayoutAlign](/components/LayoutAlign/) lets you align contents both horizontally and vertically.
-- [LayoutColumns](/components/LayoutColumns/) divide a space evenly into columns, arranging contents into the columns in order.
-- [LayoutFlexColumn](/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
-- [LayoutFlexRow](/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
-- [LayoutGrid](/components/LayoutGrid/) divides a horizontal space into a number of columns evenly, helps align elements based on sequenced columns and rows.
 - [LayoutList](/components/LayoutList/) arranges contents vertically.
 - [LayoutListInline](/components/LayoutListInline/) arranges contents horizontally.
+- [LayoutFlexColumn](/components/LayoutFlexColumn/) divides a vertical space into 3 sections, where you can place contents at top, bottom and the remaining space.
+- [LayoutFlexRow](/components/LayoutFlexRow/) divides a horizontal space into 3 sections, where you can place contents at left, right and the remaining space.
+- [LayoutColumns](/components/LayoutColumns/) divides a space evenly into columns, arranging contents into the columns in order.
+- [LayoutRows](/components/LayoutRows/) arranges contents into a number of rows.
+- [LayoutGrid](/components/LayoutGrid/) divides a horizontal space into a number of columns evenly, helps align elements based on sequenced columns and rows.
 
 ## Spacing System
 Vue Layout System uses a finite set of spacing scales for all spacing needs, such as padding around the contents and gaps between contents. This is a vital foundation for consistent and precise control of the spacing.
