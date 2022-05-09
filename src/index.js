@@ -4,6 +4,8 @@ import LayoutColumns from './components/LayoutColumns.vue';
 import LayoutFlexColumn from './components/LayoutFlexColumn.vue';
 import LayoutFlexRow from './components/LayoutFlexRow.vue';
 import LayoutGrid from './components/LayoutGrid.vue';
+import LayoutGridCell from './components/LayoutGridCell.vue';
+import LayoutGridRowBreak from './components/LayoutGridRowBreak.vue';
 import LayoutList from './components/LayoutList.vue';
 import LayoutListInline from './components/LayoutListInline.vue';
 import './scss/main.scss';
@@ -15,6 +17,8 @@ const VueLayoutSystem = {
     LayoutFlexColumn,
     LayoutFlexRow,
     LayoutGrid,
+    LayoutGridCell,
+    LayoutGridRowBreak,
     LayoutList,
     LayoutListInline,
 };
@@ -49,6 +53,8 @@ export {
     LayoutFlexColumn,
     LayoutFlexRow,
     LayoutGrid,
+    LayoutGridCell,
+    LayoutGridRowBreak,
     LayoutList,
     LayoutListInline,
 };
